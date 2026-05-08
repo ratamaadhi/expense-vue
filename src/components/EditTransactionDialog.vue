@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch, computed, useAttrs } from "vue";
+import { ref, watch } from "vue";
 import { useAppStore } from "@/stores/app";
 import { Button } from "@/components/ui/button";
 import {
@@ -9,7 +9,6 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -20,22 +19,18 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Plus } from "lucide-vue-next";
 import DatePicker from "@/components/ui/DatePicker.vue";
 import type { Transaction } from "@/types";
 import { getLocalTimeZone } from "@internationalized/date";
 import { parseDate } from "@internationalized/date";
 
 const appStore = useAppStore();
-const attrs = useAttrs();
 
 const open = defineModel<boolean>("open", { default: false });
 
 const props = defineProps<{
   transaction?: Transaction;
 }>();
-
-const isEdit = computed(() => !!props.transaction?.id);
 
 const newTransaction = ref({
   type: "expense" as "income" | "expense",
@@ -58,25 +53,13 @@ watch(() => props.transaction, (tx) => {
   }
 }, { immediate: true });
 
-watch(open, (isOpen) => {
-  if (!isOpen && !isEdit.value) {
-    newTransaction.value = {
-      type: "expense",
-      amount: "",
-      description: "",
-      categoryId: "",
-      occurredAt: undefined,
-    };
-  }
-});
-
 async function handleSubmit() {
   try {
-    const occurredAt = newTransaction.value.occurredAt
-      ? new Date(newTransaction.value.occurredAt.toDate(getLocalTimeZone())).toISOString()
-      : new Date().toISOString();
+    if (props.transaction?.id) {
+      const occurredAt = newTransaction.value.occurredAt
+        ? new Date(newTransaction.value.occurredAt.toDate(getLocalTimeZone())).toISOString()
+        : new Date().toISOString();
 
-    if (isEdit.value && props.transaction?.id) {
       await appStore.updateTransaction(props.transaction.id, {
         type: newTransaction.value.type,
         amount: Number(newTransaction.value.amount),
@@ -84,50 +67,26 @@ async function handleSubmit() {
         categoryId: newTransaction.value.categoryId,
         occurredAt,
       });
-    } else {
-      await appStore.createTransaction({
-        type: newTransaction.value.type,
-        amount: Number(newTransaction.value.amount),
-        description: newTransaction.value.description || undefined,
-        categoryId: newTransaction.value.categoryId,
-        occurredAt,
-      });
+      open.value = false;
     }
-    open.value = false;
   } catch (e) {
     console.error(e);
   }
 }
-
-const dialogTitle = computed(() => isEdit.value ? "Edit Transaction" : "Add Transaction");
-const dialogDescription = computed(() =>
-  isEdit.value ? "Update the transaction details" : "Create a new income or expense record"
-);
-const buttonText = computed(() => isEdit.value ? "Update Transaction" : "Add Transaction");
-const buttonSize = computed(() => {
-  const size = attrs.size as "default" | "icon" | "sm" | "lg" | "icon-sm" | "icon-lg" | null | undefined;
-  return size || "default";
-});
 </script>
 
 <template>
   <Dialog v-model:open="open">
-    <DialogTrigger v-if="!isEdit" as-child>
-      <Button :size="buttonSize">
-        <Plus class="w-4 h-4 mr-2" />
-        Add Transaction
-      </Button>
-    </DialogTrigger>
     <DialogContent class="sm:max-w-md">
       <DialogHeader>
-        <DialogTitle>{{ dialogTitle }}</DialogTitle>
-        <DialogDescription>{{ dialogDescription }}</DialogDescription>
+        <DialogTitle>Edit Transaction</DialogTitle>
+        <DialogDescription>Update the transaction details</DialogDescription>
       </DialogHeader>
       <form @submit.prevent="handleSubmit" class="space-y-4">
         <div class="grid gap-2">
-          <Label for="type">Type</Label>
+          <Label for="edit-type">Type</Label>
           <Select v-model="newTransaction.type">
-            <SelectTrigger id="type">
+            <SelectTrigger id="edit-type">
               <SelectValue placeholder="Select type" />
             </SelectTrigger>
             <SelectContent>
@@ -137,9 +96,9 @@ const buttonSize = computed(() => {
           </Select>
         </div>
         <div class="grid gap-2">
-          <Label for="amount">Amount</Label>
+          <Label for="edit-amount">Amount</Label>
           <Input
-            id="amount"
+            id="edit-amount"
             v-model.number="newTransaction.amount"
             type="number"
             step="0.01"
@@ -148,9 +107,9 @@ const buttonSize = computed(() => {
           />
         </div>
         <div class="grid gap-2">
-          <Label for="category">Category</Label>
+          <Label for="edit-category">Category</Label>
           <Select v-model="newTransaction.categoryId" required>
-            <SelectTrigger id="category">
+            <SelectTrigger id="edit-category">
               <SelectValue placeholder="Select category" />
             </SelectTrigger>
             <SelectContent>
@@ -161,18 +120,18 @@ const buttonSize = computed(() => {
           </Select>
         </div>
         <div class="grid gap-2">
-          <Label for="description">Description</Label>
+          <Label for="edit-description">Description</Label>
           <Input
-            id="description"
+            id="edit-description"
             v-model="newTransaction.description"
             type="text"
             placeholder="Optional description"
           />
         </div>
         <div class="grid gap-2">
-          <Label for="date">Date</Label>
+          <Label for="edit-date">Date</Label>
           <DatePicker
-            id="date"
+            id="edit-date"
             v-model="newTransaction.occurredAt"
             placeholder="Select date"
           />
@@ -181,7 +140,7 @@ const buttonSize = computed(() => {
           <Button type="button" variant="outline" @click="open = false">
             Cancel
           </Button>
-          <Button type="submit">{{ buttonText }}</Button>
+          <Button type="submit">Update Transaction</Button>
         </DialogFooter>
       </form>
     </DialogContent>

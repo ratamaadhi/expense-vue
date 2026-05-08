@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, watch, onMounted } from "vue";
 import { useAppStore } from "@/stores/app";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -20,14 +20,20 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
-import { Trash2, Loader2, Pencil } from "lucide-vue-next";
+import { Trash2, Loader2, Pencil, Search } from "lucide-vue-next";
 import { format } from "date-fns";
 import AddTransactionDialog from "@/components/AddTransactionDialog.vue";
+import EditTransactionDialog from "@/components/EditTransactionDialog.vue";
+import { Input } from "@/components/ui/input";
+import DatePickerWithRange from "@/components/ui/DatePickerWithRange.vue";
 import type { Transaction } from "@/types";
+import type { DateRange } from "reka-ui";
 
 const appStore = useAppStore();
 const filterType = ref<"all" | "income" | "expense">("all");
 const filterCategory = ref<string>("all");
+const filterSearch = ref<string>("");
+const filterDateRange = ref<DateRange>();
 const editingTransaction = ref<Transaction>();
 const showEditDialog = ref(false);
 
@@ -38,6 +44,22 @@ const filteredTransactions = computed(() => {
   }
   if (filterCategory.value !== "all") {
     result = result.filter((t) => t.categoryId === filterCategory.value);
+  }
+  if (filterSearch.value) {
+    const search = filterSearch.value.toLowerCase();
+    result = result.filter((t) =>
+      t.description?.toLowerCase().includes(search) ||
+      t.category?.name.toLowerCase().includes(search)
+    );
+  }
+  if (filterDateRange.value?.start) {
+    const fromDate = filterDateRange.value.start.toDate(getLocalTimeZone());
+    result = result.filter((t) => new Date(t.occurredAt) >= fromDate);
+  }
+  if (filterDateRange.value?.end) {
+    const toDate = new Date(filterDateRange.value.end.toDate(getLocalTimeZone()));
+    toDate.setHours(23, 59, 59, 999);
+    result = result.filter((t) => new Date(t.occurredAt) <= toDate);
   }
   return result;
 });
@@ -66,8 +88,33 @@ function handleEdit(transaction: Transaction) {
   showEditDialog.value = true;
 }
 
+function getLocalTimeZone() {
+  return Intl.DateTimeFormat().resolvedOptions().timeZone;
+}
+
+async function fetchFilteredTransactions() {
+  const from = filterDateRange.value?.start
+    ? filterDateRange.value.start.toDate(getLocalTimeZone()).toISOString().slice(0, 10)
+    : undefined;
+  const to = filterDateRange.value?.end
+    ? filterDateRange.value.end.toDate(getLocalTimeZone()).toISOString().slice(0, 10)
+    : undefined;
+
+  await appStore.fetchTransactions({
+    type: filterType.value === "all" ? undefined : filterType.value,
+    categoryId: filterCategory.value === "all" ? undefined : filterCategory.value,
+    from,
+    to,
+  });
+}
+
+// Watch filter changes and refetch
+watch([filterType, filterCategory, filterDateRange], () => {
+  fetchFilteredTransactions();
+});
+
 onMounted(() => {
-  appStore.fetchTransactions();
+  fetchFilteredTransactions();
 });
 </script>
 
@@ -83,7 +130,7 @@ onMounted(() => {
 
     <Card>
       <CardContent class="pt-6">
-        <div class="flex gap-4 mb-6">
+        <div class="flex flex-wrap gap-4 mb-6">
           <Select v-model="filterType">
             <SelectTrigger class="w-[180px]">
               <SelectValue placeholder="Filter by type" />
@@ -105,6 +152,27 @@ onMounted(() => {
               </SelectItem>
             </SelectContent>
           </Select>
+          <div class="relative flex-1 min-w-[200px]">
+            <Search class="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+            <Input
+              v-model="filterSearch"
+              type="text"
+              placeholder="Search transactions..."
+              class="pl-9"
+            />
+            <Button
+              v-if="filterSearch"
+              variant="ghost"
+              size="icon"
+              class="absolute right-1 top-1 h-7 w-7 px-0"
+              @click="filterSearch = ''"
+            >
+              <X class="h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-4 mb-6">
+          <DatePickerWithRange v-model="filterDateRange" placeholder="Filter by date range" />
         </div>
 
         <div v-if="appStore.loading" class="flex items-center justify-center py-12">
@@ -185,7 +253,7 @@ onMounted(() => {
       </CardContent>
     </Card>
 
-    <AddTransactionDialog
+    <EditTransactionDialog
       v-model:open="showEditDialog"
       :transaction="editingTransaction"
     />
