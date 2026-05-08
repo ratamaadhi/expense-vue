@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { useAppStore } from "@/stores/app";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -15,11 +15,33 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Plus, Pencil, Trash2, Loader2, Tag } from "lucide-vue-next";
+import { Plus, Pencil, Trash2, Loader2, Tag, TrendingUp, TrendingDown } from "lucide-vue-next";
 
 const appStore = useAppStore();
 const showAddModal = ref(false);
 const editingCategory = ref<string | null>(null);
+
+const categoryBreakdownMap = computed(() => {
+  const map = new Map<string, { totalIncome: string; totalExpense: string; netBalance: string }>();
+  appStore.categoryBreakdown.forEach((item) => {
+    map.set(item.categoryId, {
+      totalIncome: item.totalIncome,
+      totalExpense: item.totalExpense,
+      netBalance: item.netBalance,
+    });
+  });
+  return map;
+});
+
+function formatCurrency(amount: string | number): string {
+  const numAmount = typeof amount === "string" ? Number(amount) : amount;
+  const formatted = new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+    minimumFractionDigits: 0,
+  }).format(numAmount);
+  return formatted.replace("Rp", "Rp ");
+}
 
 const newCategory = ref({
   name: "",
@@ -91,6 +113,7 @@ async function handleDelete(id: string) {
 
 onMounted(() => {
   appStore.fetchCategories();
+  appStore.fetchCategoryBreakdown();
 });
 </script>
 
@@ -206,36 +229,77 @@ onMounted(() => {
               </Button>
             </div>
           </div>
-          <div v-else class="flex items-center justify-between">
-            <div class="flex items-center gap-3">
-              <div
-                class="w-10 h-10 rounded-full flex items-center justify-center"
-                :style="{ backgroundColor: category.color || '#94A3B8' }"
-              >
-                <Tag class="w-5 h-5 text-white" />
+          <div v-else class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-10 h-10 rounded-full flex items-center justify-center"
+                  :style="{ backgroundColor: category.color || '#94A3B8' }"
+                >
+                  <Tag class="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 class="font-medium text-foreground">{{ category.name }}</h3>
+                  <p class="text-sm text-muted-foreground">{{ category.color || "Default" }}</p>
+                </div>
               </div>
-              <div>
-                <h3 class="font-medium text-foreground">{{ category.name }}</h3>
-                <p class="text-sm text-muted-foreground">{{ category.color || "Default" }}</p>
+              <div class="flex gap-1">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  @click="startEditing(category)"
+                  class="text-muted-foreground hover:text-primary hover:bg-primary/10"
+                >
+                  <Pencil class="w-4 h-4" />
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  @click="handleDelete(category.id)"
+                  class="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
+                >
+                  <Trash2 class="w-4 h-4" />
+                </Button>
               </div>
             </div>
-            <div class="flex gap-1">
-              <Button
-                variant="ghost"
-                size="icon"
-                @click="startEditing(category)"
-                class="text-muted-foreground hover:text-primary hover:bg-primary/10"
-              >
-                <Pencil class="w-4 h-4" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                @click="handleDelete(category.id)"
-                class="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
-              >
-                <Trash2 class="w-4 h-4" />
-              </Button>
+            <div
+              v-if="categoryBreakdownMap.has(category.id)"
+              class="grid grid-cols-3 gap-3 pt-3 border-t"
+            >
+              <div class="space-y-1">
+                <div class="flex items-center gap-1 text-xs text-muted-foreground">
+                  <TrendingUp class="w-3 h-3 text-green-500" />
+                  <span>Income</span>
+                </div>
+                <p class="text-sm font-medium text-green-600">
+                  {{ formatCurrency(categoryBreakdownMap.get(category.id)!.totalIncome) }}
+                </p>
+              </div>
+              <div class="space-y-1">
+                <div class="flex items-center gap-1 text-xs text-muted-foreground">
+                  <TrendingDown class="w-3 h-3 text-red-500" />
+                  <span>Expense</span>
+                </div>
+                <p class="text-sm font-medium text-red-600">
+                  {{ formatCurrency(categoryBreakdownMap.get(category.id)!.totalExpense) }}
+                </p>
+              </div>
+              <div class="space-y-1">
+                <div class="flex items-center gap-1 text-xs text-muted-foreground">
+                  <span class="w-3 h-3 rounded-full bg-muted-foreground" />
+                  <span>Net</span>
+                </div>
+                <p
+                  class="text-sm font-medium"
+                  :class="
+                    Number(categoryBreakdownMap.get(category.id)!.netBalance) >= 0
+                      ? 'text-green-600'
+                      : 'text-red-600'
+                  "
+                >
+                  {{ formatCurrency(categoryBreakdownMap.get(category.id)!.netBalance) }}
+                </p>
+              </div>
             </div>
           </div>
         </CardContent>
