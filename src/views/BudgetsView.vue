@@ -106,22 +106,6 @@ async function handleDelete(id: string) {
 
 onMounted(async () => {
   await appStore.fetchBudgets();
-  // Log budget utilization percentages from API
-  console.log("Budget utilization percentages from API:");
-  appStore.budgets.forEach((budget) => {
-    console.log(`Budget: ${budget.category?.name || "Unknown"}`);
-    console.log(
-      `  - utilizationPercentage:`,
-      budget.utilizationPercentage,
-      `(type: ${typeof budget.utilizationPercentage})`,
-    );
-    console.log(`  - spent:`, budget.spent, `amount:`, budget.amount);
-    console.log(
-      `  - calculated:`,
-      ((Number(budget.spent) || 0) / (Number(budget.amount) || 1)) * 100,
-      "%",
-    );
-  });
 });
 </script>
 

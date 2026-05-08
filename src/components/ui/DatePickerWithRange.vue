@@ -68,8 +68,9 @@ function formatDateRange(): string {
 }
 
 function handleClear(e: MouseEvent) {
+  e.preventDefault();
   e.stopPropagation();
-  dateRange.value = undefined;
+  emit("update:modelValue", undefined);
 }
 </script>
 
@@ -87,11 +88,14 @@ function handleClear(e: MouseEvent) {
         >
           <CalendarIcon class="mr-2 h-4 w-4" />
           <span class="flex-1">{{ formatDateRange() }}</span>
-          <X
+          <button
             v-if="dateRange"
-            class="h-4 w-4 opacity-50 hover:opacity-100"
+            type="button"
+            class="h-4 w-4 opacity-50 hover:opacity-100 p-0 border-0 bg-transparent cursor-pointer"
             @click="handleClear"
-          />
+          >
+            <X class="h-4 w-4" />
+          </button>
         </Button>
       </PopoverTrigger>
       <PopoverContent class="w-auto p-0" align="start">
