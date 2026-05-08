@@ -173,7 +173,7 @@ const columns: ColumnDef<Transaction>[] = [
       const amount = Number(row.getValue('amount'))
       const type = row.original.type
       return h('div', {
-        class: cn('text-right font-semibold', type === 'income' ? 'text-green-600' : 'text-red-600'),
+        class: cn('text-right font-semibold', type === 'income' ? 'text-green-400' : 'text-red-400'),
       }, `${type === 'income' ? '+' : '-'}${formatCurrency(amount)}`)
     },
   },

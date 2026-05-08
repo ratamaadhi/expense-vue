@@ -1,0 +1,59 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e6]:
+      - list [ref=e8]:
+        - listitem [ref=e9]:
+          - link "Expense Tracker" [ref=e10] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e12]
+            - generic [ref=e15]: Expense Tracker
+      - list [ref=e17]:
+        - listitem [ref=e18]:
+          - link "Dashboard" [ref=e19] [cursor=pointer]:
+            - /url: /
+            - img [ref=e20]
+            - generic [ref=e25]: Dashboard
+        - listitem [ref=e26]:
+          - link "Transactions" [ref=e27] [cursor=pointer]:
+            - /url: /transactions
+            - img [ref=e28]
+            - generic [ref=e29]: Transactions
+        - listitem [ref=e30]:
+          - link "Categories" [ref=e31] [cursor=pointer]:
+            - /url: /categories
+            - img [ref=e32]
+            - generic [ref=e35]: Categories
+        - listitem [ref=e36]:
+          - link "Budgets" [ref=e37] [cursor=pointer]:
+            - /url: /budgets
+            - img [ref=e38]
+            - generic [ref=e41]: Budgets
+      - list [ref=e43]:
+        - listitem [ref=e44]:
+          - img [ref=e46]
+    - main [ref=e48]:
+      - generic [ref=e49]:
+        - button "Toggle Sidebar" [ref=e50]:
+          - img
+          - generic [ref=e51]: Toggle Sidebar
+        - heading "Categories" [level=1] [ref=e53]
+        - button "Toggle theme" [ref=e55]:
+          - img
+          - generic [ref=e56]: Toggle theme
+      - main [ref=e57]:
+        - generic [ref=e58]:
+          - generic [ref=e59]:
+            - generic [ref=e60]:
+              - heading "Categories" [level=1] [ref=e61]
+              - paragraph [ref=e62]: Organize your transactions with custom categories
+            - button "Add Category" [ref=e63]:
+              - img
+              - text: Add Category
+          - generic [ref=e64]:
+            - img [ref=e65]
+            - heading "No categories yet" [level=3] [ref=e68]
+            - paragraph [ref=e69]: Create your first category to organize your transactions
+            - button "Add Category" [ref=e70]:
+              - img
+              - text: Add Category
+  - img [ref=e71]
