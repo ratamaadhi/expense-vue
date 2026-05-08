@@ -3,9 +3,8 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { SidebarTrigger } from '@/components/ui/sidebar'
 import { Separator } from '@/components/ui/separator'
-import { Button } from '@/components/ui/button'
-import { Plus } from 'lucide-vue-next'
 import ThemeToggle from '@/components/ThemeToggle.vue'
+import AddTransactionDialog from '@/components/AddTransactionDialog.vue'
 
 const route = useRoute()
 
@@ -33,12 +32,7 @@ const showAddButton = computed(() => {
     </div>
     <div class="flex items-center gap-2">
       <ThemeToggle />
-      <Button v-if="showAddButton" size="sm" as-child>
-        <RouterLink to="/transactions">
-          <Plus class="w-4 h-4 mr-2" />
-          Add Transaction
-        </RouterLink>
-      </Button>
+      <AddTransactionDialog v-if="showAddButton" size="sm" />
     </div>
   </header>
 </template>

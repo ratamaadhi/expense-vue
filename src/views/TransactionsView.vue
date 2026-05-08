@@ -5,15 +5,6 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import {
   Table,
   TableBody,
   TableCell,
@@ -21,8 +12,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import {
   Select,
   SelectContent,
@@ -31,21 +20,16 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
-import { Plus, Trash2, Loader2 } from "lucide-vue-next";
+import { Trash2, Loader2, Pencil } from "lucide-vue-next";
 import { format } from "date-fns";
+import AddTransactionDialog from "@/components/AddTransactionDialog.vue";
+import type { Transaction } from "@/types";
 
 const appStore = useAppStore();
-const showAddModal = ref(false);
 const filterType = ref<"all" | "income" | "expense">("all");
 const filterCategory = ref<string>("all");
-
-const newTransaction = ref({
-  type: "expense" as "income" | "expense",
-  amount: "",
-  description: "",
-  categoryId: "",
-  occurredAt: new Date().toISOString().slice(0, 16),
-});
+const editingTransaction = ref<Transaction>();
+const showEditDialog = ref(false);
 
 const filteredTransactions = computed(() => {
   let result = [...appStore.transactions];
@@ -71,32 +55,15 @@ function formatDate(dateStr: string): string {
   return format(new Date(dateStr), "MMM d, yyyy");
 }
 
-async function handleSubmit() {
-  try {
-    await appStore.createTransaction({
-      type: newTransaction.value.type,
-      amount: Number(newTransaction.value.amount),
-      description: newTransaction.value.description || undefined,
-      categoryId: newTransaction.value.categoryId,
-      occurredAt: new Date(newTransaction.value.occurredAt).toISOString(),
-    });
-    showAddModal.value = false;
-    newTransaction.value = {
-      type: "expense",
-      amount: "",
-      description: "",
-      categoryId: "",
-      occurredAt: new Date().toISOString().slice(0, 16),
-    };
-  } catch (e) {
-    console.error(e);
-  }
-}
-
 async function handleDelete(id: string) {
   if (confirm("Are you sure you want to delete this transaction?")) {
     await appStore.deleteTransaction(id);
   }
+}
+
+function handleEdit(transaction: Transaction) {
+  editingTransaction.value = transaction;
+  showEditDialog.value = true;
 }
 
 onMounted(() => {
@@ -111,77 +78,7 @@ onMounted(() => {
         <h1 class="text-3xl font-bold text-foreground">Transactions</h1>
         <p class="text-muted-foreground mt-1">Track and manage all your financial transactions</p>
       </div>
-      <Dialog v-model:open="showAddModal">
-        <DialogTrigger as-child>
-          <Button>
-            <Plus class="w-4 h-4 mr-2" />
-            Add Transaction
-          </Button>
-        </DialogTrigger>
-        <DialogContent class="sm:max-w-md">
-          <DialogHeader>
-            <DialogTitle>Add Transaction</DialogTitle>
-            <DialogDescription>Create a new income or expense record</DialogDescription>
-          </DialogHeader>
-          <form @submit.prevent="handleSubmit" class="space-y-4">
-            <div class="grid gap-2">
-              <Label for="type">Type</Label>
-              <Select v-model="newTransaction.type">
-                <SelectTrigger id="type">
-                  <SelectValue placeholder="Select type" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="income">Income</SelectItem>
-                  <SelectItem value="expense">Expense</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            <div class="grid gap-2">
-              <Label for="amount">Amount</Label>
-              <Input
-                id="amount"
-                v-model.number="newTransaction.amount"
-                type="number"
-                step="0.01"
-                required
-                placeholder="0.00"
-              />
-            </div>
-            <div class="grid gap-2">
-              <Label for="category">Category</Label>
-              <Select v-model="newTransaction.categoryId" required>
-                <SelectTrigger id="category">
-                  <SelectValue placeholder="Select category" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem v-for="cat in appStore.categories" :key="cat.id" :value="cat.id">
-                    {{ cat.name }}
-                  </SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            <div class="grid gap-2">
-              <Label for="description">Description</Label>
-              <Input
-                id="description"
-                v-model="newTransaction.description"
-                type="text"
-                placeholder="Optional description"
-              />
-            </div>
-            <div class="grid gap-2">
-              <Label for="date">Date</Label>
-              <Input id="date" v-model="newTransaction.occurredAt" type="datetime-local" required />
-            </div>
-            <DialogFooter>
-              <Button type="button" variant="outline" @click="showAddModal = false">
-                Cancel
-              </Button>
-              <Button type="submit"> Add Transaction </Button>
-            </DialogFooter>
-          </form>
-        </DialogContent>
-      </Dialog>
+      <AddTransactionDialog />
     </div>
 
     <Card>
@@ -221,7 +118,7 @@ onMounted(() => {
               <TableHead>Category</TableHead>
               <TableHead>Date</TableHead>
               <TableHead class="text-right">Amount</TableHead>
-              <TableHead class="w-[50px]"></TableHead>
+              <TableHead class="w-[100px] text-right">Actions</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -263,19 +160,34 @@ onMounted(() => {
                 </Badge>
               </TableCell>
               <TableCell>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  @click="handleDelete(transaction.id)"
-                  class="text-muted-foreground hover:text-destructive"
-                >
-                  <Trash2 class="w-4 h-4" />
-                </Button>
+                <div class="flex items-center justify-end gap-1">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    @click="handleEdit(transaction)"
+                    class="text-muted-foreground hover:text-foreground"
+                  >
+                    <Pencil class="w-4 h-4" />
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    @click="handleDelete(transaction.id)"
+                    class="text-muted-foreground hover:text-destructive"
+                  >
+                    <Trash2 class="w-4 h-4" />
+                  </Button>
+                </div>
               </TableCell>
             </TableRow>
           </TableBody>
         </Table>
       </CardContent>
     </Card>
+
+    <AddTransactionDialog
+      v-model:open="showEditDialog"
+      :transaction="editingTransaction"
+    />
   </div>
 </template>
