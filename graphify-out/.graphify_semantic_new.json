@@ -1,0 +1,3744 @@
+{
+  "nodes": [
+    {
+      "id": "index_html_app_mount",
+      "label": "Application Mount Point",
+      "file_type": "code",
+      "source_file": "index.html",
+      "source_location": 10
+    },
+    {
+      "id": "index_html_main_entry",
+      "label": "Main Entry Point Script",
+      "file_type": "code",
+      "source_file": "index.html",
+      "source_location": 11
+    },
+    {
+      "id": "readme_expense_tracker",
+      "label": "Expense Tracker Application",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null
+    },
+    {
+      "id": "readme_vue_framework",
+      "label": "Vue 3 Framework",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 17
+    },
+    {
+      "id": "readme_typescript_language",
+      "label": "TypeScript Language",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 18
+    },
+    {
+      "id": "readme_vite_build_tool",
+      "label": "Vite Build Tool",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 19
+    },
+    {
+      "id": "readme_tailwind_styling",
+      "label": "Tailwind CSS v4 Styling",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 20
+    },
+    {
+      "id": "readme_shadcn_components",
+      "label": "shadcn-vue Component Library",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 20
+    },
+    {
+      "id": "readme_pinia_state",
+      "label": "Pinia State Management",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 21
+    },
+    {
+      "id": "readme_vue_router",
+      "label": "Vue Router",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 22
+    },
+    {
+      "id": "readme_axios_api",
+      "label": "Axios HTTP Client",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 23
+    },
+    {
+      "id": "readme_lucide_icons",
+      "label": "Lucide Vue Icons",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 24
+    },
+    {
+      "id": "readme_expense_api",
+      "label": "Expsense API",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 116
+    },
+    {
+      "id": "readme_vite_api_base_url",
+      "label": "VITE_API_BASE_URL Environment Variable",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 52
+    },
+    {
+      "id": "readme_dokploy_deployment",
+      "label": "Dokploy Deployment Method",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 56
+    },
+    {
+      "id": "readme_docker_deployment",
+      "label": "Docker Deployment Method",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 68
+    },
+    {
+      "id": "readme_project_structure",
+      "label": "Project Directory Structure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 101
+    },
+    {
+      "id": "deployment_dokploy_guide",
+      "label": "Dokploy Deployment Guide",
+      "file_type": "document",
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 14
+    },
+    {
+      "id": "deployment_docker_guide",
+      "label": "Docker Deployment Guide",
+      "file_type": "document",
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 78
+    },
+    {
+      "id": "deployment_troubleshooting",
+      "label": "Deployment Troubleshooting Guide",
+      "file_type": "document",
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 158
+    },
+    {
+      "id": "deployment_netlify_config",
+      "label": "Netlify Platform Configuration",
+      "file_type": "document",
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 232
+    },
+    {
+      "id": "deployment_vercel_config",
+      "label": "Vercel Platform Configuration",
+      "file_type": "document",
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 253
+    },
+    {
+      "id": "deployment_aws_s3_config",
+      "label": "AWS S3 CloudFront Configuration",
+      "file_type": "document",
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 265
+    },
+    {
+      "id": "deployment_health_check",
+      "label": "Docker Health Check Configuration",
+      "file_type": "document",
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 279
+    },
+    {
+      "id": "deployment_security_considerations",
+      "label": "Deployment Security Considerations",
+      "file_type": "document",
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 296
+    },
+    {
+      "id": "docker_compose_service",
+      "label": "Docker Compose Service Configuration",
+      "file_type": "code",
+      "source_file": "docker-compose.yml",
+      "source_location": 2
+    },
+    {
+      "id": "docker_compose_build_config",
+      "label": "Docker Build Configuration",
+      "file_type": "code",
+      "source_file": "docker-compose.yml",
+      "source_location": 3
+    },
+    {
+      "id": "docker_compose_port_mapping",
+      "label": "Port Mapping 3002:80",
+      "file_type": "code",
+      "source_file": "docker-compose.yml",
+      "source_location": 7
+    },
+    {
+      "id": "docker_compose_healthcheck",
+      "label": "Docker Health Check",
+      "file_type": "code",
+      "source_file": "docker-compose.yml",
+      "source_location": 11
+    },
+    {
+      "id": "claude_project_overview",
+      "label": "Vue 3 Expense Tracker UI",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": 5
+    },
+    {
+      "id": "claude_composition_api",
+      "label": "Vue 3 Composition API with script setup",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": 24
+    },
+    {
+      "id": "claude_path_aliases",
+      "label": "Path Alias Configuration @/*",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": 32
+    },
+    {
+      "id": "claude_shadcn_config",
+      "label": "shadcn-vue Component Configuration",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": 39
+    },
+    {
+      "id": "claude_build_process",
+      "label": "TypeScript Build Process with vue-tsc",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": 50
+    },
+    {
+      "id": "claude_openapi_spec",
+      "label": "Expsense API OpenAPI Specification",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": 58
+    },
+    {
+      "id": "claude_cn_utility",
+      "label": "cn() className merging utility",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": 35
+    },
+    {
+      "id": "hero_png_ui_element",
+      "label": "Layered UI Component Design",
+      "file_type": "image",
+      "source_file": "src/assets/hero.png",
+      "source_location": null
+    },
+    {
+      "id": "svg-icons-sprite",
+      "label": "Social Media Icons Sprite Sheet",
+      "file_type": "image",
+      "source_file": "public/icons.svg",
+      "description": "SVG sprite sheet containing social media and branding icons as reusable symbols: Bluesky, Discord, GitHub, X/Twitter, Documentation, and generic Social icons. Styled with #08060d (dark) and #aa3bff (purple) colors.",
+      "symbols": [
+        "bluesky-icon",
+        "discord-icon",
+        "documentation-icon",
+        "github-icon",
+        "social-icon",
+        "x-icon"
+      ]
+    },
+    {
+      "id": "svg-favicon",
+      "label": "Vue.js Favicon",
+      "file_type": "image",
+      "source_file": "public/favicon.svg",
+      "description": "Official Vue.js logo/favicon using signature V-shape design with green (#41B883) and dark blue (#35495E) gradients. The iconic Vue.js branding element used as the site favicon."
+    },
+    {
+      "id": "svg-vue-logo",
+      "label": "Vue.js Logo Asset",
+      "file_type": "image",
+      "source_file": "src/assets/vue.svg",
+      "description": "High-resolution Vue.js logo for use in application UI and documentation. Features the distinctive Vue.js V-mark with layered green gradient design on transparent background."
+    },
+    {
+      "id": "svg-vite-logo",
+      "label": "Vite Logo Asset",
+      "file_type": "image",
+      "source_file": "src/assets/vite.svg",
+      "description": "Official Vite build tool logo featuring purple lightning bolt design (#9135ff, #863bff) with gradient effects and parentheses design elements. Includes dark/light mode adaptive styling."
+    },
+    {
+      "id": "vite.config.ts",
+      "type": "configuration",
+      "labels": [
+        "vite",
+        "build-tool",
+        "configuration",
+        "proxy",
+        "alias"
+      ],
+      "attributes": {
+        "path": "vite.config.ts",
+        "plugins": [
+          "vue",
+          "tailwindcss"
+        ],
+        "alias": "@ -> ./src",
+        "proxy_target": "https://expense-api.ratama.space",
+        "proxy_path": "/api"
+      }
+    },
+    {
+      "id": "src/main.ts",
+      "type": "entry-point",
+      "labels": [
+        "entry-point",
+        "app-initialization",
+        "vue",
+        "pinia",
+        "router"
+      ],
+      "attributes": {
+        "path": "src/main.ts",
+        "framework": "vue",
+        "state_management": "pinia",
+        "routing": "vue-router"
+      }
+    },
+    {
+      "id": "src/App.vue",
+      "type": "root-component",
+      "labels": [
+        "root-component",
+        "layout",
+        "sidebar",
+        "header"
+      ],
+      "attributes": {
+        "path": "src/App.vue",
+        "layout_pattern": "sidebar-layout",
+        "components": [
+          "SidebarProvider",
+          "SidebarInset",
+          "AppSidebar",
+          "SiteHeader"
+        ]
+      }
+    },
+    {
+      "id": "vite-plugin-vue",
+      "type": "dependency",
+      "labels": [
+        "plugin",
+        "vue"
+      ],
+      "attributes": {
+        "package": "@vitejs/plugin-vue",
+        "purpose": "Vue 3 SFC support"
+      }
+    },
+    {
+      "id": "vite-plugin-tailwindcss",
+      "type": "dependency",
+      "labels": [
+        "plugin",
+        "tailwindcss",
+        "styling"
+      ],
+      "attributes": {
+        "package": "@tailwindcss/vite",
+        "purpose": "Tailwind CSS v4 integration"
+      }
+    },
+    {
+      "id": "app-store",
+      "type": "store",
+      "labels": [
+        "pinia",
+        "store",
+        "app-state"
+      ],
+      "attributes": {
+        "location": "@/stores/app",
+        "initialization": "onMounted hook"
+      }
+    },
+    {
+      "id": "vue-router",
+      "type": "dependency",
+      "labels": [
+        "routing",
+        "vue-router"
+      ],
+      "attributes": {
+        "purpose": "Client-side routing"
+      }
+    },
+    {
+      "id": "pinia",
+      "type": "dependency",
+      "labels": [
+        "state-management",
+        "pinia"
+      ],
+      "attributes": {
+        "purpose": "State management"
+      }
+    },
+    {
+      "id": "sidebar-layout",
+      "type": "ui-pattern",
+      "labels": [
+        "layout",
+        "sidebar",
+        "shadcn-vue"
+      ],
+      "attributes": {
+        "components": [
+          "SidebarProvider",
+          "SidebarInset"
+        ],
+        "variant": "new-york"
+      }
+    },
+    {
+      "id": "utils_cn",
+      "type": "function",
+      "name": "cn",
+      "file": "src/lib/utils.ts"
+    },
+    {
+      "id": "api_index",
+      "type": "module",
+      "name": "api",
+      "file": "src/lib/api/index.ts"
+    },
+    {
+      "id": "api_apiClient",
+      "type": "object",
+      "name": "apiClient",
+      "file": "src/lib/api/index.ts"
+    },
+    {
+      "id": "api_categories",
+      "type": "api_namespace",
+      "name": "categories",
+      "file": "src/lib/api/index.ts"
+    },
+    {
+      "id": "api_transactions",
+      "type": "api_namespace",
+      "name": "transactions",
+      "file": "src/lib/api/index.ts"
+    },
+    {
+      "id": "api_budgets",
+      "type": "api_namespace",
+      "name": "budgets",
+      "file": "src/lib/api/index.ts"
+    },
+    {
+      "id": "api_analytics",
+      "type": "api_namespace",
+      "name": "analytics",
+      "file": "src/lib/api/index.ts"
+    },
+    {
+      "id": "component:AppSidebar.vue",
+      "type": "component",
+      "labels": [
+        "navigation",
+        "sidebar",
+        "layout"
+      ],
+      "metadata": {
+        "path": "src/components/AppSidebar.vue",
+        "role": "primary_navigation",
+        "features": [
+          "collapsible",
+          "financial_summary",
+          "route_based_navigation"
+        ],
+        "state_management": "useAppStore",
+        "icon_library": "lucide-vue-next",
+        "responsive": true
+      }
+    },
+    {
+      "id": "component:SiteHeader.vue",
+      "type": "component",
+      "labels": [
+        "layout",
+        "header",
+        "navigation"
+      ],
+      "metadata": {
+        "path": "src/components/SiteHeader.vue",
+        "role": "top_navigation",
+        "features": [
+          "dynamic_title",
+          "conditional_add_button",
+          "sidebar_trigger"
+        ],
+        "integration": [
+          "ThemeToggle",
+          "AddTransactionDialog"
+        ],
+        "responsive": true
+      }
+    },
+    {
+      "id": "component:ThemeToggle.vue",
+      "type": "component",
+      "labels": [
+        "ui",
+        "theme",
+        "accessibility"
+      ],
+      "metadata": {
+        "path": "src/components/ThemeToggle.vue",
+        "role": "theme_switcher",
+        "modes": [
+          "light",
+          "dark",
+          "system"
+        ],
+        "composable": "useTheme",
+        "ui_pattern": "dropdown_menu"
+      }
+    },
+    {
+      "id": "component:NavMain.vue",
+      "type": "component",
+      "labels": [
+        "navigation",
+        "ui"
+      ],
+      "metadata": {
+        "path": "src/components/NavMain.vue",
+        "role": "navigation_menu",
+        "features": [
+          "quick_create",
+          "tooltip"
+        ],
+        "icon_library": "@tabler/icons-vue",
+        "pattern": "sidebar_group"
+      }
+    },
+    {
+      "id": "component:DataTable.vue",
+      "type": "component",
+      "labels": [
+        "data",
+        "display",
+        "table"
+      ],
+      "metadata": {
+        "path": "src/components/DataTable.vue",
+        "role": "transaction_display",
+        "features": [
+          "recent_transactions",
+          "currency_formatting",
+          "delete_action",
+          "empty_state"
+        ],
+        "state_management": "useAppStore",
+        "styling": [
+          "conditional_colors",
+          "badges",
+          "hover_effects"
+        ],
+        "data_limit": 15
+      }
+    },
+    {
+      "id": "component:AddTransactionDialog.vue",
+      "type": "component",
+      "labels": [
+        "form",
+        "dialog",
+        "crud"
+      ],
+      "metadata": {
+        "path": "src/components/AddTransactionDialog.vue",
+        "role": "transaction_form",
+        "features": [
+          "create_edit_mode",
+          "form_validation",
+          "model_binding"
+        ],
+        "state_management": "useAppStore",
+        "ui_pattern": "dialog",
+        "form_fields": [
+          "type",
+          "amount",
+          "category",
+          "description",
+          "date"
+        ]
+      }
+    },
+    {
+      "id": "pattern:shadcn-sidebar",
+      "type": "pattern",
+      "labels": [
+        "ui_pattern",
+        "layout"
+      ],
+      "metadata": {
+        "components": [
+          "Sidebar",
+          "SidebarContent",
+          "SidebarHeader",
+          "SidebarFooter",
+          "SidebarMenu"
+        ],
+        "features": [
+          "collapsible",
+          "responsive",
+          "icon_only_mode"
+        ],
+        "library": "shadcn-vue"
+      }
+    },
+    {
+      "id": "pattern:currency-formatting",
+      "type": "pattern",
+      "labels": [
+        "utility",
+        "formatting"
+      ],
+      "metadata": {
+        "locale": "id-ID",
+        "currency": "IDR",
+        "implementation": "Intl.NumberFormat",
+        "components": [
+          "AppSidebar",
+          "DataTable"
+        ]
+      }
+    },
+    {
+      "id": "pattern:conditional-rendering",
+      "type": "pattern",
+      "labels": [
+        "vue_pattern"
+      ],
+      "metadata": {
+        "usage": [
+          "route_based_visibility",
+          "state_based_display"
+        ],
+        "examples": [
+          "showAddButton in SiteHeader",
+          "loading states in DataTable"
+        ]
+      }
+    },
+    {
+      "id": "composable:useTheme",
+      "type": "composable",
+      "labels": [
+        "theme",
+        "state"
+      ],
+      "metadata": {
+        "path": "src/composables/useTheme",
+        "features": [
+          "theme_switching",
+          "system_preference_detection"
+        ],
+        "used_by": [
+          "ThemeToggle"
+        ]
+      }
+    },
+    {
+      "id": "store:useAppStore",
+      "type": "store",
+      "labels": [
+        "state",
+        "data"
+      ],
+      "metadata": {
+        "path": "src/stores/app",
+        "data_accessed": [
+          "transactions",
+          "categories",
+          "summary",
+          "netBalance"
+        ],
+        "actions": [
+          "createTransaction",
+          "updateTransaction",
+          "deleteTransaction"
+        ],
+        "used_by": [
+          "AppSidebar",
+          "DataTable",
+          "AddTransactionDialog"
+        ]
+      }
+    },
+    {
+      "id": "integration:lucide-vue-next",
+      "type": "integration",
+      "labels": [
+        "icons",
+        "ui_library"
+      ],
+      "metadata": {
+        "icons": [
+          "LayoutDashboard",
+          "ListPlus",
+          "Tag",
+          "Wallet",
+          "Loader2",
+          "Moon",
+          "Sun",
+          "Plus",
+          "Trash2",
+          "Eye"
+        ],
+        "components": [
+          "AppSidebar",
+          "SiteHeader",
+          "DataTable",
+          "AddTransactionDialog"
+        ]
+      }
+    },
+    {
+      "id": "integration:tabler-icons-vue",
+      "type": "integration",
+      "labels": [
+        "icons",
+        "ui_library"
+      ],
+      "metadata": {
+        "icons": [
+          "IconCirclePlusFilled",
+          "IconMail"
+        ],
+        "components": [
+          "NavMain"
+        ]
+      }
+    },
+    {
+      "id": "styling:css-variables",
+      "type": "styling",
+      "labels": [
+        "theming",
+        "css"
+      ],
+      "metadata": {
+        "variables": [
+          "--primary",
+          "--chart-1",
+          "--chart-3",
+          "--border",
+          "--card",
+          "--muted",
+          "--destructive"
+        ],
+        "usage": [
+          "conditional_coloring",
+          "theme_aware_components"
+        ],
+        "components": [
+          "DataTable",
+          "AppSidebar"
+        ]
+      }
+    },
+    {
+      "id": "navigation:structure",
+      "type": "navigation",
+      "labels": [
+        "routing",
+        "structure"
+      ],
+      "metadata": {
+        "routes": [
+          "/",
+          "/transactions",
+          "/categories",
+          "/budgets"
+        ],
+        "mapping": {
+          "/": "Dashboard",
+          "/transactions": "Transactions",
+          "/categories": "Categories",
+          "/budgets": "Budgets"
+        },
+        "components": [
+          "AppSidebar",
+          "SiteHeader"
+        ]
+      }
+    },
+    {
+      "id": "form:transaction-schema",
+      "type": "schema",
+      "labels": [
+        "data",
+        "validation"
+      ],
+      "metadata": {
+        "fields": [
+          "type",
+          "amount",
+          "description",
+          "categoryId",
+          "occurredAt"
+        ],
+        "types": {
+          "type": "'income' | 'expense'",
+          "amount": "number",
+          "description": "string | undefined",
+          "categoryId": "string",
+          "occurredAt": "ISO datetime"
+        },
+        "component": "AddTransactionDialog"
+      }
+    },
+    {
+      "id": "NavSecondary",
+      "type": "component",
+      "properties": {
+        "file": "src/components/NavSecondary.vue",
+        "role": "navigation",
+        "pattern": "secondary_nav",
+        "props": [
+          "items: NavItem[]"
+        ],
+        "exports": [
+          "NavItem interface"
+        ]
+      }
+    },
+    {
+      "id": "NavUser",
+      "type": "component",
+      "properties": {
+        "file": "src/components/NavUser.vue",
+        "role": "navigation",
+        "pattern": "user_menu",
+        "props": [
+          "user: User"
+        ],
+        "exports": [
+          "User interface"
+        ],
+        "features": [
+          "dropdown_menu",
+          "avatar_display",
+          "responsive_layout"
+        ]
+      }
+    },
+    {
+      "id": "NavDocuments",
+      "type": "component",
+      "properties": {
+        "file": "src/components/NavDocuments.vue",
+        "role": "navigation",
+        "pattern": "document_list",
+        "props": [
+          "items: Document[]"
+        ],
+        "exports": [
+          "Document interface"
+        ],
+        "features": [
+          "dropdown_menu",
+          "hover_actions",
+          "collapsible_sidebar"
+        ]
+      }
+    },
+    {
+      "id": "SectionCards",
+      "type": "component",
+      "properties": {
+        "file": "src/components/SectionCards.vue",
+        "role": "data_visualization",
+        "pattern": "summary_cards",
+        "features": [
+          "computed_properties",
+          "currency_formatting",
+          "conditional_styling"
+        ],
+        "data_source": "appStore",
+        "metrics": [
+          "totalIncome",
+          "totalExpense",
+          "netBalance",
+          "categoriesCount",
+          "budgetsCount",
+          "overBudgetCount"
+        ]
+      }
+    },
+    {
+      "id": "ChartAreaInteractive",
+      "type": "component",
+      "properties": {
+        "file": "src/components/ChartAreaInteractive.vue",
+        "role": "data_visualization",
+        "pattern": "area_chart",
+        "library": "@unovis/vue",
+        "features": [
+          "time_filtering",
+          "interactive_tooltip",
+          "gradient_fills",
+          "responsive_design"
+        ],
+        "chart_types": [
+          "VisArea",
+          "VisLine",
+          "VisAxis"
+        ],
+        "time_ranges": [
+          "7d",
+          "30d",
+          "90d"
+        ]
+      }
+    },
+    {
+      "id": "HelloWorld",
+      "type": "component",
+      "properties": {
+        "file": "src/components/HelloWorld.vue",
+        "role": "demo",
+        "pattern": "starter_template",
+        "features": [
+          "counter_state",
+          "external_links",
+          "svg_icons"
+        ]
+      }
+    },
+    {
+      "id": "NavItem",
+      "type": "interface",
+      "properties": {
+        "defined_in": "NavSecondary.vue",
+        "fields": [
+          "title: string",
+          "url: string",
+          "icon?: Component"
+        ]
+      }
+    },
+    {
+      "id": "User",
+      "type": "interface",
+      "properties": {
+        "defined_in": "NavUser.vue",
+        "fields": [
+          "name: string",
+          "email: string",
+          "avatar: string"
+        ]
+      }
+    },
+    {
+      "id": "Document",
+      "type": "interface",
+      "properties": {
+        "defined_in": "NavDocuments.vue",
+        "fields": [
+          "name: string",
+          "url: string",
+          "icon?: Component"
+        ]
+      }
+    },
+    {
+      "id": "shadcn_sidebar",
+      "type": "component_library",
+      "properties": {
+        "components": [
+          "SidebarGroup",
+          "SidebarGroupContent",
+          "SidebarMenu",
+          "SidebarMenuButton",
+          "SidebarMenuItem",
+          "SidebarMenuAction",
+          "SidebarGroupLabel",
+          "useSidebar"
+        ]
+      }
+    },
+    {
+      "id": "shadcn_dropdown",
+      "type": "component_library",
+      "properties": {
+        "components": [
+          "DropdownMenu",
+          "DropdownMenuContent",
+          "DropdownMenuItem",
+          "DropdownMenuSeparator",
+          "DropdownMenuTrigger",
+          "DropdownMenuGroup",
+          "DropdownMenuLabel"
+        ]
+      }
+    },
+    {
+      "id": "shadcn_card",
+      "type": "component_library",
+      "properties": {
+        "components": [
+          "Card",
+          "CardHeader",
+          "CardTitle",
+          "CardDescription",
+          "CardContent"
+        ]
+      }
+    },
+    {
+      "id": "shadcn_chart",
+      "type": "component_library",
+      "properties": {
+        "components": [
+          "ChartContainer",
+          "ChartCrosshair",
+          "ChartLegendContent",
+          "ChartTooltip",
+          "ChartTooltipContent",
+          "componentToString"
+        ],
+        "types": [
+          "ChartConfig"
+        ]
+      }
+    },
+    {
+      "id": "tabler_icons",
+      "type": "icon_library",
+      "properties": {
+        "package": "@tabler/icons-vue",
+        "icons": [
+          "IconCreditCard",
+          "IconDotsVertical",
+          "IconLogout",
+          "IconNotification",
+          "IconUserCircle",
+          "IconDots",
+          "IconFolder",
+          "IconShare3",
+          "IconTrash"
+        ]
+      }
+    },
+    {
+      "id": "lucide_icons",
+      "type": "icon_library",
+      "properties": {
+        "package": "lucide-vue-next",
+        "icons": [
+          "TrendingUp",
+          "TrendingDown",
+          "Wallet"
+        ]
+      }
+    },
+    {
+      "id": "unovis",
+      "type": "visualization_library",
+      "properties": {
+        "package": "@unovis/vue",
+        "components": [
+          "VisArea",
+          "VisAxis",
+          "VisLine",
+          "VisXYContainer"
+        ]
+      }
+    },
+    {
+      "id": "appStore",
+      "type": "state_management",
+      "properties": {
+        "store": "Pinia",
+        "location": "@/stores/app",
+        "state": [
+          "categories",
+          "budgets",
+          "totalIncome",
+          "totalExpense",
+          "netBalance"
+        ]
+      }
+    },
+    {
+      "id": "vue-component:Tabs",
+      "type": "component",
+      "labels": [
+        "Tabs",
+        "root-component",
+        "reka-ui"
+      ],
+      "attributes": {
+        "file": "src/components/ui/tabs/Tabs.vue",
+        "script_setup": true,
+        "lang": "ts",
+        "base_class": "TabsRoot",
+        "base_library": "reka-ui",
+        "default_classes": "flex flex-col gap-2",
+        "slot_props": true,
+        "data_slot": "tabs"
+      }
+    },
+    {
+      "id": "vue-component:TabsList",
+      "type": "component",
+      "labels": [
+        "TabsList",
+        "tab-navigation",
+        "reka-ui"
+      ],
+      "attributes": {
+        "file": "src/components/ui/tabs/TabsList.vue",
+        "script_setup": true,
+        "lang": "ts",
+        "base_class": "TabsList",
+        "base_library": "reka-ui",
+        "default_classes": "bg-muted text-muted-foreground inline-flex h-9 w-fit items-center justify-center rounded-lg p-[3px]",
+        "data_slot": "tabs-list"
+      }
+    },
+    {
+      "id": "vue-component:TabsTrigger",
+      "type": "component",
+      "labels": [
+        "TabsTrigger",
+        "tab-button",
+        "reka-ui"
+      ],
+      "attributes": {
+        "file": "src/components/ui/tabs/TabsTrigger.vue",
+        "script_setup": true,
+        "lang": "ts",
+        "base_class": "TabsTrigger",
+        "base_library": "reka-ui",
+        "uses_forward_props": true,
+        "default_classes": "data-[state=active]:bg-background dark:data-[state=active]:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:outline-ring dark:data-[state=active]:border-input dark:data-[state=active]:bg-input/30 text-foreground dark:text-muted-foreground inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded-md border border-transparent px-2 py-1 text-sm font-medium whitespace-nowrap transition-[color,box-shadow] focus-visible:ring-[3px] focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-sm [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "data_slot": "tabs-trigger"
+      }
+    },
+    {
+      "id": "vue-component:TabsContent",
+      "type": "component",
+      "labels": [
+        "TabsContent",
+        "tab-panel",
+        "reka-ui"
+      ],
+      "attributes": {
+        "file": "src/components/ui/tabs/TabsContent.vue",
+        "script_setup": true,
+        "lang": "ts",
+        "base_class": "TabsContent",
+        "base_library": "reka-ui",
+        "default_classes": "flex-1 outline-none",
+        "data_slot": "tabs-content"
+      }
+    },
+    {
+      "id": "export:tabs-index",
+      "type": "module",
+      "labels": [
+        "barrel-export",
+        "component-index"
+      ],
+      "attributes": {
+        "file": "src/components/ui/tabs/index.ts",
+        "exports": [
+          "Tabs",
+          "TabsContent",
+          "TabsList",
+          "TabsTrigger"
+        ]
+      }
+    },
+    {
+      "id": "utility:cn",
+      "type": "utility",
+      "labels": [
+        "className-utility"
+      ],
+      "attributes": {
+        "import_path": "@/lib/utils",
+        "used_by": [
+          "Tabs",
+          "TabsList",
+          "TabsTrigger",
+          "TabsContent"
+        ]
+      }
+    },
+    {
+      "id": "utility:reactiveOmit",
+      "type": "utility",
+      "labels": [
+        "vue-use",
+        "props-manipulation"
+      ],
+      "attributes": {
+        "import_path": "@vueuse/core",
+        "used_by": [
+          "Tabs",
+          "TabsList",
+          "TabsTrigger",
+          "TabsContent"
+        ],
+        "purpose": "omit class prop from delegated props"
+      }
+    },
+    {
+      "id": "utility:useForwardPropsEmits",
+      "type": "utility",
+      "labels": [
+        "reka-ui",
+        "props-forwarding"
+      ],
+      "attributes": {
+        "import_path": "reka-ui",
+        "used_by": [
+          "Tabs"
+        ],
+        "purpose": "forward props and emits to root component"
+      }
+    },
+    {
+      "id": "utility:useForwardProps",
+      "type": "utility",
+      "labels": [
+        "reka-ui",
+        "props-forwarding"
+      ],
+      "attributes": {
+        "import_path": "reka-ui",
+        "used_by": [
+          "TabsTrigger"
+        ],
+        "purpose": "forward props to trigger component"
+      }
+    },
+    {
+      "id": "dialog:DialogRoot",
+      "type": "component",
+      "labels": [
+        "root",
+        "container",
+        "state-manager"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/Dialog.vue",
+        "library": "reka-ui",
+        "exports": "DialogRoot wrapper",
+        "pattern": "forwardPropsEmits"
+      }
+    },
+    {
+      "id": "dialog:DialogTrigger",
+      "type": "component",
+      "labels": [
+        "trigger",
+        "activator"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/DialogTrigger.vue",
+        "library": "reka-ui",
+        "exports": "DialogTrigger wrapper",
+        "slots": [
+          "default"
+        ]
+      }
+    },
+    {
+      "id": "dialog:DialogContent",
+      "type": "component",
+      "labels": [
+        "content",
+        "modal",
+        "overlay"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/DialogContent.vue",
+        "features": [
+          "portal",
+          "overlay",
+          "close-button"
+        ],
+        "pattern": "reactiveOmit class forwarding",
+        "animations": [
+          "fade-in",
+          "zoom-in",
+          "fade-out",
+          "zoom-out"
+        ],
+        "positioning": "fixed center with translate"
+      }
+    },
+    {
+      "id": "dialog:DialogScrollContent",
+      "type": "component",
+      "labels": [
+        "content",
+        "scrollable",
+        "overlay"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/DialogScrollContent.vue",
+        "features": [
+          "scrollable-overflow",
+          "portal",
+          "overlay"
+        ],
+        "difference_from_DialogContent": "overflow-y-auto on overlay"
+      }
+    },
+    {
+      "id": "dialog:DialogHeader",
+      "type": "component",
+      "labels": [
+        "header",
+        "layout"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/DialogHeader.vue",
+        "layout": "flex-col gap-2",
+        "responsive": "text-center sm:text-left"
+      }
+    },
+    {
+      "id": "dialog:DialogFooter",
+      "type": "component",
+      "labels": [
+        "footer",
+        "layout"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/DialogFooter.vue",
+        "layout": "flex-col-reverse sm:flex-row sm:justify-end",
+        "optional_feature": "showCloseButton with DialogClose"
+      }
+    },
+    {
+      "id": "dialog:DialogTitle",
+      "type": "component",
+      "labels": [
+        "title",
+        "typography"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/DialogTitle.vue",
+        "styling": "text-lg font-semibold leading-none",
+        "pattern": "reactiveOmit class forwarding"
+      }
+    },
+    {
+      "id": "dialog:DialogDescription",
+      "type": "component",
+      "labels": [
+        "description",
+        "typography"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/DialogDescription.vue",
+        "styling": "text-sm text-muted-foreground",
+        "pattern": "reactiveOmit class forwarding"
+      }
+    },
+    {
+      "id": "dialog:DialogClose",
+      "type": "component",
+      "labels": [
+        "close",
+        "action"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/DialogClose.vue",
+        "exports": "DialogClose wrapper"
+      }
+    },
+    {
+      "id": "dialog:DialogOverlay",
+      "type": "component",
+      "labels": [
+        "overlay",
+        "backdrop"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/DialogOverlay.vue",
+        "styling": "fixed inset-0 bg-black/80",
+        "animations": [
+          "fade-in",
+          "fade-out"
+        ],
+        "pattern": "reactiveOmit class forwarding"
+      }
+    },
+    {
+      "id": "dialog:barrel_export",
+      "type": "module",
+      "labels": [
+        "barrel",
+        "index"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/index.ts",
+        "exports": [
+          "Dialog",
+          "DialogClose",
+          "DialogContent",
+          "DialogDescription",
+          "DialogFooter",
+          "DialogHeader",
+          "DialogOverlay",
+          "DialogScrollContent",
+          "DialogTitle",
+          "DialogTrigger"
+        ],
+        "pattern": "centralized exports"
+      }
+    },
+    {
+      "id": "dialog:composition_pattern",
+      "type": "pattern",
+      "labels": [
+        "composition",
+        "compound-component"
+      ],
+      "properties": {
+        "description": "Dialog system uses compound component pattern",
+        "root_component": "Dialog",
+        "leaf_components": [
+          "DialogTrigger",
+          "DialogContent",
+          "DialogHeader",
+          "DialogFooter",
+          "DialogTitle",
+          "DialogDescription"
+        ],
+        "data_slots": [
+          "data-slot=\"dialog\"",
+          "data-slot=\"dialog-trigger\"",
+          "data-slot=\"dialog-content\""
+        ]
+      }
+    },
+    {
+      "id": "dialog:utility_dependencies",
+      "type": "dependency",
+      "labels": [
+        "utilities"
+      ],
+      "properties": {
+        "cn": "@/lib/utils className merger",
+        "reactiveOmit": "@vueuse/core for props filtering",
+        "useForwardPropsEmits": "reka-ui prop forwarding",
+        "useForwardProps": "reka-ui prop forwarding"
+      }
+    },
+    {
+      "id": "dialog:reka_ui_mapping",
+      "type": "mapping",
+      "labels": [
+        "library-mapping"
+      ],
+      "properties": {
+        "DialogRoot": "reka-ui DialogRoot",
+        "DialogTrigger": "reka-ui DialogTrigger",
+        "DialogContent": "reka-ui DialogContent",
+        "DialogPortal": "reka-ui DialogPortal",
+        "DialogClose": "reka-ui DialogClose",
+        "DialogTitle": "reka-ui DialogTitle",
+        "DialogDescription": "reka-ui DialogDescription",
+        "DialogOverlay": "reka-ui DialogOverlay"
+      }
+    },
+    {
+      "id": "dialog:class_forwarding_pattern",
+      "type": "pattern",
+      "labels": [
+        "pattern",
+        "styling"
+      ],
+      "properties": {
+        "description": "Consistent class forwarding using reactiveOmit",
+        "components_using": [
+          "DialogContent",
+          "DialogScrollContent",
+          "DialogTitle",
+          "DialogDescription",
+          "DialogOverlay"
+        ],
+        "pattern": "reactiveOmit(props, 'class') then forward + cn()"
+      }
+    },
+    {
+      "id": "dialog:icon_integration",
+      "type": "dependency",
+      "labels": [
+        "icons"
+      ],
+      "properties": {
+        "library": "lucide-vue-next",
+        "used_icons": [
+          "X for close button"
+        ],
+        "component_location": "DialogContent, DialogScrollContent"
+      }
+    },
+    {
+      "id": "dialog:accessibility_features",
+      "type": "feature",
+      "labels": [
+        "a11y",
+        "accessibility"
+      ],
+      "properties": {
+        "screen_reader_support": "sr-only Close text",
+        "focus_management": "ring-offset-background focus:ring-ring",
+        "data_attributes": [
+          "data-state=open",
+          "data-state=closed"
+        ]
+      }
+    },
+    {
+      "id": "dialog:animation_system",
+      "type": "feature",
+      "labels": [
+        "animation",
+        "transitions"
+      ],
+      "properties": {
+        "framework": "data-state driven CSS animations",
+        "animations": {
+          "fade_in": "data-[state=open]:fade-in-0",
+          "fade_out": "data-[state=closed]:fade-out-0",
+          "zoom_in": "data-[state=open]:zoom-in-95",
+          "zoom_out": "data-[state=closed]:zoom-out-95"
+        },
+        "duration": "duration-200"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "index_html_main_entry",
+      "target": "index_html_app_mount",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "source_location": 11
+    },
+    {
+      "source": "readme_expense_tracker",
+      "target": "readme_vue_framework",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 3
+    },
+    {
+      "source": "readme_expense_tracker",
+      "target": "readme_typescript_language",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 3
+    },
+    {
+      "source": "readme_expense_tracker",
+      "target": "readme_vite_build_tool",
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 3
+    },
+    {
+      "source": "readme_expense_tracker",
+      "target": "readme_tailwind_styling",
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 3
+    },
+    {
+      "source": "readme_expense_tracker",
+      "target": "readme_shadcn_components",
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 3
+    },
+    {
+      "source": "readme_expense_tracker",
+      "target": "readme_pinia_state",
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 21
+    },
+    {
+      "source": "readme_expense_tracker",
+      "target": "readme_vue_router",
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 22
+    },
+    {
+      "source": "readme_expense_tracker",
+      "target": "readme_axios_api",
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 23
+    },
+    {
+      "source": "readme_expense_tracker",
+      "target": "readme_lucide_icons",
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 24
+    },
+    {
+      "source": "readme_expense_tracker",
+      "target": "readme_expense_api",
+      "relation": "connects_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 116
+    },
+    {
+      "source": "readme_expense_tracker",
+      "target": "readme_vite_api_base_url",
+      "relation": "configures",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 52
+    },
+    {
+      "source": "readme_expense_tracker",
+      "target": "readme_dokploy_deployment",
+      "relation": "deploys_via",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 56
+    },
+    {
+      "source": "readme_expense_tracker",
+      "target": "readme_docker_deployment",
+      "relation": "deploys_via",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 68
+    },
+    {
+      "source": "readme_expense_tracker",
+      "target": "readme_project_structure",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 101
+    },
+    {
+      "source": "deployment_dokploy_guide",
+      "target": "readme_dokploy_deployment",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 14
+    },
+    {
+      "source": "deployment_docker_guide",
+      "target": "readme_docker_deployment",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 78
+    },
+    {
+      "source": "deployment_troubleshooting",
+      "target": "readme_expense_tracker",
+      "relation": "troubleshoots",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 158
+    },
+    {
+      "source": "deployment_netlify_config",
+      "target": "readme_expense_tracker",
+      "relation": "deploys",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 232
+    },
+    {
+      "source": "deployment_vercel_config",
+      "target": "readme_expense_tracker",
+      "relation": "deploys",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 253
+    },
+    {
+      "source": "deployment_aws_s3_config",
+      "target": "readme_expense_tracker",
+      "relation": "deploys",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 265
+    },
+    {
+      "source": "deployment_health_check",
+      "target": "docker_compose_healthcheck",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 279
+    },
+    {
+      "source": "deployment_security_considerations",
+      "target": "readme_expense_tracker",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 296
+    },
+    {
+      "source": "docker_compose_service",
+      "target": "docker_compose_build_config",
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docker-compose.yml",
+      "source_location": 2
+    },
+    {
+      "source": "docker_compose_service",
+      "target": "docker_compose_port_mapping",
+      "relation": "configures",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docker-compose.yml",
+      "source_location": 7
+    },
+    {
+      "source": "docker_compose_service",
+      "target": "docker_compose_healthcheck",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docker-compose.yml",
+      "source_location": 11
+    },
+    {
+      "source": "claude_project_overview",
+      "target": "readme_expense_tracker",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": 5
+    },
+    {
+      "source": "claude_project_overview",
+      "target": "claude_composition_api",
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": 24
+    },
+    {
+      "source": "claude_project_overview",
+      "target": "claude_path_aliases",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": 32
+    },
+    {
+      "source": "claude_project_overview",
+      "target": "claude_shadcn_config",
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": 39
+    },
+    {
+      "source": "claude_project_overview",
+      "target": "claude_build_process",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": 50
+    },
+    {
+      "source": "claude_project_overview",
+      "target": "claude_openapi_spec",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": 58
+    },
+    {
+      "source": "claude_project_overview",
+      "target": "claude_cn_utility",
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": 35
+    },
+    {
+      "source": "hero_png_ui_element",
+      "target": "readme_expense_tracker",
+      "relation": "visually_represents",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/assets/hero.png",
+      "source_location": null
+    },
+    {
+      "from": "svg-icons-sprite",
+      "to": "svg-favicon",
+      "label": "contains_vue_branding",
+      "description": "The favicon.vue.svg is the Vue.js brand logo, while icons.svg contains Vue.js as one of the framework branding elements"
+    },
+    {
+      "from": "svg-vue-logo",
+      "to": "svg-favicon",
+      "label": "duplicate_brand_asset",
+      "description": "Both files contain the Vue.js logo - one as favicon, one as UI asset"
+    },
+    {
+      "from": "svg-vite-logo",
+      "to": "svg-vue-logo",
+      "label": "build_tool_branding",
+      "description": "Vite and Vue.js logos represent the build tool/framework pairing used in this project"
+    },
+    {
+      "from": "vite.config.ts",
+      "to": "vite-plugin-vue",
+      "relation": "configures",
+      "attributes": {
+        "phase": "build"
+      }
+    },
+    {
+      "from": "vite.config.ts",
+      "to": "vite-plugin-tailwindcss",
+      "relation": "configures",
+      "attributes": {
+        "phase": "build"
+      }
+    },
+    {
+      "from": "src/main.ts",
+      "to": "src/App.vue",
+      "relation": "mounts",
+      "attributes": {
+        "selector": "#app"
+      }
+    },
+    {
+      "from": "src/main.ts",
+      "to": "vue-router",
+      "relation": "registers",
+      "attributes": {
+        "method": "app.use"
+      }
+    },
+    {
+      "from": "src/main.ts",
+      "to": "pinia",
+      "relation": "registers",
+      "attributes": {
+        "method": "app.use"
+      }
+    },
+    {
+      "from": "src/App.vue",
+      "to": "app-store",
+      "relation": "uses",
+      "attributes": {
+        "purpose": "app initialization"
+      }
+    },
+    {
+      "from": "src/App.vue",
+      "to": "sidebar-layout",
+      "relation": "implements",
+      "attributes": {}
+    },
+    {
+      "source": "utils_cn",
+      "target": "clsx",
+      "type": "uses",
+      "label": "merges class names",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "utils_cn",
+      "target": "twMerge",
+      "type": "uses",
+      "label": "merges tailwind classes",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "api_index",
+      "target": "axios",
+      "type": "uses",
+      "label": "creates http client",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "api_apiClient",
+      "target": "api_categories",
+      "type": "contains",
+      "label": "category endpoints",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "api_apiClient",
+      "target": "api_transactions",
+      "type": "contains",
+      "label": "transaction endpoints",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "api_apiClient",
+      "target": "api_budgets",
+      "type": "contains",
+      "label": "budget endpoints",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "api_apiClient",
+      "target": "api_analytics",
+      "type": "contains",
+      "label": "analytics endpoints",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "api_index",
+      "target": "Category",
+      "type": "uses",
+      "label": "type for category operations",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "api_index",
+      "target": "Transaction",
+      "type": "uses",
+      "label": "type for transaction operations",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "api_index",
+      "target": "Budget",
+      "type": "uses",
+      "label": "type for budget operations",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "api_index",
+      "target": "FinancialSummary",
+      "type": "uses",
+      "label": "type for analytics summary",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "api_index",
+      "target": "CategoryBreakdown",
+      "type": "uses",
+      "label": "type for category breakdown",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "api_index",
+      "target": "ApiError",
+      "type": "uses",
+      "label": "error response type",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "api_categories",
+      "target": "Category",
+      "type": "returns",
+      "label": "category list endpoint",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "api_transactions",
+      "target": "Transaction",
+      "type": "returns",
+      "label": "transaction list endpoint",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "api_budgets",
+      "target": "Budget",
+      "type": "returns",
+      "label": "budget list endpoint",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "api_analytics",
+      "target": "FinancialSummary",
+      "type": "returns",
+      "label": "summary endpoint",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "api_analytics",
+      "target": "CategoryBreakdown",
+      "type": "returns",
+      "label": "by-category endpoint",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "dashboardview",
+      "target": "appstore",
+      "relation": "FETCHES_DATA_FROM",
+      "kind": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "dashboardview",
+      "target": "sectioncards",
+      "relation": "RENDERS",
+      "kind": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "dashboardview",
+      "target": "datatable",
+      "relation": "RENDERS",
+      "kind": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "transactionsview",
+      "target": "appstore",
+      "relation": "FETCHES_DATA_FROM",
+      "kind": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "transactionsview",
+      "target": "addtransactiondialog",
+      "relation": "RENDERS",
+      "kind": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "transactionsview",
+      "target": "transaction",
+      "relation": "USES_TYPE",
+      "kind": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "transactionsview",
+      "target": "transactionsview",
+      "relation": "IMPLEMENTS_FILTERING",
+      "kind": "INFERRED",
+      "confidence_score": 0.95
+    },
+    {
+      "source": "transactionsview",
+      "target": "transactionsview",
+      "relation": "IMPLEMENTS_CURRENCY_FORMATTING",
+      "kind": "INFERRED",
+      "confidence_score": 0.95
+    },
+    {
+      "source": "transactionsview",
+      "target": "transactionsview",
+      "relation": "IMPLEMENTS_DATE_FORMATTING",
+      "kind": "INFERRED",
+      "confidence_score": 0.95
+    },
+    {
+      "source": "budgetsview",
+      "target": "appstore",
+      "relation": "FETCHES_DATA_FROM",
+      "kind": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "budgetsview",
+      "target": "budgetsview",
+      "relation": "IMPLEMENTS_CURRENCY_FORMATTING",
+      "kind": "INFERRED",
+      "confidence_score": 0.95
+    },
+    {
+      "source": "budgetsview",
+      "target": "budgetsview",
+      "relation": "IMPLEMENTS_BUDGET_STATUS_LOGIC",
+      "kind": "INFERRED",
+      "confidence_score": 0.95
+    },
+    {
+      "source": "budgetsview",
+      "target": "budgetsview",
+      "relation": "IMPLEMENTS_INLINE_EDITING",
+      "kind": "INFERRED",
+      "confidence_score": 0.95
+    },
+    {
+      "source": "budgetsview",
+      "target": "appstore",
+      "relation": "MUTATES_STATE",
+      "kind": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "categoriesview",
+      "target": "appstore",
+      "relation": "FETCHES_DATA_FROM",
+      "kind": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "categoriesview",
+      "target": "categoriesview",
+      "relation": "IMPLEMENTS_COLOR_PICKER",
+      "kind": "INFERRED",
+      "confidence_score": 0.95
+    },
+    {
+      "source": "categoriesview",
+      "target": "categoriesview",
+      "relation": "IMPLEMENTS_INLINE_EDITING",
+      "kind": "INFERRED",
+      "confidence_score": 0.95
+    },
+    {
+      "source": "categoriesview",
+      "target": "appstore",
+      "relation": "MUTATES_STATE",
+      "kind": "EXTRACTED",
+      "confidence_score": 1.0
+    },
+    {
+      "source": "transactionsview",
+      "target": "categoriesview",
+      "relation": "SHARES_STORE_DEPENDENCY",
+      "kind": "INFERRED",
+      "confidence_score": 0.85
+    },
+    {
+      "source": "budgetsview",
+      "target": "categoriesview",
+      "relation": "SHARES_STORE_DEPENDENCY",
+      "kind": "INFERRED",
+      "confidence_score": 0.85
+    },
+    {
+      "source": "transactionsview",
+      "target": "budgetsview",
+      "relation": "SHARES_STORE_DEPENDENCY",
+      "kind": "INFERRED",
+      "confidence_score": 0.85
+    },
+    {
+      "source": "transactionsview",
+      "target": "transactionsview",
+      "relation": "IMPLEMENTS_DELETE_CONFIRMATION",
+      "kind": "INFERRED",
+      "confidence_score": 0.95
+    },
+    {
+      "source": "budgetsview",
+      "target": "budgetsview",
+      "relation": "IMPLEMENTS_DELETE_CONFIRMATION",
+      "kind": "INFERRED",
+      "confidence_score": 0.95
+    },
+    {
+      "source": "categoriesview",
+      "target": "categoriesview",
+      "relation": "IMPLEMENTS_DELETE_CONFIRMATION",
+      "kind": "INFERRED",
+      "confidence_score": 0.95
+    },
+    {
+      "source": "transactionsview",
+      "target": "transactionsview",
+      "relation": "IMPLEMENTS_EDIT_DIALOG",
+      "kind": "INFERRED",
+      "confidence_score": 0.95
+    },
+    {
+      "source": "budgetsview",
+      "target": "budgetsview",
+      "relation": "USES_DIALOG_FOR_CREATE",
+      "kind": "INFERRED",
+      "confidence_score": 0.95
+    },
+    {
+      "source": "categoriesview",
+      "target": "categoriesview",
+      "relation": "USES_DIALOG_FOR_CREATE",
+      "kind": "INFERRED",
+      "confidence_score": 0.95
+    },
+    {
+      "source": "transactionsview",
+      "target": "appstore",
+      "relation": "FILTERS_BY_CATEGORY",
+      "kind": "INFERRED",
+      "confidence_score": 0.95
+    },
+    {
+      "source": "transactionsview",
+      "target": "appstore",
+      "relation": "FILTERS_BY_TYPE",
+      "kind": "INFERRED",
+      "confidence_score": 0.95
+    },
+    {
+      "source": "budgetsview",
+      "target": "appstore",
+      "relation": "REQUIRES_CATEGORIES_FOR_BUDGETS",
+      "kind": "INFERRED",
+      "confidence_score": 0.95
+    },
+    {
+      "from": "component:AppSidebar.vue",
+      "to": "store:useAppStore",
+      "type": "USES",
+      "metadata": {
+        "purpose": "data_binding",
+        "properties": [
+          "transactions",
+          "summary",
+          "netBalance",
+          "totalIncome",
+          "totalExpense"
+        ]
+      }
+    },
+    {
+      "from": "component:SiteHeader.vue",
+      "to": "component:ThemeToggle.vue",
+      "type": "COMPOSES",
+      "metadata": {
+        "placement": "header_right"
+      }
+    },
+    {
+      "from": "component:SiteHeader.vue",
+      "to": "component:AddTransactionDialog.vue",
+      "type": "COMPOSES_CONDITIONAL",
+      "metadata": {
+        "condition": "route.path === '/' || route.path === '/transactions'",
+        "size": "sm"
+      }
+    },
+    {
+      "from": "component:ThemeToggle.vue",
+      "to": "composable:useTheme",
+      "type": "USES",
+      "metadata": {
+        "methods": [
+          "setTheme",
+          "resolvedTheme"
+        ]
+      }
+    },
+    {
+      "from": "component:DataTable.vue",
+      "to": "store:useAppStore",
+      "type": "USES",
+      "metadata": {
+        "purpose": "data_fetching",
+        "actions": [
+          "deleteTransaction"
+        ]
+      }
+    },
+    {
+      "from": "component:AddTransactionDialog.vue",
+      "to": "store:useAppStore",
+      "type": "USES",
+      "metadata": {
+        "purpose": "crud_operations",
+        "actions": [
+          "createTransaction",
+          "updateTransaction"
+        ]
+      }
+    },
+    {
+      "from": "component:AppSidebar.vue",
+      "to": "pattern:shadcn-sidebar",
+      "type": "IMPLEMENTS",
+      "metadata": {
+        "collapsible": "icon"
+      }
+    },
+    {
+      "from": "component:SiteHeader.vue",
+      "to": "pattern:shadcn-sidebar",
+      "type": "INTEGRATES",
+      "metadata": {
+        "component": "SidebarTrigger"
+      }
+    },
+    {
+      "from": "component:AppSidebar.vue",
+      "to": "navigation:structure",
+      "type": "IMPLEMENTS",
+      "metadata": {
+        "active_state": "route.path comparison"
+      }
+    },
+    {
+      "from": "component:SiteHeader.vue",
+      "to": "navigation:structure",
+      "type": "USES",
+      "metadata": {
+        "purpose": "dynamic_title_generation"
+      }
+    },
+    {
+      "from": "component:DataTable.vue",
+      "to": "pattern:currency-formatting",
+      "type": "USES",
+      "metadata": {
+        "function": "formatCurrency"
+      }
+    },
+    {
+      "from": "component:AppSidebar.vue",
+      "to": "pattern:currency-formatting",
+      "type": "USES",
+      "metadata": {
+        "function": "formatCurrency"
+      }
+    },
+    {
+      "from": "component:DataTable.vue",
+      "to": "styling:css-variables",
+      "type": "USES",
+      "metadata": {
+        "purpose": "conditional_coloring",
+        "variables": [
+          "--chart-1",
+          "--chart-3",
+          "--border"
+        ]
+      }
+    },
+    {
+      "from": "component:AppSidebar.vue",
+      "to": "styling:css-variables",
+      "type": "USES",
+      "metadata": {
+        "purpose": "theme_aware_styling",
+        "variables": [
+          "--primary",
+          "--destructive"
+        ]
+      }
+    },
+    {
+      "from": "component:AddTransactionDialog.vue",
+      "to": "form:transaction-schema",
+      "type": "IMPLEMENTS",
+      "metadata": {
+        "validation": "required_fields",
+        "modes": [
+          "create",
+          "edit"
+        ]
+      }
+    },
+    {
+      "from": "component:AppSidebar.vue",
+      "to": "integration:lucide-vue-next",
+      "type": "USES",
+      "metadata": {
+        "icons": [
+          "LayoutDashboard",
+          "ListPlus",
+          "Tag",
+          "Wallet",
+          "Loader2"
+        ]
+      }
+    },
+    {
+      "from": "component:SiteHeader.vue",
+      "to": "integration:lucide-vue-next",
+      "type": "USES",
+      "metadata": {
+        "indirect": true,
+        "through": [
+          "ThemeToggle",
+          "AddTransactionDialog"
+        ]
+      }
+    },
+    {
+      "from": "component:DataTable.vue",
+      "to": "integration:lucide-vue-next",
+      "type": "USES",
+      "metadata": {
+        "icons": [
+          "Trash2",
+          "Eye"
+        ]
+      }
+    },
+    {
+      "from": "component:AddTransactionDialog.vue",
+      "to": "integration:lucide-vue-next",
+      "type": "USES",
+      "metadata": {
+        "icons": [
+          "Plus"
+        ]
+      }
+    },
+    {
+      "from": "component:ThemeToggle.vue",
+      "to": "integration:lucide-vue-next",
+      "type": "USES",
+      "metadata": {
+        "icons": [
+          "Sun",
+          "Moon"
+        ]
+      }
+    },
+    {
+      "from": "component:NavMain.vue",
+      "to": "integration:tabler-icons-vue",
+      "type": "USES",
+      "metadata": {
+        "icons": [
+          "IconCirclePlusFilled",
+          "IconMail"
+        ]
+      }
+    },
+    {
+      "from": "component:SiteHeader.vue",
+      "to": "pattern:conditional-rendering",
+      "type": "USES",
+      "metadata": {
+        "computed_property": "showAddButton"
+      }
+    },
+    {
+      "from": "component:DataTable.vue",
+      "to": "pattern:conditional-rendering",
+      "type": "USES",
+      "metadata": {
+        "states": [
+          "loading",
+          "empty",
+          "data"
+        ]
+      }
+    },
+    {
+      "from": "NavSecondary",
+      "to": "shadcn_sidebar",
+      "type": "uses",
+      "properties": {
+        "components": [
+          "SidebarGroup",
+          "SidebarGroupContent",
+          "SidebarMenu",
+          "SidebarMenuButton",
+          "SidebarMenuItem"
+        ]
+      }
+    },
+    {
+      "from": "NavSecondary",
+      "to": "NavItem",
+      "type": "defines"
+    },
+    {
+      "from": "NavUser",
+      "to": "shadcn_sidebar",
+      "type": "uses",
+      "properties": {
+        "components": [
+          "SidebarMenu",
+          "SidebarMenuButton",
+          "SidebarMenuItem",
+          "useSidebar"
+        ]
+      }
+    },
+    {
+      "from": "NavUser",
+      "to": "shadcn_dropdown",
+      "type": "uses",
+      "properties": {
+        "components": [
+          "DropdownMenu",
+          "DropdownMenuContent",
+          "DropdownMenuGroup",
+          "DropdownMenuItem",
+          "DropdownMenuLabel",
+          "DropdownMenuSeparator",
+          "DropdownMenuTrigger"
+        ]
+      }
+    },
+    {
+      "from": "NavUser",
+      "to": "shadcn_avatar",
+      "type": "uses",
+      "properties": {
+        "components": [
+          "Avatar",
+          "AvatarFallback",
+          "AvatarImage"
+        ]
+      }
+    },
+    {
+      "from": "NavUser",
+      "to": "tabler_icons",
+      "type": "uses",
+      "properties": {
+        "icons": [
+          "IconCreditCard",
+          "IconDotsVertical",
+          "IconLogout",
+          "IconNotification",
+          "IconUserCircle"
+        ]
+      }
+    },
+    {
+      "from": "NavUser",
+      "to": "User",
+      "type": "defines"
+    },
+    {
+      "from": "NavDocuments",
+      "to": "shadcn_sidebar",
+      "type": "uses",
+      "properties": {
+        "components": [
+          "SidebarGroup",
+          "SidebarGroupLabel",
+          "SidebarMenu",
+          "SidebarMenuAction",
+          "SidebarMenuButton",
+          "SidebarMenuItem",
+          "useSidebar"
+        ]
+      }
+    },
+    {
+      "from": "NavDocuments",
+      "to": "shadcn_dropdown",
+      "type": "uses",
+      "properties": {
+        "components": [
+          "DropdownMenu",
+          "DropdownMenuContent",
+          "DropdownMenuItem",
+          "DropdownMenuSeparator",
+          "DropdownMenuTrigger"
+        ]
+      }
+    },
+    {
+      "from": "NavDocuments",
+      "to": "tabler_icons",
+      "type": "uses",
+      "properties": {
+        "icons": [
+          "IconDots",
+          "IconFolder",
+          "IconShare3",
+          "IconTrash"
+        ]
+      }
+    },
+    {
+      "from": "NavDocuments",
+      "to": "Document",
+      "type": "defines"
+    },
+    {
+      "from": "SectionCards",
+      "to": "shadcn_card",
+      "type": "uses",
+      "properties": {
+        "components": [
+          "Card",
+          "CardHeader",
+          "CardTitle",
+          "CardDescription"
+        ]
+      }
+    },
+    {
+      "from": "SectionCards",
+      "to": "appStore",
+      "type": "consumes",
+      "properties": {
+        "computed_values": [
+          "totalIncome",
+          "totalExpense",
+          "netBalance",
+          "categories",
+          "budgets"
+        ]
+      }
+    },
+    {
+      "from": "SectionCards",
+      "to": "lucide_icons",
+      "type": "uses",
+      "properties": {
+        "icons": [
+          "TrendingUp",
+          "TrendingDown",
+          "Wallet"
+        ]
+      }
+    },
+    {
+      "from": "ChartAreaInteractive",
+      "to": "shadcn_card",
+      "type": "uses",
+      "properties": {
+        "components": [
+          "Card",
+          "CardHeader",
+          "CardContent",
+          "CardTitle",
+          "CardDescription"
+        ]
+      }
+    },
+    {
+      "from": "ChartAreaInteractive",
+      "to": "shadcn_chart",
+      "type": "uses",
+      "properties": {
+        "components": [
+          "ChartContainer",
+          "ChartCrosshair",
+          "ChartLegendContent",
+          "ChartTooltip",
+          "ChartTooltipContent",
+          "componentToString"
+        ]
+      }
+    },
+    {
+      "from": "ChartAreaInteractive",
+      "to": "unovis",
+      "type": "uses",
+      "properties": {
+        "components": [
+          "VisArea",
+          "VisAxis",
+          "VisLine",
+          "VisXYContainer"
+        ]
+      }
+    },
+    {
+      "from": "ChartAreaInteractive",
+      "to": "shadcn_select",
+      "type": "uses",
+      "properties": {
+        "components": [
+          "Select",
+          "SelectContent",
+          "SelectItem",
+          "SelectTrigger",
+          "SelectValue"
+        ]
+      }
+    },
+    {
+      "from": "vue-component:Tabs",
+      "to": "vue-component:TabsList",
+      "type": "composition",
+      "labels": [
+        "parent-child",
+        "slot-content"
+      ]
+    },
+    {
+      "from": "vue-component:TabsList",
+      "to": "vue-component:TabsTrigger",
+      "type": "composition",
+      "labels": [
+        "parent-child",
+        "slot-content"
+      ]
+    },
+    {
+      "from": "vue-component:Tabs",
+      "to": "vue-component:TabsContent",
+      "type": "composition",
+      "labels": [
+        "parent-child",
+        "slot-content"
+      ]
+    },
+    {
+      "from": "vue-component:Tabs",
+      "to": "utility:useForwardPropsEmits",
+      "type": "uses"
+    },
+    {
+      "from": "vue-component:TabsTrigger",
+      "to": "utility:useForwardProps",
+      "type": "uses"
+    },
+    {
+      "from": "vue-component:Tabs",
+      "to": "utility:reactiveOmit",
+      "type": "uses"
+    },
+    {
+      "from": "vue-component:TabsList",
+      "to": "utility:reactiveOmit",
+      "type": "uses"
+    },
+    {
+      "from": "vue-component:TabsTrigger",
+      "to": "utility:reactiveOmit",
+      "type": "uses"
+    },
+    {
+      "from": "vue-component:TabsContent",
+      "to": "utility:reactiveOmit",
+      "type": "uses"
+    },
+    {
+      "from": "vue-component:Tabs",
+      "to": "utility:cn",
+      "type": "uses"
+    },
+    {
+      "from": "vue-component:TabsList",
+      "to": "utility:cn",
+      "type": "uses"
+    },
+    {
+      "from": "vue-component:TabsTrigger",
+      "to": "utility:cn",
+      "type": "uses"
+    },
+    {
+      "from": "vue-component:TabsContent",
+      "to": "utility:cn",
+      "type": "uses"
+    },
+    {
+      "from": "export:tabs-index",
+      "to": "vue-component:Tabs",
+      "type": "exports"
+    },
+    {
+      "from": "export:tabs-index",
+      "to": "vue-component:TabsList",
+      "type": "exports"
+    },
+    {
+      "from": "export:tabs-index",
+      "to": "vue-component:TabsTrigger",
+      "type": "exports"
+    },
+    {
+      "from": "export:tabs-index",
+      "to": "vue-component:TabsContent",
+      "type": "exports"
+    },
+    {
+      "from": "dialog:DialogRoot",
+      "to": "dialog:composition_pattern",
+      "label": "implements",
+      "properties": {
+        "role": "root component"
+      }
+    },
+    {
+      "from": "dialog:DialogTrigger",
+      "to": "dialog:composition_pattern",
+      "label": "part-of",
+      "properties": {
+        "role": "activator component"
+      }
+    },
+    {
+      "from": "dialog:DialogContent",
+      "to": "dialog:composition_pattern",
+      "label": "part-of",
+      "properties": {
+        "role": "main content wrapper"
+      }
+    },
+    {
+      "from": "dialog:DialogScrollContent",
+      "to": "dialog:DialogContent",
+      "label": "alternative-to",
+      "properties": {
+        "difference": "adds scrollable overflow on overlay"
+      }
+    },
+    {
+      "from": "dialog:DialogHeader",
+      "to": "dialog:composition_pattern",
+      "label": "part-of",
+      "properties": {
+        "role": "header layout container"
+      }
+    },
+    {
+      "from": "dialog:DialogFooter",
+      "to": "dialog:composition_pattern",
+      "label": "part-of",
+      "properties": {
+        "role": "footer layout container"
+      }
+    },
+    {
+      "from": "dialog:DialogTitle",
+      "to": "dialog:DialogHeader",
+      "label": "typically-contained-in",
+      "properties": {
+        "relationship": "semantic grouping"
+      }
+    },
+    {
+      "from": "dialog:DialogDescription",
+      "to": "dialog:DialogHeader",
+      "label": "typically-contained-in",
+      "properties": {
+        "relationship": "semantic grouping"
+      }
+    },
+    {
+      "from": "dialog:DialogClose",
+      "to": "dialog:DialogContent",
+      "label": "used-by",
+      "properties": {
+        "placement": "absolute top-4 right-4"
+      }
+    },
+    {
+      "from": "dialog:DialogClose",
+      "to": "dialog:DialogFooter",
+      "label": "optionally-used-by",
+      "properties": {
+        "condition": "showCloseButton prop"
+      }
+    },
+    {
+      "from": "dialog:DialogOverlay",
+      "to": "dialog:DialogContent",
+      "label": "composes-with",
+      "properties": {
+        "relationship": "overlay wraps content in portal"
+      }
+    },
+    {
+      "from": "dialog:DialogContent",
+      "to": "dialog:DialogOverlay",
+      "label": "imports",
+      "properties": {
+        "usage": "overlay as separate component"
+      }
+    },
+    {
+      "from": "dialog:DialogScrollContent",
+      "to": "dialog:DialogOverlay",
+      "label": "composes-with",
+      "properties": {
+        "relationship": "overlay contains scrollable content"
+      }
+    },
+    {
+      "from": "dialog:DialogScrollContent",
+      "to": "dialog:DialogContent",
+      "label": "imports",
+      "properties": {
+        "usage": "content inside overlay"
+      }
+    },
+    {
+      "from": "dialog:DialogRoot",
+      "to": "dialog:reka_ui_mapping",
+      "label": "wraps",
+      "properties": {
+        "library_component": "DialogRoot"
+      }
+    },
+    {
+      "from": "dialog:DialogTrigger",
+      "to": "dialog:reka_ui_mapping",
+      "label": "wraps",
+      "properties": {
+        "library_component": "DialogTrigger"
+      }
+    },
+    {
+      "from": "dialog:DialogContent",
+      "to": "dialog:reka_ui_mapping",
+      "label": "uses",
+      "properties": {
+        "library_components": [
+          "DialogPortal",
+          "DialogContent",
+          "DialogClose"
+        ]
+      }
+    },
+    {
+      "from": "dialog:DialogTitle",
+      "to": "dialog:reka_ui_mapping",
+      "label": "wraps",
+      "properties": {
+        "library_component": "DialogTitle"
+      }
+    },
+    {
+      "from": "dialog:DialogDescription",
+      "to": "dialog:reka_ui_mapping",
+      "label": "wraps",
+      "properties": {
+        "library_component": "DialogDescription"
+      }
+    },
+    {
+      "from": "dialog:DialogClose",
+      "to": "dialog:reka_ui_mapping",
+      "label": "wraps",
+      "properties": {
+        "library_component": "DialogClose"
+      }
+    },
+    {
+      "from": "dialog:DialogOverlay",
+      "to": "dialog:reka_ui_mapping",
+      "label": "wraps",
+      "properties": {
+        "library_component": "DialogOverlay"
+      }
+    },
+    {
+      "from": "dialog:barrel_export",
+      "to": "dialog:DialogRoot",
+      "label": "exports",
+      "properties": {
+        "as": "Dialog"
+      }
+    },
+    {
+      "from": "dialog:barrel_export",
+      "to": "dialog:DialogTrigger",
+      "label": "exports"
+    },
+    {
+      "from": "dialog:barrel_export",
+      "to": "dialog:DialogContent",
+      "label": "exports"
+    },
+    {
+      "from": "dialog:barrel_export",
+      "to": "dialog:DialogScrollContent",
+      "label": "exports"
+    },
+    {
+      "from": "dialog:barrel_export",
+      "to": "dialog:DialogHeader",
+      "label": "exports"
+    },
+    {
+      "from": "dialog:barrel_export",
+      "to": "dialog:DialogFooter",
+      "label": "exports"
+    },
+    {
+      "from": "dialog:barrel_export",
+      "to": "dialog:DialogTitle",
+      "label": "exports"
+    },
+    {
+      "from": "dialog:barrel_export",
+      "to": "dialog:DialogDescription",
+      "label": "exports"
+    },
+    {
+      "from": "dialog:barrel_export",
+      "to": "dialog:DialogClose",
+      "label": "exports"
+    },
+    {
+      "from": "dialog:barrel_export",
+      "to": "dialog:DialogOverlay",
+      "label": "exports"
+    },
+    {
+      "from": "dialog:DialogContent",
+      "to": "dialog:class_forwarding_pattern",
+      "label": "implements"
+    },
+    {
+      "from": "dialog:DialogScrollContent",
+      "to": "dialog:class_forwarding_pattern",
+      "label": "implements"
+    },
+    {
+      "from": "dialog:DialogTitle",
+      "to": "dialog:class_forwarding_pattern",
+      "label": "implements"
+    },
+    {
+      "from": "dialog:DialogDescription",
+      "to": "dialog:class_forwarding_pattern",
+      "label": "implements"
+    },
+    {
+      "from": "dialog:DialogOverlay",
+      "to": "dialog:class_forwarding_pattern",
+      "label": "implements"
+    },
+    {
+      "from": "dialog:DialogContent",
+      "to": "dialog:utility_dependencies",
+      "label": "uses",
+      "properties": {
+        "utilities": [
+          "cn",
+          "reactiveOmit",
+          "useForwardPropsEmits"
+        ]
+      }
+    },
+    {
+      "from": "dialog:DialogScrollContent",
+      "to": "dialog:utility_dependencies",
+      "label": "uses",
+      "properties": {
+        "utilities": [
+          "cn",
+          "reactiveOmit",
+          "useForwardPropsEmits"
+        ]
+      }
+    },
+    {
+      "from": "dialog:DialogTitle",
+      "to": "dialog:utility_dependencies",
+      "label": "uses",
+      "properties": {
+        "utilities": [
+          "cn",
+          "reactiveOmit",
+          "useForwardProps"
+        ]
+      }
+    },
+    {
+      "from": "dialog:DialogDescription",
+      "to": "dialog:utility_dependencies",
+      "label": "uses",
+      "properties": {
+        "utilities": [
+          "cn",
+          "reactiveOmit",
+          "useForwardProps"
+        ]
+      }
+    },
+    {
+      "from": "dialog:DialogOverlay",
+      "to": "dialog:utility_dependencies",
+      "label": "uses",
+      "properties": {
+        "utilities": [
+          "cn",
+          "reactiveOmit"
+        ]
+      }
+    },
+    {
+      "from": "dialog:DialogHeader",
+      "to": "dialog:utility_dependencies",
+      "label": "uses",
+      "properties": {
+        "utilities": [
+          "cn"
+        ]
+      }
+    },
+    {
+      "from": "dialog:DialogFooter",
+      "to": "dialog:utility_dependencies",
+      "label": "uses",
+      "properties": {
+        "utilities": [
+          "cn"
+        ]
+      }
+    },
+    {
+      "from": "dialog:DialogContent",
+      "to": "dialog:icon_integration",
+      "label": "uses",
+      "properties": {
+        "icon": "X from lucide-vue-next"
+      }
+    },
+    {
+      "from": "dialog:DialogScrollContent",
+      "to": "dialog:icon_integration",
+      "label": "uses",
+      "properties": {
+        "icon": "X from lucide-vue-next"
+      }
+    },
+    {
+      "from": "dialog:DialogClose",
+      "to": "dialog:accessibility_features",
+      "label": "implements",
+      "properties": {
+        "features": [
+          "sr-only text",
+          "focus management"
+        ]
+      }
+    },
+    {
+      "from": "dialog:DialogContent",
+      "to": "dialog:animation_system",
+      "label": "uses",
+      "properties": {
+        "animations": [
+          "fade-in-0",
+          "fade-out-0",
+          "zoom-in-95",
+          "zoom-out-95"
+        ]
+      }
+    },
+    {
+      "from": "dialog:DialogOverlay",
+      "to": "dialog:animation_system",
+      "label": "uses",
+      "properties": {
+        "animations": [
+          "fade-in-0",
+          "fade-out-0"
+        ]
+      }
+    },
+    {
+      "from": "dialog:DialogScrollContent",
+      "to": "dialog:animation_system",
+      "label": "uses",
+      "properties": {
+        "animations": [
+          "fade-in",
+          "fade-out"
+        ]
+      }
+    },
+    {
+      "from": "dialog:DialogFooter",
+      "to": "dialog:Button",
+      "label": "uses-conditionally",
+      "properties": {
+        "condition": "showCloseButton=true",
+        "variant": "outline"
+      }
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "tech_stack_dependencies",
+      "label": "Vue 3 Expense Tracker Tech Stack",
+      "nodes": [
+        "readme_vue_framework",
+        "readme_typescript_language",
+        "readme_vite_build_tool",
+        "readme_tailwind_styling",
+        "readme_shadcn_components",
+        "readme_pinia_state",
+        "readme_vue_router",
+        "readme_axios_api",
+        "readme_lucide_icons"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md"
+    },
+    {
+      "id": "deployment_methods",
+      "label": "Deployment Methods",
+      "nodes": [
+        "readme_dokploy_deployment",
+        "readme_docker_deployment",
+        "deployment_netlify_config",
+        "deployment_vercel_config",
+        "deployment_aws_s3_config"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DEPLOYMENT.md"
+    },
+    {
+      "id": "architecture_configuration",
+      "label": "Application Architecture Configuration",
+      "nodes": [
+        "claude_composition_api",
+        "claude_path_aliases",
+        "claude_shadcn_config",
+        "claude_build_process",
+        "claude_cn_utility"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md"
+    },
+    {
+      "id": "framework-branding",
+      "members": [
+        "svg-vue-logo",
+        "svg-vite-logo",
+        "svg-favicon"
+      ],
+      "label": "Vue.js + Vite Framework Branding",
+      "description": "Collection of official logos representing the Vue.js 3 + Vite technology stack used in this project"
+    },
+    {
+      "id": "social-media-icons",
+      "members": [
+        "svg-icons-sprite"
+      ],
+      "label": "Social Platform Icons",
+      "description": "Reusable SVG sprite for social media integration (Bluesky, Discord, GitHub, X/Twitter)"
+    },
+    {
+      "id": "app-initialization-flow",
+      "type": "flow",
+      "members": [
+        "src/main.ts",
+        "pinia",
+        "vue-router",
+        "src/App.vue"
+      ],
+      "attributes": {
+        "description": "Vue app initialization sequence with Pinia and Router"
+      }
+    },
+    {
+      "id": "build-configuration",
+      "type": "configuration-group",
+      "members": [
+        "vite.config.ts",
+        "vite-plugin-vue",
+        "vite-plugin-tailwindcss"
+      ],
+      "attributes": {
+        "description": "Vite build configuration with Vue and Tailwind plugins"
+      }
+    },
+    {
+      "id": "api-proxy-setup",
+      "type": "configuration-group",
+      "members": [
+        "vite.config.ts"
+      ],
+      "attributes": {
+        "proxy_target": "https://expense-api.ratama.space",
+        "proxy_path": "/api",
+        "description": "Development API proxy configuration"
+      }
+    },
+    {
+      "id": "api_rest_pattern",
+      "type": "pattern",
+      "members": [
+        "api_categories",
+        "api_transactions",
+        "api_budgets"
+      ],
+      "label": "standard CRUD operations (list, get, create, update, delete)",
+      "confidence_score": 1.0
+    },
+    {
+      "id": "api_error_handling",
+      "type": "pattern",
+      "members": [
+        "api_index",
+        "ApiError"
+      ],
+      "label": "response interceptor attaches ApiError to rejection",
+      "confidence_score": 1.0
+    },
+    {
+      "id": "crud_views_pattern",
+      "members": [
+        "transactionsview",
+        "budgetsview",
+        "categoriesview"
+      ],
+      "type": "DESIGN_PATTERN",
+      "attributes": {
+        "pattern": "CRUD_VIEW_WITH_INLINE_EDITING",
+        "description": "All three views implement similar CRUD patterns with inline editing, modal creation, and delete confirmation"
+      },
+      "confidence_score": 0.9
+    },
+    {
+      "id": "store_centric_data_flow",
+      "members": [
+        "dashboardview",
+        "transactionsview",
+        "budgetsview",
+        "categoriesview"
+      ],
+      "type": "ARCHITECTURAL_PATTERN",
+      "attributes": {
+        "pattern": "STORE_CENTRIC_DATA_FLOW",
+        "description": "All views use useAppStore for data fetching and mutations"
+      },
+      "confidence_score": 1.0
+    },
+    {
+      "id": "loading_state_pattern",
+      "members": [
+        "transactionsview",
+        "budgetsview",
+        "categoriesview"
+      ],
+      "type": "UI_PATTERN",
+      "attributes": {
+        "pattern": "LOADING_STATE_HANDLING",
+        "description": "All views check appStore.loading and show Loader2 spinner"
+      },
+      "confidence_score": 0.95
+    },
+    {
+      "id": "currency_formatting_reuse",
+      "members": [
+        "transactionsview",
+        "budgetsview"
+      ],
+      "type": "CODE_DUPLICATION",
+      "attributes": {
+        "pattern": "DUPLICATE_CURRENCY_FORMATTING",
+        "description": "Both views implement identical formatCurrency function with IDR locale"
+      },
+      "confidence_score": 1.0
+    },
+    {
+      "id": "modal_dialog_pattern",
+      "members": [
+        "transactionsview",
+        "budgetsview",
+        "categoriesview"
+      ],
+      "type": "UI_PATTERN",
+      "attributes": {
+        "pattern": "MODAL_DIALOG_FOR_CREATE",
+        "description": "All views use Dialog component for create operations"
+      },
+      "confidence_score": 0.95
+    },
+    {
+      "id": "category_budget_relationship",
+      "members": [
+        "transactionsview",
+        "budgetsview",
+        "categoriesview"
+      ],
+      "type": "DATA_DEPENDENCY",
+      "attributes": {
+        "relationship": "CATEGORY_CENTRIC_DOMAIN",
+        "description": "Transactions and budgets both depend on categories; budgets view filters out categories that already have budgets"
+      },
+      "confidence_score": 0.95
+    },
+    {
+      "id": "layout:app-shell",
+      "type": "layout_composition",
+      "members": [
+        "component:AppSidebar.vue",
+        "component:SiteHeader.vue"
+      ],
+      "metadata": {
+        "pattern": "sidebar_layout",
+        "responsive": true,
+        "collapsible": true
+      }
+    },
+    {
+      "id": "theme:implementation",
+      "type": "theme_integration",
+      "members": [
+        "component:ThemeToggle.vue",
+        "composable:useTheme",
+        "styling:css-variables"
+      ],
+      "metadata": {
+        "modes": [
+          "light",
+          "dark",
+          "system"
+        ],
+        "approach": "class_based",
+        "css_class": ".dark"
+      }
+    },
+    {
+      "id": "state:app-store-consumers",
+      "type": "state_management",
+      "members": [
+        "component:AppSidebar.vue",
+        "component:DataTable.vue",
+        "component:AddTransactionDialog.vue"
+      ],
+      "metadata": {
+        "store": "useAppStore",
+        "pattern": "pinia_store",
+        "data_flow": "unidirectional"
+      }
+    },
+    {
+      "id": "navigation:routing-integration",
+      "type": "routing",
+      "members": [
+        "component:AppSidebar.vue",
+        "component:SiteHeader.vue",
+        "navigation:structure"
+      ],
+      "metadata": {
+        "library": "vue-router",
+        "features": [
+          "active_state",
+          "route_based_rendering"
+        ]
+      }
+    },
+    {
+      "id": "ui:shadcn-components",
+      "type": "ui_library",
+      "members": [
+        "component:ThemeToggle.vue",
+        "component:NavMain.vue",
+        "component:AddTransactionDialog.vue",
+        "component:DataTable.vue"
+      ],
+      "metadata": {
+        "library": "shadcn-vue",
+        "style_variant": "new-york",
+        "components_used": [
+          "Button",
+          "Dialog",
+          "DropdownMenu",
+          "Table",
+          "Select",
+          "Input",
+          "Sidebar"
+        ]
+      }
+    },
+    {
+      "id": "form:transaction-workflow",
+      "type": "user_workflow",
+      "members": [
+        "component:AddTransactionDialog.vue",
+        "component:DataTable.vue",
+        "form:transaction-schema"
+      ],
+      "metadata": {
+        "flow": "create_edit_view_delete",
+        "components": [
+          "Dialog",
+          "Table",
+          "Actions"
+        ]
+      }
+    },
+    {
+      "id": "navigation_components",
+      "type": "component_group",
+      "members": [
+        "NavSecondary",
+        "NavUser",
+        "NavDocuments"
+      ],
+      "properties": {
+        "shared_pattern": "sidebar_navigation",
+        "common_features": [
+          "responsive_design",
+          "dropdown_menus",
+          "icon_support"
+        ],
+        "sidebar_integration": true
+      }
+    },
+    {
+      "id": "data_visualization_components",
+      "type": "component_group",
+      "members": [
+        "SectionCards",
+        "ChartAreaInteractive"
+      ],
+      "properties": {
+        "shared_pattern": "dashboard_widgets",
+        "common_features": [
+          "computed_data",
+          "shadcn_card_wrapper",
+          "responsive_layout"
+        ],
+        "data_display": true
+      }
+    },
+    {
+      "id": "shadcn_ui_integration",
+      "type": "design_system",
+      "members": [
+        "shadcn_sidebar",
+        "shadcn_dropdown",
+        "shadcn_card",
+        "shadcn_chart",
+        "shadcn_avatar",
+        "shadcn_select"
+      ],
+      "properties": {
+        "library": "shadcn-vue",
+        "styling": "CSS_variables",
+        "theming": "light_dark_mode"
+      }
+    },
+    {
+      "id": "icon_system",
+      "type": "design_pattern",
+      "members": [
+        "tabler_icons",
+        "lucide_icons"
+      ],
+      "properties": {
+        "pattern": "icon_component_usage",
+        "implementation": "Vue_components"
+      }
+    },
+    {
+      "id": "pattern:tabs-composition",
+      "type": "component-pattern",
+      "nodes": [
+        "vue-component:Tabs",
+        "vue-component:TabsList",
+        "vue-component:TabsTrigger",
+        "vue-component:TabsContent"
+      ],
+      "attributes": {
+        "pattern": "reka-ui-tabs-wrapper",
+        "description": "Composite tabs component wrapping reka-ui primitives",
+        "composition": "Tabs contains TabsList and TabsContent; TabsList contains TabsTrigger"
+      }
+    },
+    {
+      "id": "pattern:props-delegation",
+      "type": "pattern",
+      "nodes": [
+        "vue-component:Tabs",
+        "vue-component:TabsList",
+        "vue-component:TabsTrigger",
+        "vue-component:TabsContent",
+        "utility:reactiveOmit"
+      ],
+      "attributes": {
+        "pattern": "class-prop-delegation",
+        "description": "All tab components use reactiveOmit to exclude class prop, then bind delegated props to base component"
+      }
+    },
+    {
+      "id": "pattern:styling-architecture",
+      "type": "pattern",
+      "nodes": [
+        "vue-component:Tabs",
+        "vue-component:TabsList",
+        "vue-component:TabsTrigger",
+        "vue-component:TabsContent",
+        "utility:cn"
+      ],
+      "attributes": {
+        "pattern": "cn-utility-merging",
+        "description": "All components use cn() utility to merge default classes with custom class prop"
+      }
+    },
+    {
+      "id": "dialog:full_dialog_composition",
+      "type": "composition",
+      "nodes": [
+        "dialog:DialogRoot",
+        "dialog:DialogTrigger",
+        "dialog:DialogContent",
+        "dialog:DialogHeader",
+        "dialog:DialogTitle",
+        "dialog:DialogDescription",
+        "dialog:DialogFooter",
+        "dialog:DialogClose"
+      ],
+      "properties": {
+        "pattern": "compound component",
+        "description": "Complete dialog composition hierarchy"
+      }
+    },
+    {
+      "id": "dialog:styling_pattern_consistency",
+      "type": "pattern",
+      "nodes": [
+        "dialog:DialogContent",
+        "dialog:DialogScrollContent",
+        "dialog:DialogTitle",
+        "dialog:DialogDescription",
+        "dialog:DialogOverlay"
+      ],
+      "properties": {
+        "pattern": "reactiveOmit + cn class forwarding",
+        "purpose": "consistent styling override pattern"
+      }
+    },
+    {
+      "id": "dialog:portal_pattern",
+      "type": "pattern",
+      "nodes": [
+        "dialog:DialogContent",
+        "dialog:DialogScrollContent",
+        "dialog:DialogOverlay"
+      ],
+      "properties": {
+        "pattern": "DialogPortal wrapping",
+        "purpose": "render outside DOM hierarchy"
+      }
+    },
+    {
+      "id": "dialog:data_slot_attributes",
+      "type": "metadata",
+      "nodes": [
+        "dialog:DialogRoot",
+        "dialog:DialogTrigger",
+        "dialog:DialogContent",
+        "dialog:DialogHeader",
+        "dialog:DialogFooter",
+        "dialog:DialogTitle",
+        "dialog:DialogDescription",
+        "dialog:DialogClose",
+        "dialog:DialogOverlay"
+      ],
+      "properties": {
+        "pattern": "data-slot attributes for component identification",
+        "purpose": "testing and styling hooks"
+      }
+    },
+    {
+      "id": "dialog:reka_ui_abstraction",
+      "type": "abstraction",
+      "nodes": [
+        "dialog:DialogRoot",
+        "dialog:DialogTrigger",
+        "dialog:DialogContent",
+        "dialog:DialogTitle",
+        "dialog:DialogDescription",
+        "dialog:DialogClose",
+        "dialog:DialogOverlay"
+      ],
+      "properties": {
+        "layer": "wrapper around reka-ui primitives",
+        "value_add": "styling, data-slots, icon integration"
+      }
+    }
+  ],
+  "input_tokens": 22288,
+  "output_tokens": 11392
+}

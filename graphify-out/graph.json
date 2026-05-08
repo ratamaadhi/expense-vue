@@ -1,0 +1,6117 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "tech_stack_dependencies",
+        "label": "Vue 3 Expense Tracker Tech Stack",
+        "nodes": [
+          "readme_vue_framework",
+          "readme_typescript_language",
+          "readme_vite_build_tool",
+          "readme_tailwind_styling",
+          "readme_shadcn_components",
+          "readme_pinia_state",
+          "readme_vue_router",
+          "readme_axios_api",
+          "readme_lucide_icons"
+        ],
+        "relation": "form",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "README.md"
+      },
+      {
+        "id": "deployment_methods",
+        "label": "Deployment Methods",
+        "nodes": [
+          "readme_dokploy_deployment",
+          "readme_docker_deployment",
+          "deployment_netlify_config",
+          "deployment_vercel_config",
+          "deployment_aws_s3_config"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "DEPLOYMENT.md"
+      },
+      {
+        "id": "architecture_configuration",
+        "label": "Application Architecture Configuration",
+        "nodes": [
+          "claude_composition_api",
+          "claude_path_aliases",
+          "claude_shadcn_config",
+          "claude_build_process",
+          "claude_cn_utility"
+        ],
+        "relation": "implement",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "CLAUDE.md"
+      },
+      {
+        "id": "framework-branding",
+        "members": [
+          "svg-vue-logo",
+          "svg-vite-logo",
+          "svg-favicon"
+        ],
+        "label": "Vue.js + Vite Framework Branding",
+        "description": "Collection of official logos representing the Vue.js 3 + Vite technology stack used in this project"
+      },
+      {
+        "id": "social-media-icons",
+        "members": [
+          "svg-icons-sprite"
+        ],
+        "label": "Social Platform Icons",
+        "description": "Reusable SVG sprite for social media integration (Bluesky, Discord, GitHub, X/Twitter)"
+      },
+      {
+        "id": "app-initialization-flow",
+        "type": "flow",
+        "members": [
+          "src/main.ts",
+          "pinia",
+          "vue-router",
+          "src/App.vue"
+        ],
+        "attributes": {
+          "description": "Vue app initialization sequence with Pinia and Router"
+        }
+      },
+      {
+        "id": "build-configuration",
+        "type": "configuration-group",
+        "members": [
+          "vite.config.ts",
+          "vite-plugin-vue",
+          "vite-plugin-tailwindcss"
+        ],
+        "attributes": {
+          "description": "Vite build configuration with Vue and Tailwind plugins"
+        }
+      },
+      {
+        "id": "api-proxy-setup",
+        "type": "configuration-group",
+        "members": [
+          "vite.config.ts"
+        ],
+        "attributes": {
+          "proxy_target": "https://expense-api.ratama.space",
+          "proxy_path": "/api",
+          "description": "Development API proxy configuration"
+        }
+      },
+      {
+        "id": "api_rest_pattern",
+        "type": "pattern",
+        "members": [
+          "api_categories",
+          "api_transactions",
+          "api_budgets"
+        ],
+        "label": "standard CRUD operations (list, get, create, update, delete)",
+        "confidence_score": 1.0
+      },
+      {
+        "id": "api_error_handling",
+        "type": "pattern",
+        "members": [
+          "api_index",
+          "ApiError"
+        ],
+        "label": "response interceptor attaches ApiError to rejection",
+        "confidence_score": 1.0
+      },
+      {
+        "id": "crud_views_pattern",
+        "members": [
+          "transactionsview",
+          "budgetsview",
+          "categoriesview"
+        ],
+        "type": "DESIGN_PATTERN",
+        "attributes": {
+          "pattern": "CRUD_VIEW_WITH_INLINE_EDITING",
+          "description": "All three views implement similar CRUD patterns with inline editing, modal creation, and delete confirmation"
+        },
+        "confidence_score": 0.9
+      },
+      {
+        "id": "store_centric_data_flow",
+        "members": [
+          "dashboardview",
+          "transactionsview",
+          "budgetsview",
+          "categoriesview"
+        ],
+        "type": "ARCHITECTURAL_PATTERN",
+        "attributes": {
+          "pattern": "STORE_CENTRIC_DATA_FLOW",
+          "description": "All views use useAppStore for data fetching and mutations"
+        },
+        "confidence_score": 1.0
+      },
+      {
+        "id": "loading_state_pattern",
+        "members": [
+          "transactionsview",
+          "budgetsview",
+          "categoriesview"
+        ],
+        "type": "UI_PATTERN",
+        "attributes": {
+          "pattern": "LOADING_STATE_HANDLING",
+          "description": "All views check appStore.loading and show Loader2 spinner"
+        },
+        "confidence_score": 0.95
+      },
+      {
+        "id": "currency_formatting_reuse",
+        "members": [
+          "transactionsview",
+          "budgetsview"
+        ],
+        "type": "CODE_DUPLICATION",
+        "attributes": {
+          "pattern": "DUPLICATE_CURRENCY_FORMATTING",
+          "description": "Both views implement identical formatCurrency function with IDR locale"
+        },
+        "confidence_score": 1.0
+      },
+      {
+        "id": "modal_dialog_pattern",
+        "members": [
+          "transactionsview",
+          "budgetsview",
+          "categoriesview"
+        ],
+        "type": "UI_PATTERN",
+        "attributes": {
+          "pattern": "MODAL_DIALOG_FOR_CREATE",
+          "description": "All views use Dialog component for create operations"
+        },
+        "confidence_score": 0.95
+      },
+      {
+        "id": "category_budget_relationship",
+        "members": [
+          "transactionsview",
+          "budgetsview",
+          "categoriesview"
+        ],
+        "type": "DATA_DEPENDENCY",
+        "attributes": {
+          "relationship": "CATEGORY_CENTRIC_DOMAIN",
+          "description": "Transactions and budgets both depend on categories; budgets view filters out categories that already have budgets"
+        },
+        "confidence_score": 0.95
+      },
+      {
+        "id": "layout:app-shell",
+        "type": "layout_composition",
+        "members": [
+          "component:AppSidebar.vue",
+          "component:SiteHeader.vue"
+        ],
+        "metadata": {
+          "pattern": "sidebar_layout",
+          "responsive": true,
+          "collapsible": true
+        }
+      },
+      {
+        "id": "theme:implementation",
+        "type": "theme_integration",
+        "members": [
+          "component:ThemeToggle.vue",
+          "composable:useTheme",
+          "styling:css-variables"
+        ],
+        "metadata": {
+          "modes": [
+            "light",
+            "dark",
+            "system"
+          ],
+          "approach": "class_based",
+          "css_class": ".dark"
+        }
+      },
+      {
+        "id": "state:app-store-consumers",
+        "type": "state_management",
+        "members": [
+          "component:AppSidebar.vue",
+          "component:DataTable.vue",
+          "component:AddTransactionDialog.vue"
+        ],
+        "metadata": {
+          "store": "useAppStore",
+          "pattern": "pinia_store",
+          "data_flow": "unidirectional"
+        }
+      },
+      {
+        "id": "navigation:routing-integration",
+        "type": "routing",
+        "members": [
+          "component:AppSidebar.vue",
+          "component:SiteHeader.vue",
+          "navigation:structure"
+        ],
+        "metadata": {
+          "library": "vue-router",
+          "features": [
+            "active_state",
+            "route_based_rendering"
+          ]
+        }
+      },
+      {
+        "id": "ui:shadcn-components",
+        "type": "ui_library",
+        "members": [
+          "component:ThemeToggle.vue",
+          "component:NavMain.vue",
+          "component:AddTransactionDialog.vue",
+          "component:DataTable.vue"
+        ],
+        "metadata": {
+          "library": "shadcn-vue",
+          "style_variant": "new-york",
+          "components_used": [
+            "Button",
+            "Dialog",
+            "DropdownMenu",
+            "Table",
+            "Select",
+            "Input",
+            "Sidebar"
+          ]
+        }
+      },
+      {
+        "id": "form:transaction-workflow",
+        "type": "user_workflow",
+        "members": [
+          "component:AddTransactionDialog.vue",
+          "component:DataTable.vue",
+          "form:transaction-schema"
+        ],
+        "metadata": {
+          "flow": "create_edit_view_delete",
+          "components": [
+            "Dialog",
+            "Table",
+            "Actions"
+          ]
+        }
+      },
+      {
+        "id": "navigation_components",
+        "type": "component_group",
+        "members": [
+          "NavSecondary",
+          "NavUser",
+          "NavDocuments"
+        ],
+        "properties": {
+          "shared_pattern": "sidebar_navigation",
+          "common_features": [
+            "responsive_design",
+            "dropdown_menus",
+            "icon_support"
+          ],
+          "sidebar_integration": true
+        }
+      },
+      {
+        "id": "data_visualization_components",
+        "type": "component_group",
+        "members": [
+          "SectionCards",
+          "ChartAreaInteractive"
+        ],
+        "properties": {
+          "shared_pattern": "dashboard_widgets",
+          "common_features": [
+            "computed_data",
+            "shadcn_card_wrapper",
+            "responsive_layout"
+          ],
+          "data_display": true
+        }
+      },
+      {
+        "id": "shadcn_ui_integration",
+        "type": "design_system",
+        "members": [
+          "shadcn_sidebar",
+          "shadcn_dropdown",
+          "shadcn_card",
+          "shadcn_chart",
+          "shadcn_avatar",
+          "shadcn_select"
+        ],
+        "properties": {
+          "library": "shadcn-vue",
+          "styling": "CSS_variables",
+          "theming": "light_dark_mode"
+        }
+      },
+      {
+        "id": "icon_system",
+        "type": "design_pattern",
+        "members": [
+          "tabler_icons",
+          "lucide_icons"
+        ],
+        "properties": {
+          "pattern": "icon_component_usage",
+          "implementation": "Vue_components"
+        }
+      },
+      {
+        "id": "pattern:tabs-composition",
+        "type": "component-pattern",
+        "nodes": [
+          "vue-component:Tabs",
+          "vue-component:TabsList",
+          "vue-component:TabsTrigger",
+          "vue-component:TabsContent"
+        ],
+        "attributes": {
+          "pattern": "reka-ui-tabs-wrapper",
+          "description": "Composite tabs component wrapping reka-ui primitives",
+          "composition": "Tabs contains TabsList and TabsContent; TabsList contains TabsTrigger"
+        }
+      },
+      {
+        "id": "pattern:props-delegation",
+        "type": "pattern",
+        "nodes": [
+          "vue-component:Tabs",
+          "vue-component:TabsList",
+          "vue-component:TabsTrigger",
+          "vue-component:TabsContent",
+          "utility:reactiveOmit"
+        ],
+        "attributes": {
+          "pattern": "class-prop-delegation",
+          "description": "All tab components use reactiveOmit to exclude class prop, then bind delegated props to base component"
+        }
+      },
+      {
+        "id": "pattern:styling-architecture",
+        "type": "pattern",
+        "nodes": [
+          "vue-component:Tabs",
+          "vue-component:TabsList",
+          "vue-component:TabsTrigger",
+          "vue-component:TabsContent",
+          "utility:cn"
+        ],
+        "attributes": {
+          "pattern": "cn-utility-merging",
+          "description": "All components use cn() utility to merge default classes with custom class prop"
+        }
+      },
+      {
+        "id": "dialog:full_dialog_composition",
+        "type": "composition",
+        "nodes": [
+          "dialog:DialogRoot",
+          "dialog:DialogTrigger",
+          "dialog:DialogContent",
+          "dialog:DialogHeader",
+          "dialog:DialogTitle",
+          "dialog:DialogDescription",
+          "dialog:DialogFooter",
+          "dialog:DialogClose"
+        ],
+        "properties": {
+          "pattern": "compound component",
+          "description": "Complete dialog composition hierarchy"
+        }
+      },
+      {
+        "id": "dialog:styling_pattern_consistency",
+        "type": "pattern",
+        "nodes": [
+          "dialog:DialogContent",
+          "dialog:DialogScrollContent",
+          "dialog:DialogTitle",
+          "dialog:DialogDescription",
+          "dialog:DialogOverlay"
+        ],
+        "properties": {
+          "pattern": "reactiveOmit + cn class forwarding",
+          "purpose": "consistent styling override pattern"
+        }
+      },
+      {
+        "id": "dialog:portal_pattern",
+        "type": "pattern",
+        "nodes": [
+          "dialog:DialogContent",
+          "dialog:DialogScrollContent",
+          "dialog:DialogOverlay"
+        ],
+        "properties": {
+          "pattern": "DialogPortal wrapping",
+          "purpose": "render outside DOM hierarchy"
+        }
+      },
+      {
+        "id": "dialog:data_slot_attributes",
+        "type": "metadata",
+        "nodes": [
+          "dialog:DialogRoot",
+          "dialog:DialogTrigger",
+          "dialog:DialogContent",
+          "dialog:DialogHeader",
+          "dialog:DialogFooter",
+          "dialog:DialogTitle",
+          "dialog:DialogDescription",
+          "dialog:DialogClose",
+          "dialog:DialogOverlay"
+        ],
+        "properties": {
+          "pattern": "data-slot attributes for component identification",
+          "purpose": "testing and styling hooks"
+        }
+      },
+      {
+        "id": "dialog:reka_ui_abstraction",
+        "type": "abstraction",
+        "nodes": [
+          "dialog:DialogRoot",
+          "dialog:DialogTrigger",
+          "dialog:DialogContent",
+          "dialog:DialogTitle",
+          "dialog:DialogDescription",
+          "dialog:DialogClose",
+          "dialog:DialogOverlay"
+        ],
+        "properties": {
+          "layer": "wrapper around reka-ui primitives",
+          "value_add": "styling, data-slots, icon integration"
+        }
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "vite.config.ts",
+      "file_type": "code",
+      "source_file": "vite.config.ts",
+      "source_location": "L1",
+      "id": "vite_config_ts",
+      "community": 20,
+      "norm_label": "vite.config.ts"
+    },
+    {
+      "label": "App.vue",
+      "file_type": "code",
+      "source_file": "src/App.vue",
+      "source_location": "L1",
+      "id": "src_app_vue",
+      "community": 3,
+      "norm_label": "app.vue"
+    },
+    {
+      "label": "main.ts",
+      "file_type": "code",
+      "source_file": "src/main.ts",
+      "source_location": "L1",
+      "id": "src_main_ts",
+      "community": 3,
+      "norm_label": "main.ts"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L1",
+      "id": "src_types_index_ts",
+      "community": 21,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "useTheme.ts",
+      "file_type": "code",
+      "source_file": "src/composables/useTheme.ts",
+      "source_location": "L1",
+      "id": "src_composables_usetheme_ts",
+      "community": 10,
+      "norm_label": "usetheme.ts"
+    },
+    {
+      "label": "updateResolvedTheme()",
+      "file_type": "code",
+      "source_file": "src/composables/useTheme.ts",
+      "source_location": "L11",
+      "id": "composables_usetheme_updateresolvedtheme",
+      "community": 10,
+      "norm_label": "updateresolvedtheme()"
+    },
+    {
+      "label": "applyTheme()",
+      "file_type": "code",
+      "source_file": "src/composables/useTheme.ts",
+      "source_location": "L19",
+      "id": "composables_usetheme_applytheme",
+      "community": 10,
+      "norm_label": "applytheme()"
+    },
+    {
+      "label": "useTheme()",
+      "file_type": "code",
+      "source_file": "src/composables/useTheme.ts",
+      "source_location": "L25",
+      "id": "composables_usetheme_usetheme",
+      "community": 10,
+      "norm_label": "usetheme()"
+    },
+    {
+      "label": "app.ts",
+      "file_type": "code",
+      "source_file": "src/stores/app.ts",
+      "source_location": "L1",
+      "id": "src_stores_app_ts",
+      "community": 3,
+      "norm_label": "app.ts"
+    },
+    {
+      "label": "NavSecondary.vue",
+      "file_type": "code",
+      "source_file": "src/components/NavSecondary.vue",
+      "source_location": "L1",
+      "id": "src_components_navsecondary_vue",
+      "community": 22,
+      "norm_label": "navsecondary.vue"
+    },
+    {
+      "label": "NavUser.vue",
+      "file_type": "code",
+      "source_file": "src/components/NavUser.vue",
+      "source_location": "L1",
+      "id": "src_components_navuser_vue",
+      "community": 23,
+      "norm_label": "navuser.vue"
+    },
+    {
+      "label": "SiteHeader.vue",
+      "file_type": "code",
+      "source_file": "src/components/SiteHeader.vue",
+      "source_location": "L1",
+      "id": "src_components_siteheader_vue",
+      "community": 24,
+      "norm_label": "siteheader.vue"
+    },
+    {
+      "label": "SectionCards.vue",
+      "file_type": "code",
+      "source_file": "src/components/SectionCards.vue",
+      "source_location": "L1",
+      "id": "src_components_sectioncards_vue",
+      "community": 17,
+      "norm_label": "sectioncards.vue"
+    },
+    {
+      "label": "formatCurrency()",
+      "file_type": "code",
+      "source_file": "src/components/SectionCards.vue",
+      "source_location": "L19",
+      "id": "components_sectioncards_formatcurrency",
+      "community": 17,
+      "norm_label": "formatcurrency()"
+    },
+    {
+      "label": "NavMain.vue",
+      "file_type": "code",
+      "source_file": "src/components/NavMain.vue",
+      "source_location": "L1",
+      "id": "src_components_navmain_vue",
+      "community": 25,
+      "norm_label": "navmain.vue"
+    },
+    {
+      "label": "HelloWorld.vue",
+      "file_type": "code",
+      "source_file": "src/components/HelloWorld.vue",
+      "source_location": "L1",
+      "id": "src_components_helloworld_vue",
+      "community": 26,
+      "norm_label": "helloworld.vue"
+    },
+    {
+      "label": "AddTransactionDialog.vue",
+      "file_type": "code",
+      "source_file": "src/components/AddTransactionDialog.vue",
+      "source_location": "L1",
+      "id": "src_components_addtransactiondialog_vue",
+      "community": 27,
+      "norm_label": "addtransactiondialog.vue"
+    },
+    {
+      "label": "ChartAreaInteractive.vue",
+      "file_type": "code",
+      "source_file": "src/components/ChartAreaInteractive.vue",
+      "source_location": "L1",
+      "id": "src_components_chartareainteractive_vue",
+      "community": 28,
+      "norm_label": "chartareainteractive.vue"
+    },
+    {
+      "label": "AppSidebar.vue",
+      "file_type": "code",
+      "source_file": "src/components/AppSidebar.vue",
+      "source_location": "L1",
+      "id": "src_components_appsidebar_vue",
+      "community": 29,
+      "norm_label": "appsidebar.vue"
+    },
+    {
+      "label": "ThemeToggle.vue",
+      "file_type": "code",
+      "source_file": "src/components/ThemeToggle.vue",
+      "source_location": "L1",
+      "id": "src_components_themetoggle_vue",
+      "community": 30,
+      "norm_label": "themetoggle.vue"
+    },
+    {
+      "label": "DataTable.vue",
+      "file_type": "code",
+      "source_file": "src/components/DataTable.vue",
+      "source_location": "L1",
+      "id": "src_components_datatable_vue",
+      "community": 31,
+      "norm_label": "datatable.vue"
+    },
+    {
+      "label": "NavDocuments.vue",
+      "file_type": "code",
+      "source_file": "src/components/NavDocuments.vue",
+      "source_location": "L1",
+      "id": "src_components_navdocuments_vue",
+      "community": 32,
+      "norm_label": "navdocuments.vue"
+    },
+    {
+      "label": "Tabs.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/tabs/Tabs.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_tabs_tabs_vue",
+      "community": 33,
+      "norm_label": "tabs.vue"
+    },
+    {
+      "label": "TabsContent.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/tabs/TabsContent.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_tabs_tabscontent_vue",
+      "community": 34,
+      "norm_label": "tabscontent.vue"
+    },
+    {
+      "label": "TabsTrigger.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/tabs/TabsTrigger.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_tabs_tabstrigger_vue",
+      "community": 35,
+      "norm_label": "tabstrigger.vue"
+    },
+    {
+      "label": "TabsList.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/tabs/TabsList.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_tabs_tabslist_vue",
+      "community": 36,
+      "norm_label": "tabslist.vue"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/tabs/index.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_tabs_index_ts",
+      "community": 37,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "SidebarMenuSubButton.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarMenuSubButton.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebarmenusubbutton_vue",
+      "community": 38,
+      "norm_label": "sidebarmenusubbutton.vue"
+    },
+    {
+      "label": "SidebarContent.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarContent.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebarcontent_vue",
+      "community": 39,
+      "norm_label": "sidebarcontent.vue"
+    },
+    {
+      "label": "SidebarTrigger.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarTrigger.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebartrigger_vue",
+      "community": 40,
+      "norm_label": "sidebartrigger.vue"
+    },
+    {
+      "label": "SidebarGroup.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarGroup.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebargroup_vue",
+      "community": 41,
+      "norm_label": "sidebargroup.vue"
+    },
+    {
+      "label": "SidebarInset.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarInset.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebarinset_vue",
+      "community": 42,
+      "norm_label": "sidebarinset.vue"
+    },
+    {
+      "label": "SidebarMenuSub.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarMenuSub.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebarmenusub_vue",
+      "community": 43,
+      "norm_label": "sidebarmenusub.vue"
+    },
+    {
+      "label": "SidebarMenuAction.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarMenuAction.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebarmenuaction_vue",
+      "community": 44,
+      "norm_label": "sidebarmenuaction.vue"
+    },
+    {
+      "label": "SidebarMenuBadge.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarMenuBadge.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebarmenubadge_vue",
+      "community": 45,
+      "norm_label": "sidebarmenubadge.vue"
+    },
+    {
+      "label": "SidebarGroupLabel.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarGroupLabel.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebargrouplabel_vue",
+      "community": 46,
+      "norm_label": "sidebargrouplabel.vue"
+    },
+    {
+      "label": "SidebarMenuButtonChild.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarMenuButtonChild.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebarmenubuttonchild_vue",
+      "community": 47,
+      "norm_label": "sidebarmenubuttonchild.vue"
+    },
+    {
+      "label": "SidebarSeparator.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarSeparator.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebarseparator_vue",
+      "community": 48,
+      "norm_label": "sidebarseparator.vue"
+    },
+    {
+      "label": "utils.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/utils.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_utils_ts",
+      "community": 49,
+      "norm_label": "utils.ts"
+    },
+    {
+      "label": "SidebarProvider.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarProvider.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebarprovider_vue",
+      "community": 13,
+      "norm_label": "sidebarprovider.vue"
+    },
+    {
+      "label": "setOpenMobile()",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarProvider.vue",
+      "source_location": "L37",
+      "id": "sidebar_sidebarprovider_setopenmobile",
+      "community": 13,
+      "norm_label": "setopenmobile()"
+    },
+    {
+      "label": "toggleSidebar()",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarProvider.vue",
+      "source_location": "L42",
+      "id": "sidebar_sidebarprovider_togglesidebar",
+      "community": 13,
+      "norm_label": "togglesidebar()"
+    },
+    {
+      "label": "SidebarRail.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarRail.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebarrail_vue",
+      "community": 50,
+      "norm_label": "sidebarrail.vue"
+    },
+    {
+      "label": "SidebarGroupAction.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarGroupAction.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebargroupaction_vue",
+      "community": 51,
+      "norm_label": "sidebargroupaction.vue"
+    },
+    {
+      "label": "SidebarMenuSubItem.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarMenuSubItem.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebarmenusubitem_vue",
+      "community": 52,
+      "norm_label": "sidebarmenusubitem.vue"
+    },
+    {
+      "label": "Sidebar.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/Sidebar.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebar_vue",
+      "community": 53,
+      "norm_label": "sidebar.vue"
+    },
+    {
+      "label": "SidebarMenuSkeleton.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarMenuSkeleton.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebarmenuskeleton_vue",
+      "community": 54,
+      "norm_label": "sidebarmenuskeleton.vue"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/index.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_index_ts",
+      "community": 55,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "SidebarGroupContent.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarGroupContent.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebargroupcontent_vue",
+      "community": 56,
+      "norm_label": "sidebargroupcontent.vue"
+    },
+    {
+      "label": "SidebarHeader.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarHeader.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebarheader_vue",
+      "community": 57,
+      "norm_label": "sidebarheader.vue"
+    },
+    {
+      "label": "SidebarMenu.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarMenu.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebarmenu_vue",
+      "community": 58,
+      "norm_label": "sidebarmenu.vue"
+    },
+    {
+      "label": "SidebarFooter.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarFooter.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebarfooter_vue",
+      "community": 59,
+      "norm_label": "sidebarfooter.vue"
+    },
+    {
+      "label": "SidebarMenuItem.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarMenuItem.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebarmenuitem_vue",
+      "community": 60,
+      "norm_label": "sidebarmenuitem.vue"
+    },
+    {
+      "label": "SidebarMenuButton.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarMenuButton.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebarmenubutton_vue",
+      "community": 61,
+      "norm_label": "sidebarmenubutton.vue"
+    },
+    {
+      "label": "SidebarInput.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sidebar/SidebarInput.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sidebar_sidebarinput_vue",
+      "community": 62,
+      "norm_label": "sidebarinput.vue"
+    },
+    {
+      "label": "Tooltip.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/tooltip/Tooltip.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_tooltip_tooltip_vue",
+      "community": 63,
+      "norm_label": "tooltip.vue"
+    },
+    {
+      "label": "TooltipProvider.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/tooltip/TooltipProvider.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_tooltip_tooltipprovider_vue",
+      "community": 64,
+      "norm_label": "tooltipprovider.vue"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/tooltip/index.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_tooltip_index_ts",
+      "community": 65,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "TooltipTrigger.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/tooltip/TooltipTrigger.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_tooltip_tooltiptrigger_vue",
+      "community": 66,
+      "norm_label": "tooltiptrigger.vue"
+    },
+    {
+      "label": "TooltipContent.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/tooltip/TooltipContent.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_tooltip_tooltipcontent_vue",
+      "community": 67,
+      "norm_label": "tooltipcontent.vue"
+    },
+    {
+      "label": "CardAction.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/card/CardAction.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_card_cardaction_vue",
+      "community": 68,
+      "norm_label": "cardaction.vue"
+    },
+    {
+      "label": "Card.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/card/Card.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_card_card_vue",
+      "community": 69,
+      "norm_label": "card.vue"
+    },
+    {
+      "label": "CardContent.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/card/CardContent.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_card_cardcontent_vue",
+      "community": 70,
+      "norm_label": "cardcontent.vue"
+    },
+    {
+      "label": "CardTitle.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/card/CardTitle.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_card_cardtitle_vue",
+      "community": 71,
+      "norm_label": "cardtitle.vue"
+    },
+    {
+      "label": "CardHeader.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/card/CardHeader.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_card_cardheader_vue",
+      "community": 72,
+      "norm_label": "cardheader.vue"
+    },
+    {
+      "label": "CardFooter.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/card/CardFooter.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_card_cardfooter_vue",
+      "community": 73,
+      "norm_label": "cardfooter.vue"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/card/index.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_card_index_ts",
+      "community": 74,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "CardDescription.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/card/CardDescription.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_card_carddescription_vue",
+      "community": 75,
+      "norm_label": "carddescription.vue"
+    },
+    {
+      "label": "Progress.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/progress/Progress.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_progress_progress_vue",
+      "community": 76,
+      "norm_label": "progress.vue"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/progress/index.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_progress_index_ts",
+      "community": 77,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/input/index.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_input_index_ts",
+      "community": 78,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "Input.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/input/Input.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_input_input_vue",
+      "community": 79,
+      "norm_label": "input.vue"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/skeleton/index.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_skeleton_index_ts",
+      "community": 80,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "Skeleton.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/skeleton/Skeleton.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_skeleton_skeleton_vue",
+      "community": 81,
+      "norm_label": "skeleton.vue"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/separator/index.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_separator_index_ts",
+      "community": 82,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "Separator.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/separator/Separator.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_separator_separator_vue",
+      "community": 83,
+      "norm_label": "separator.vue"
+    },
+    {
+      "label": "ChartContainer.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/chart/ChartContainer.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_chart_chartcontainer_vue",
+      "community": 84,
+      "norm_label": "chartcontainer.vue"
+    },
+    {
+      "label": "utils.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/chart/utils.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_chart_utils_ts",
+      "community": 12,
+      "norm_label": "utils.ts"
+    },
+    {
+      "label": "serializeKey()",
+      "file_type": "code",
+      "source_file": "src/components/ui/chart/utils.ts",
+      "source_location": "L10",
+      "id": "chart_utils_serializekey",
+      "community": 12,
+      "norm_label": "serializekey()"
+    },
+    {
+      "label": "componentToString()",
+      "file_type": "code",
+      "source_file": "src/components/ui/chart/utils.ts",
+      "source_location": "L23",
+      "id": "chart_utils_componenttostring",
+      "community": 12,
+      "norm_label": "componenttostring()"
+    },
+    {
+      "label": "ChartStyle.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/chart/ChartStyle.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_chart_chartstyle_vue",
+      "community": 85,
+      "norm_label": "chartstyle.vue"
+    },
+    {
+      "label": "ChartTooltipContent.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/chart/ChartTooltipContent.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_chart_charttooltipcontent_vue",
+      "community": 86,
+      "norm_label": "charttooltipcontent.vue"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/chart/index.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_chart_index_ts",
+      "community": 87,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "ChartLegendContent.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/chart/ChartLegendContent.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_chart_chartlegendcontent_vue",
+      "community": 88,
+      "norm_label": "chartlegendcontent.vue"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/checkbox/index.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_checkbox_index_ts",
+      "community": 89,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "Checkbox.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/checkbox/Checkbox.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_checkbox_checkbox_vue",
+      "community": 90,
+      "norm_label": "checkbox.vue"
+    },
+    {
+      "label": "Label.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/label/Label.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_label_label_vue",
+      "community": 91,
+      "norm_label": "label.vue"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/label/index.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_label_index_ts",
+      "community": 92,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "DropdownMenuLabel.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dropdown-menu/DropdownMenuLabel.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dropdown_menu_dropdownmenulabel_vue",
+      "community": 93,
+      "norm_label": "dropdownmenulabel.vue"
+    },
+    {
+      "label": "DropdownMenuRadioItem.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dropdown-menu/DropdownMenuRadioItem.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dropdown_menu_dropdownmenuradioitem_vue",
+      "community": 94,
+      "norm_label": "dropdownmenuradioitem.vue"
+    },
+    {
+      "label": "DropdownMenuSeparator.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dropdown-menu/DropdownMenuSeparator.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dropdown_menu_dropdownmenuseparator_vue",
+      "community": 95,
+      "norm_label": "dropdownmenuseparator.vue"
+    },
+    {
+      "label": "DropdownMenuGroup.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dropdown-menu/DropdownMenuGroup.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dropdown_menu_dropdownmenugroup_vue",
+      "community": 96,
+      "norm_label": "dropdownmenugroup.vue"
+    },
+    {
+      "label": "DropdownMenuTrigger.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dropdown-menu/DropdownMenuTrigger.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dropdown_menu_dropdownmenutrigger_vue",
+      "community": 97,
+      "norm_label": "dropdownmenutrigger.vue"
+    },
+    {
+      "label": "DropdownMenuContent.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dropdown-menu/DropdownMenuContent.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dropdown_menu_dropdownmenucontent_vue",
+      "community": 98,
+      "norm_label": "dropdownmenucontent.vue"
+    },
+    {
+      "label": "DropdownMenuShortcut.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dropdown-menu/DropdownMenuShortcut.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dropdown_menu_dropdownmenushortcut_vue",
+      "community": 99,
+      "norm_label": "dropdownmenushortcut.vue"
+    },
+    {
+      "label": "DropdownMenuCheckboxItem.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dropdown-menu/DropdownMenuCheckboxItem.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dropdown_menu_dropdownmenucheckboxitem_vue",
+      "community": 100,
+      "norm_label": "dropdownmenucheckboxitem.vue"
+    },
+    {
+      "label": "DropdownMenuItem.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dropdown-menu/DropdownMenuItem.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dropdown_menu_dropdownmenuitem_vue",
+      "community": 101,
+      "norm_label": "dropdownmenuitem.vue"
+    },
+    {
+      "label": "DropdownMenuRadioGroup.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dropdown-menu/DropdownMenuRadioGroup.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dropdown_menu_dropdownmenuradiogroup_vue",
+      "community": 102,
+      "norm_label": "dropdownmenuradiogroup.vue"
+    },
+    {
+      "label": "DropdownMenu.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dropdown-menu/DropdownMenu.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dropdown_menu_dropdownmenu_vue",
+      "community": 103,
+      "norm_label": "dropdownmenu.vue"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/dropdown-menu/index.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_dropdown_menu_index_ts",
+      "community": 104,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "DropdownMenuSubContent.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dropdown-menu/DropdownMenuSubContent.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dropdown_menu_dropdownmenusubcontent_vue",
+      "community": 105,
+      "norm_label": "dropdownmenusubcontent.vue"
+    },
+    {
+      "label": "DropdownMenuSubTrigger.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dropdown-menu/DropdownMenuSubTrigger.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dropdown_menu_dropdownmenusubtrigger_vue",
+      "community": 106,
+      "norm_label": "dropdownmenusubtrigger.vue"
+    },
+    {
+      "label": "DropdownMenuSub.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dropdown-menu/DropdownMenuSub.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dropdown_menu_dropdownmenusub_vue",
+      "community": 107,
+      "norm_label": "dropdownmenusub.vue"
+    },
+    {
+      "label": "DialogTitle.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dialog/DialogTitle.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dialog_dialogtitle_vue",
+      "community": 108,
+      "norm_label": "dialogtitle.vue"
+    },
+    {
+      "label": "DialogHeader.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dialog/DialogHeader.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dialog_dialogheader_vue",
+      "community": 109,
+      "norm_label": "dialogheader.vue"
+    },
+    {
+      "label": "DialogFooter.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dialog/DialogFooter.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dialog_dialogfooter_vue",
+      "community": 110,
+      "norm_label": "dialogfooter.vue"
+    },
+    {
+      "label": "DialogContent.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dialog/DialogContent.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dialog_dialogcontent_vue",
+      "community": 111,
+      "norm_label": "dialogcontent.vue"
+    },
+    {
+      "label": "DialogTrigger.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dialog/DialogTrigger.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dialog_dialogtrigger_vue",
+      "community": 112,
+      "norm_label": "dialogtrigger.vue"
+    },
+    {
+      "label": "DialogScrollContent.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dialog/DialogScrollContent.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dialog_dialogscrollcontent_vue",
+      "community": 113,
+      "norm_label": "dialogscrollcontent.vue"
+    },
+    {
+      "label": "DialogOverlay.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dialog/DialogOverlay.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dialog_dialogoverlay_vue",
+      "community": 114,
+      "norm_label": "dialogoverlay.vue"
+    },
+    {
+      "label": "Dialog.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dialog/Dialog.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dialog_dialog_vue",
+      "community": 115,
+      "norm_label": "dialog.vue"
+    },
+    {
+      "label": "DialogDescription.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dialog/DialogDescription.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dialog_dialogdescription_vue",
+      "community": 116,
+      "norm_label": "dialogdescription.vue"
+    },
+    {
+      "label": "DialogClose.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/dialog/DialogClose.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_dialog_dialogclose_vue",
+      "community": 117,
+      "norm_label": "dialogclose.vue"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/dialog/index.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_dialog_index_ts",
+      "community": 118,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/button/index.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_button_index_ts",
+      "community": 119,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "Button.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/button/Button.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_button_button_vue",
+      "community": 120,
+      "norm_label": "button.vue"
+    },
+    {
+      "label": "TableCell.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/table/TableCell.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_table_tablecell_vue",
+      "community": 121,
+      "norm_label": "tablecell.vue"
+    },
+    {
+      "label": "TableCaption.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/table/TableCaption.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_table_tablecaption_vue",
+      "community": 122,
+      "norm_label": "tablecaption.vue"
+    },
+    {
+      "label": "TableFooter.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/table/TableFooter.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_table_tablefooter_vue",
+      "community": 123,
+      "norm_label": "tablefooter.vue"
+    },
+    {
+      "label": "TableHead.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/table/TableHead.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_table_tablehead_vue",
+      "community": 124,
+      "norm_label": "tablehead.vue"
+    },
+    {
+      "label": "TableHeader.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/table/TableHeader.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_table_tableheader_vue",
+      "community": 125,
+      "norm_label": "tableheader.vue"
+    },
+    {
+      "label": "TableRow.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/table/TableRow.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_table_tablerow_vue",
+      "community": 126,
+      "norm_label": "tablerow.vue"
+    },
+    {
+      "label": "utils.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/table/utils.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_table_utils_ts",
+      "community": 15,
+      "norm_label": "utils.ts"
+    },
+    {
+      "label": "valueUpdater()",
+      "file_type": "code",
+      "source_file": "src/components/ui/table/utils.ts",
+      "source_location": "L6",
+      "id": "table_utils_valueupdater",
+      "community": 15,
+      "norm_label": "valueupdater()"
+    },
+    {
+      "label": "TableEmpty.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/table/TableEmpty.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_table_tableempty_vue",
+      "community": 127,
+      "norm_label": "tableempty.vue"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/table/index.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_table_index_ts",
+      "community": 128,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "Table.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/table/Table.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_table_table_vue",
+      "community": 129,
+      "norm_label": "table.vue"
+    },
+    {
+      "label": "TableBody.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/table/TableBody.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_table_tablebody_vue",
+      "community": 130,
+      "norm_label": "tablebody.vue"
+    },
+    {
+      "label": "AvatarFallback.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/avatar/AvatarFallback.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_avatar_avatarfallback_vue",
+      "community": 131,
+      "norm_label": "avatarfallback.vue"
+    },
+    {
+      "label": "AvatarImage.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/avatar/AvatarImage.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_avatar_avatarimage_vue",
+      "community": 132,
+      "norm_label": "avatarimage.vue"
+    },
+    {
+      "label": "Avatar.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/avatar/Avatar.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_avatar_avatar_vue",
+      "community": 133,
+      "norm_label": "avatar.vue"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/avatar/index.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_avatar_index_ts",
+      "community": 134,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "SelectItem.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/select/SelectItem.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_select_selectitem_vue",
+      "community": 135,
+      "norm_label": "selectitem.vue"
+    },
+    {
+      "label": "SelectTrigger.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/select/SelectTrigger.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_select_selecttrigger_vue",
+      "community": 136,
+      "norm_label": "selecttrigger.vue"
+    },
+    {
+      "label": "SelectContent.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/select/SelectContent.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_select_selectcontent_vue",
+      "community": 137,
+      "norm_label": "selectcontent.vue"
+    },
+    {
+      "label": "SelectGroup.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/select/SelectGroup.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_select_selectgroup_vue",
+      "community": 138,
+      "norm_label": "selectgroup.vue"
+    },
+    {
+      "label": "SelectSeparator.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/select/SelectSeparator.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_select_selectseparator_vue",
+      "community": 139,
+      "norm_label": "selectseparator.vue"
+    },
+    {
+      "label": "SelectScrollUpButton.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/select/SelectScrollUpButton.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_select_selectscrollupbutton_vue",
+      "community": 140,
+      "norm_label": "selectscrollupbutton.vue"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/select/index.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_select_index_ts",
+      "community": 141,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "SelectScrollDownButton.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/select/SelectScrollDownButton.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_select_selectscrolldownbutton_vue",
+      "community": 142,
+      "norm_label": "selectscrolldownbutton.vue"
+    },
+    {
+      "label": "SelectValue.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/select/SelectValue.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_select_selectvalue_vue",
+      "community": 143,
+      "norm_label": "selectvalue.vue"
+    },
+    {
+      "label": "SelectLabel.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/select/SelectLabel.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_select_selectlabel_vue",
+      "community": 144,
+      "norm_label": "selectlabel.vue"
+    },
+    {
+      "label": "Select.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/select/Select.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_select_select_vue",
+      "community": 145,
+      "norm_label": "select.vue"
+    },
+    {
+      "label": "SelectItemText.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/select/SelectItemText.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_select_selectitemtext_vue",
+      "community": 146,
+      "norm_label": "selectitemtext.vue"
+    },
+    {
+      "label": "SheetClose.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sheet/SheetClose.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sheet_sheetclose_vue",
+      "community": 147,
+      "norm_label": "sheetclose.vue"
+    },
+    {
+      "label": "SheetDescription.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sheet/SheetDescription.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sheet_sheetdescription_vue",
+      "community": 148,
+      "norm_label": "sheetdescription.vue"
+    },
+    {
+      "label": "SheetOverlay.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sheet/SheetOverlay.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sheet_sheetoverlay_vue",
+      "community": 149,
+      "norm_label": "sheetoverlay.vue"
+    },
+    {
+      "label": "Sheet.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sheet/Sheet.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sheet_sheet_vue",
+      "community": 150,
+      "norm_label": "sheet.vue"
+    },
+    {
+      "label": "SheetFooter.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sheet/SheetFooter.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sheet_sheetfooter_vue",
+      "community": 151,
+      "norm_label": "sheetfooter.vue"
+    },
+    {
+      "label": "SheetHeader.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sheet/SheetHeader.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sheet_sheetheader_vue",
+      "community": 152,
+      "norm_label": "sheetheader.vue"
+    },
+    {
+      "label": "SheetContent.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sheet/SheetContent.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sheet_sheetcontent_vue",
+      "community": 153,
+      "norm_label": "sheetcontent.vue"
+    },
+    {
+      "label": "SheetTrigger.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sheet/SheetTrigger.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sheet_sheettrigger_vue",
+      "community": 154,
+      "norm_label": "sheettrigger.vue"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/sheet/index.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_sheet_index_ts",
+      "community": 155,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "SheetTitle.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/sheet/SheetTitle.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_sheet_sheettitle_vue",
+      "community": 156,
+      "norm_label": "sheettitle.vue"
+    },
+    {
+      "label": "Badge.vue",
+      "file_type": "code",
+      "source_file": "src/components/ui/badge/Badge.vue",
+      "source_location": "L1",
+      "id": "src_components_ui_badge_badge_vue",
+      "community": 157,
+      "norm_label": "badge.vue"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/components/ui/badge/index.ts",
+      "source_location": "L1",
+      "id": "src_components_ui_badge_index_ts",
+      "community": 158,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "utils.ts",
+      "file_type": "code",
+      "source_file": "src/lib/utils.ts",
+      "source_location": "L1",
+      "id": "src_lib_utils_ts",
+      "community": 19,
+      "norm_label": "utils.ts"
+    },
+    {
+      "label": "cn()",
+      "file_type": "code",
+      "source_file": "src/lib/utils.ts",
+      "source_location": "L5",
+      "id": "lib_utils_cn",
+      "community": 19,
+      "norm_label": "cn()"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/lib/api/index.ts",
+      "source_location": "L1",
+      "id": "src_lib_api_index_ts",
+      "community": 159,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "TransactionsView.vue",
+      "file_type": "code",
+      "source_file": "src/views/TransactionsView.vue",
+      "source_location": "L1",
+      "id": "src_views_transactionsview_vue",
+      "community": 160,
+      "norm_label": "transactionsview.vue"
+    },
+    {
+      "label": "BudgetsView.vue",
+      "file_type": "code",
+      "source_file": "src/views/BudgetsView.vue",
+      "source_location": "L1",
+      "id": "src_views_budgetsview_vue",
+      "community": 161,
+      "norm_label": "budgetsview.vue"
+    },
+    {
+      "label": "CategoriesView.vue",
+      "file_type": "code",
+      "source_file": "src/views/CategoriesView.vue",
+      "source_location": "L1",
+      "id": "src_views_categoriesview_vue",
+      "community": 162,
+      "norm_label": "categoriesview.vue"
+    },
+    {
+      "label": "DashboardView.vue",
+      "file_type": "code",
+      "source_file": "src/views/DashboardView.vue",
+      "source_location": "L1",
+      "id": "src_views_dashboardview_vue",
+      "community": 163,
+      "norm_label": "dashboardview.vue"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/router/index.ts",
+      "source_location": "L1",
+      "id": "src_router_index_ts",
+      "community": 3,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "Application Mount Point",
+      "file_type": "code",
+      "source_file": "index.html",
+      "source_location": 10,
+      "id": "index_html_app_mount",
+      "community": 16,
+      "norm_label": "application mount point"
+    },
+    {
+      "label": "Main Entry Point Script",
+      "file_type": "code",
+      "source_file": "index.html",
+      "source_location": 11,
+      "id": "index_html_main_entry",
+      "community": 16,
+      "norm_label": "main entry point script"
+    },
+    {
+      "label": "Expense Tracker Application",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "id": "readme_expense_tracker",
+      "community": 0,
+      "norm_label": "expense tracker application"
+    },
+    {
+      "label": "Vue 3 Framework",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 17,
+      "id": "readme_vue_framework",
+      "community": 0,
+      "norm_label": "vue 3 framework"
+    },
+    {
+      "label": "TypeScript Language",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 18,
+      "id": "readme_typescript_language",
+      "community": 0,
+      "norm_label": "typescript language"
+    },
+    {
+      "label": "Vite Build Tool",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 19,
+      "id": "readme_vite_build_tool",
+      "community": 0,
+      "norm_label": "vite build tool"
+    },
+    {
+      "label": "Tailwind CSS v4 Styling",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 20,
+      "id": "readme_tailwind_styling",
+      "community": 0,
+      "norm_label": "tailwind css v4 styling"
+    },
+    {
+      "label": "shadcn-vue Component Library",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 20,
+      "id": "readme_shadcn_components",
+      "community": 0,
+      "norm_label": "shadcn-vue component library"
+    },
+    {
+      "label": "Pinia State Management",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 21,
+      "id": "readme_pinia_state",
+      "community": 0,
+      "norm_label": "pinia state management"
+    },
+    {
+      "label": "Vue Router",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 22,
+      "id": "readme_vue_router",
+      "community": 0,
+      "norm_label": "vue router"
+    },
+    {
+      "label": "Axios HTTP Client",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 23,
+      "id": "readme_axios_api",
+      "community": 0,
+      "norm_label": "axios http client"
+    },
+    {
+      "label": "Lucide Vue Icons",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 24,
+      "id": "readme_lucide_icons",
+      "community": 0,
+      "norm_label": "lucide vue icons"
+    },
+    {
+      "label": "Expsense API",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 116,
+      "id": "readme_expense_api",
+      "community": 0,
+      "norm_label": "expsense api"
+    },
+    {
+      "label": "VITE_API_BASE_URL Environment Variable",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 52,
+      "id": "readme_vite_api_base_url",
+      "community": 0,
+      "norm_label": "vite_api_base_url environment variable"
+    },
+    {
+      "label": "Dokploy Deployment Method",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 56,
+      "id": "readme_dokploy_deployment",
+      "community": 0,
+      "norm_label": "dokploy deployment method"
+    },
+    {
+      "label": "Docker Deployment Method",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 68,
+      "id": "readme_docker_deployment",
+      "community": 0,
+      "norm_label": "docker deployment method"
+    },
+    {
+      "label": "Project Directory Structure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": 101,
+      "id": "readme_project_structure",
+      "community": 0,
+      "norm_label": "project directory structure"
+    },
+    {
+      "label": "Dokploy Deployment Guide",
+      "file_type": "document",
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 14,
+      "id": "deployment_dokploy_guide",
+      "community": 0,
+      "norm_label": "dokploy deployment guide"
+    },
+    {
+      "label": "Docker Deployment Guide",
+      "file_type": "document",
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 78,
+      "id": "deployment_docker_guide",
+      "community": 0,
+      "norm_label": "docker deployment guide"
+    },
+    {
+      "label": "Deployment Troubleshooting Guide",
+      "file_type": "document",
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 158,
+      "id": "deployment_troubleshooting",
+      "community": 0,
+      "norm_label": "deployment troubleshooting guide"
+    },
+    {
+      "label": "Netlify Platform Configuration",
+      "file_type": "document",
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 232,
+      "id": "deployment_netlify_config",
+      "community": 0,
+      "norm_label": "netlify platform configuration"
+    },
+    {
+      "label": "Vercel Platform Configuration",
+      "file_type": "document",
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 253,
+      "id": "deployment_vercel_config",
+      "community": 0,
+      "norm_label": "vercel platform configuration"
+    },
+    {
+      "label": "AWS S3 CloudFront Configuration",
+      "file_type": "document",
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 265,
+      "id": "deployment_aws_s3_config",
+      "community": 0,
+      "norm_label": "aws s3 cloudfront configuration"
+    },
+    {
+      "label": "Docker Health Check Configuration",
+      "file_type": "document",
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 279,
+      "id": "deployment_health_check",
+      "community": 8,
+      "norm_label": "docker health check configuration"
+    },
+    {
+      "label": "Deployment Security Considerations",
+      "file_type": "document",
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 296,
+      "id": "deployment_security_considerations",
+      "community": 0,
+      "norm_label": "deployment security considerations"
+    },
+    {
+      "label": "Docker Compose Service Configuration",
+      "file_type": "code",
+      "source_file": "docker-compose.yml",
+      "source_location": 2,
+      "id": "docker_compose_service",
+      "community": 8,
+      "norm_label": "docker compose service configuration"
+    },
+    {
+      "label": "Docker Build Configuration",
+      "file_type": "code",
+      "source_file": "docker-compose.yml",
+      "source_location": 3,
+      "id": "docker_compose_build_config",
+      "community": 8,
+      "norm_label": "docker build configuration"
+    },
+    {
+      "label": "Port Mapping 3002:80",
+      "file_type": "code",
+      "source_file": "docker-compose.yml",
+      "source_location": 7,
+      "id": "docker_compose_port_mapping",
+      "community": 8,
+      "norm_label": "port mapping 3002:80"
+    },
+    {
+      "label": "Docker Health Check",
+      "file_type": "code",
+      "source_file": "docker-compose.yml",
+      "source_location": 11,
+      "id": "docker_compose_healthcheck",
+      "community": 8,
+      "norm_label": "docker health check"
+    },
+    {
+      "label": "Vue 3 Expense Tracker UI",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": 5,
+      "id": "claude_project_overview",
+      "community": 6,
+      "norm_label": "vue 3 expense tracker ui"
+    },
+    {
+      "label": "Vue 3 Composition API with script setup",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": 24,
+      "id": "claude_composition_api",
+      "community": 6,
+      "norm_label": "vue 3 composition api with script setup"
+    },
+    {
+      "label": "Path Alias Configuration @/*",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": 32,
+      "id": "claude_path_aliases",
+      "community": 6,
+      "norm_label": "path alias configuration @/*"
+    },
+    {
+      "label": "shadcn-vue Component Configuration",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": 39,
+      "id": "claude_shadcn_config",
+      "community": 6,
+      "norm_label": "shadcn-vue component configuration"
+    },
+    {
+      "label": "TypeScript Build Process with vue-tsc",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": 50,
+      "id": "claude_build_process",
+      "community": 6,
+      "norm_label": "typescript build process with vue-tsc"
+    },
+    {
+      "label": "Expsense API OpenAPI Specification",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": 58,
+      "id": "claude_openapi_spec",
+      "community": 6,
+      "norm_label": "expsense api openapi specification"
+    },
+    {
+      "label": "cn() className merging utility",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": 35,
+      "id": "claude_cn_utility",
+      "community": 6,
+      "norm_label": "cn() classname merging utility"
+    },
+    {
+      "label": "Layered UI Component Design",
+      "file_type": "image",
+      "source_file": "src/assets/hero.png",
+      "source_location": null,
+      "id": "hero_png_ui_element",
+      "community": 0,
+      "norm_label": "layered ui component design"
+    },
+    {
+      "label": "Social Media Icons Sprite Sheet",
+      "file_type": "image",
+      "source_file": "public/icons.svg",
+      "description": "SVG sprite sheet containing social media and branding icons as reusable symbols: Bluesky, Discord, GitHub, X/Twitter, Documentation, and generic Social icons. Styled with #08060d (dark) and #aa3bff (purple) colors.",
+      "symbols": [
+        "bluesky-icon",
+        "discord-icon",
+        "documentation-icon",
+        "github-icon",
+        "social-icon",
+        "x-icon"
+      ],
+      "id": "svg-icons-sprite",
+      "community": 11,
+      "norm_label": "social media icons sprite sheet"
+    },
+    {
+      "label": "Vue.js Favicon",
+      "file_type": "image",
+      "source_file": "public/favicon.svg",
+      "description": "Official Vue.js logo/favicon using signature V-shape design with green (#41B883) and dark blue (#35495E) gradients. The iconic Vue.js branding element used as the site favicon.",
+      "id": "svg-favicon",
+      "community": 11,
+      "norm_label": "vue.js favicon"
+    },
+    {
+      "label": "Vue.js Logo Asset",
+      "file_type": "image",
+      "source_file": "src/assets/vue.svg",
+      "description": "High-resolution Vue.js logo for use in application UI and documentation. Features the distinctive Vue.js V-mark with layered green gradient design on transparent background.",
+      "id": "svg-vue-logo",
+      "community": 11,
+      "norm_label": "vue.js logo asset"
+    },
+    {
+      "label": "Vite Logo Asset",
+      "file_type": "image",
+      "source_file": "src/assets/vite.svg",
+      "description": "Official Vite build tool logo featuring purple lightning bolt design (#9135ff, #863bff) with gradient effects and parentheses design elements. Includes dark/light mode adaptive styling.",
+      "id": "svg-vite-logo",
+      "community": 11,
+      "norm_label": "vite logo asset"
+    },
+    {
+      "type": "configuration",
+      "labels": [
+        "vite",
+        "build-tool",
+        "configuration",
+        "proxy",
+        "alias"
+      ],
+      "attributes": {
+        "path": "vite.config.ts",
+        "plugins": [
+          "vue",
+          "tailwindcss"
+        ],
+        "alias": "@ -> ./src",
+        "proxy_target": "https://expense-api.ratama.space",
+        "proxy_path": "/api"
+      },
+      "id": "vite.config.ts",
+      "community": 14,
+      "norm_label": ""
+    },
+    {
+      "type": "entry-point",
+      "labels": [
+        "entry-point",
+        "app-initialization",
+        "vue",
+        "pinia",
+        "router"
+      ],
+      "attributes": {
+        "path": "src/main.ts",
+        "framework": "vue",
+        "state_management": "pinia",
+        "routing": "vue-router"
+      },
+      "id": "src/main.ts",
+      "community": 3,
+      "norm_label": ""
+    },
+    {
+      "type": "root-component",
+      "labels": [
+        "root-component",
+        "layout",
+        "sidebar",
+        "header"
+      ],
+      "attributes": {
+        "path": "src/App.vue",
+        "layout_pattern": "sidebar-layout",
+        "components": [
+          "SidebarProvider",
+          "SidebarInset",
+          "AppSidebar",
+          "SiteHeader"
+        ]
+      },
+      "id": "src/App.vue",
+      "community": 3,
+      "norm_label": ""
+    },
+    {
+      "type": "dependency",
+      "labels": [
+        "plugin",
+        "vue"
+      ],
+      "attributes": {
+        "package": "@vitejs/plugin-vue",
+        "purpose": "Vue 3 SFC support"
+      },
+      "id": "vite-plugin-vue",
+      "community": 14,
+      "norm_label": ""
+    },
+    {
+      "type": "dependency",
+      "labels": [
+        "plugin",
+        "tailwindcss",
+        "styling"
+      ],
+      "attributes": {
+        "package": "@tailwindcss/vite",
+        "purpose": "Tailwind CSS v4 integration"
+      },
+      "id": "vite-plugin-tailwindcss",
+      "community": 14,
+      "norm_label": ""
+    },
+    {
+      "type": "store",
+      "labels": [
+        "pinia",
+        "store",
+        "app-state"
+      ],
+      "attributes": {
+        "location": "@/stores/app",
+        "initialization": "onMounted hook"
+      },
+      "id": "app-store",
+      "community": 3,
+      "norm_label": ""
+    },
+    {
+      "type": "dependency",
+      "labels": [
+        "routing",
+        "vue-router"
+      ],
+      "attributes": {
+        "purpose": "Client-side routing"
+      },
+      "id": "vue-router",
+      "community": 3,
+      "norm_label": ""
+    },
+    {
+      "type": "dependency",
+      "labels": [
+        "state-management",
+        "pinia"
+      ],
+      "attributes": {
+        "purpose": "State management"
+      },
+      "id": "pinia",
+      "community": 3,
+      "norm_label": ""
+    },
+    {
+      "type": "ui-pattern",
+      "labels": [
+        "layout",
+        "sidebar",
+        "shadcn-vue"
+      ],
+      "attributes": {
+        "components": [
+          "SidebarProvider",
+          "SidebarInset"
+        ],
+        "variant": "new-york"
+      },
+      "id": "sidebar-layout",
+      "community": 3,
+      "norm_label": ""
+    },
+    {
+      "type": "function",
+      "name": "cn",
+      "file": "src/lib/utils.ts",
+      "id": "utils_cn",
+      "community": 164,
+      "norm_label": ""
+    },
+    {
+      "type": "module",
+      "name": "api",
+      "file": "src/lib/api/index.ts",
+      "id": "api_index",
+      "community": 165,
+      "norm_label": ""
+    },
+    {
+      "type": "object",
+      "name": "apiClient",
+      "file": "src/lib/api/index.ts",
+      "id": "api_apiClient",
+      "community": 9,
+      "norm_label": ""
+    },
+    {
+      "type": "api_namespace",
+      "name": "categories",
+      "file": "src/lib/api/index.ts",
+      "id": "api_categories",
+      "community": 9,
+      "norm_label": ""
+    },
+    {
+      "type": "api_namespace",
+      "name": "transactions",
+      "file": "src/lib/api/index.ts",
+      "id": "api_transactions",
+      "community": 9,
+      "norm_label": ""
+    },
+    {
+      "type": "api_namespace",
+      "name": "budgets",
+      "file": "src/lib/api/index.ts",
+      "id": "api_budgets",
+      "community": 9,
+      "norm_label": ""
+    },
+    {
+      "type": "api_namespace",
+      "name": "analytics",
+      "file": "src/lib/api/index.ts",
+      "id": "api_analytics",
+      "community": 9,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "labels": [
+        "navigation",
+        "sidebar",
+        "layout"
+      ],
+      "metadata": {
+        "path": "src/components/AppSidebar.vue",
+        "role": "primary_navigation",
+        "features": [
+          "collapsible",
+          "financial_summary",
+          "route_based_navigation"
+        ],
+        "state_management": "useAppStore",
+        "icon_library": "lucide-vue-next",
+        "responsive": true
+      },
+      "id": "component:AppSidebar.vue",
+      "community": 2,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "labels": [
+        "layout",
+        "header",
+        "navigation"
+      ],
+      "metadata": {
+        "path": "src/components/SiteHeader.vue",
+        "role": "top_navigation",
+        "features": [
+          "dynamic_title",
+          "conditional_add_button",
+          "sidebar_trigger"
+        ],
+        "integration": [
+          "ThemeToggle",
+          "AddTransactionDialog"
+        ],
+        "responsive": true
+      },
+      "id": "component:SiteHeader.vue",
+      "community": 2,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "labels": [
+        "ui",
+        "theme",
+        "accessibility"
+      ],
+      "metadata": {
+        "path": "src/components/ThemeToggle.vue",
+        "role": "theme_switcher",
+        "modes": [
+          "light",
+          "dark",
+          "system"
+        ],
+        "composable": "useTheme",
+        "ui_pattern": "dropdown_menu"
+      },
+      "id": "component:ThemeToggle.vue",
+      "community": 2,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "labels": [
+        "navigation",
+        "ui"
+      ],
+      "metadata": {
+        "path": "src/components/NavMain.vue",
+        "role": "navigation_menu",
+        "features": [
+          "quick_create",
+          "tooltip"
+        ],
+        "icon_library": "@tabler/icons-vue",
+        "pattern": "sidebar_group"
+      },
+      "id": "component:NavMain.vue",
+      "community": 18,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "labels": [
+        "data",
+        "display",
+        "table"
+      ],
+      "metadata": {
+        "path": "src/components/DataTable.vue",
+        "role": "transaction_display",
+        "features": [
+          "recent_transactions",
+          "currency_formatting",
+          "delete_action",
+          "empty_state"
+        ],
+        "state_management": "useAppStore",
+        "styling": [
+          "conditional_colors",
+          "badges",
+          "hover_effects"
+        ],
+        "data_limit": 15
+      },
+      "id": "component:DataTable.vue",
+      "community": 2,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "labels": [
+        "form",
+        "dialog",
+        "crud"
+      ],
+      "metadata": {
+        "path": "src/components/AddTransactionDialog.vue",
+        "role": "transaction_form",
+        "features": [
+          "create_edit_mode",
+          "form_validation",
+          "model_binding"
+        ],
+        "state_management": "useAppStore",
+        "ui_pattern": "dialog",
+        "form_fields": [
+          "type",
+          "amount",
+          "category",
+          "description",
+          "date"
+        ]
+      },
+      "id": "component:AddTransactionDialog.vue",
+      "community": 2,
+      "norm_label": ""
+    },
+    {
+      "type": "pattern",
+      "labels": [
+        "ui_pattern",
+        "layout"
+      ],
+      "metadata": {
+        "components": [
+          "Sidebar",
+          "SidebarContent",
+          "SidebarHeader",
+          "SidebarFooter",
+          "SidebarMenu"
+        ],
+        "features": [
+          "collapsible",
+          "responsive",
+          "icon_only_mode"
+        ],
+        "library": "shadcn-vue"
+      },
+      "id": "pattern:shadcn-sidebar",
+      "community": 2,
+      "norm_label": ""
+    },
+    {
+      "type": "pattern",
+      "labels": [
+        "utility",
+        "formatting"
+      ],
+      "metadata": {
+        "locale": "id-ID",
+        "currency": "IDR",
+        "implementation": "Intl.NumberFormat",
+        "components": [
+          "AppSidebar",
+          "DataTable"
+        ]
+      },
+      "id": "pattern:currency-formatting",
+      "community": 2,
+      "norm_label": ""
+    },
+    {
+      "type": "pattern",
+      "labels": [
+        "vue_pattern"
+      ],
+      "metadata": {
+        "usage": [
+          "route_based_visibility",
+          "state_based_display"
+        ],
+        "examples": [
+          "showAddButton in SiteHeader",
+          "loading states in DataTable"
+        ]
+      },
+      "id": "pattern:conditional-rendering",
+      "community": 2,
+      "norm_label": ""
+    },
+    {
+      "type": "composable",
+      "labels": [
+        "theme",
+        "state"
+      ],
+      "metadata": {
+        "path": "src/composables/useTheme",
+        "features": [
+          "theme_switching",
+          "system_preference_detection"
+        ],
+        "used_by": [
+          "ThemeToggle"
+        ]
+      },
+      "id": "composable:useTheme",
+      "community": 2,
+      "norm_label": ""
+    },
+    {
+      "type": "store",
+      "labels": [
+        "state",
+        "data"
+      ],
+      "metadata": {
+        "path": "src/stores/app",
+        "data_accessed": [
+          "transactions",
+          "categories",
+          "summary",
+          "netBalance"
+        ],
+        "actions": [
+          "createTransaction",
+          "updateTransaction",
+          "deleteTransaction"
+        ],
+        "used_by": [
+          "AppSidebar",
+          "DataTable",
+          "AddTransactionDialog"
+        ]
+      },
+      "id": "store:useAppStore",
+      "community": 2,
+      "norm_label": ""
+    },
+    {
+      "type": "integration",
+      "labels": [
+        "icons",
+        "ui_library"
+      ],
+      "metadata": {
+        "icons": [
+          "LayoutDashboard",
+          "ListPlus",
+          "Tag",
+          "Wallet",
+          "Loader2",
+          "Moon",
+          "Sun",
+          "Plus",
+          "Trash2",
+          "Eye"
+        ],
+        "components": [
+          "AppSidebar",
+          "SiteHeader",
+          "DataTable",
+          "AddTransactionDialog"
+        ]
+      },
+      "id": "integration:lucide-vue-next",
+      "community": 2,
+      "norm_label": ""
+    },
+    {
+      "type": "integration",
+      "labels": [
+        "icons",
+        "ui_library"
+      ],
+      "metadata": {
+        "icons": [
+          "IconCirclePlusFilled",
+          "IconMail"
+        ],
+        "components": [
+          "NavMain"
+        ]
+      },
+      "id": "integration:tabler-icons-vue",
+      "community": 18,
+      "norm_label": ""
+    },
+    {
+      "type": "styling",
+      "labels": [
+        "theming",
+        "css"
+      ],
+      "metadata": {
+        "variables": [
+          "--primary",
+          "--chart-1",
+          "--chart-3",
+          "--border",
+          "--card",
+          "--muted",
+          "--destructive"
+        ],
+        "usage": [
+          "conditional_coloring",
+          "theme_aware_components"
+        ],
+        "components": [
+          "DataTable",
+          "AppSidebar"
+        ]
+      },
+      "id": "styling:css-variables",
+      "community": 2,
+      "norm_label": ""
+    },
+    {
+      "type": "navigation",
+      "labels": [
+        "routing",
+        "structure"
+      ],
+      "metadata": {
+        "routes": [
+          "/",
+          "/transactions",
+          "/categories",
+          "/budgets"
+        ],
+        "mapping": {
+          "/": "Dashboard",
+          "/transactions": "Transactions",
+          "/categories": "Categories",
+          "/budgets": "Budgets"
+        },
+        "components": [
+          "AppSidebar",
+          "SiteHeader"
+        ]
+      },
+      "id": "navigation:structure",
+      "community": 2,
+      "norm_label": ""
+    },
+    {
+      "type": "schema",
+      "labels": [
+        "data",
+        "validation"
+      ],
+      "metadata": {
+        "fields": [
+          "type",
+          "amount",
+          "description",
+          "categoryId",
+          "occurredAt"
+        ],
+        "types": {
+          "type": "'income' | 'expense'",
+          "amount": "number",
+          "description": "string | undefined",
+          "categoryId": "string",
+          "occurredAt": "ISO datetime"
+        },
+        "component": "AddTransactionDialog"
+      },
+      "id": "form:transaction-schema",
+      "community": 2,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "properties": {
+        "file": "src/components/NavSecondary.vue",
+        "role": "navigation",
+        "pattern": "secondary_nav",
+        "props": [
+          "items: NavItem[]"
+        ],
+        "exports": [
+          "NavItem interface"
+        ]
+      },
+      "id": "NavSecondary",
+      "community": 4,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "properties": {
+        "file": "src/components/NavUser.vue",
+        "role": "navigation",
+        "pattern": "user_menu",
+        "props": [
+          "user: User"
+        ],
+        "exports": [
+          "User interface"
+        ],
+        "features": [
+          "dropdown_menu",
+          "avatar_display",
+          "responsive_layout"
+        ]
+      },
+      "id": "NavUser",
+      "community": 4,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "properties": {
+        "file": "src/components/NavDocuments.vue",
+        "role": "navigation",
+        "pattern": "document_list",
+        "props": [
+          "items: Document[]"
+        ],
+        "exports": [
+          "Document interface"
+        ],
+        "features": [
+          "dropdown_menu",
+          "hover_actions",
+          "collapsible_sidebar"
+        ]
+      },
+      "id": "NavDocuments",
+      "community": 4,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "properties": {
+        "file": "src/components/SectionCards.vue",
+        "role": "data_visualization",
+        "pattern": "summary_cards",
+        "features": [
+          "computed_properties",
+          "currency_formatting",
+          "conditional_styling"
+        ],
+        "data_source": "appStore",
+        "metrics": [
+          "totalIncome",
+          "totalExpense",
+          "netBalance",
+          "categoriesCount",
+          "budgetsCount",
+          "overBudgetCount"
+        ]
+      },
+      "id": "SectionCards",
+      "community": 7,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "properties": {
+        "file": "src/components/ChartAreaInteractive.vue",
+        "role": "data_visualization",
+        "pattern": "area_chart",
+        "library": "@unovis/vue",
+        "features": [
+          "time_filtering",
+          "interactive_tooltip",
+          "gradient_fills",
+          "responsive_design"
+        ],
+        "chart_types": [
+          "VisArea",
+          "VisLine",
+          "VisAxis"
+        ],
+        "time_ranges": [
+          "7d",
+          "30d",
+          "90d"
+        ]
+      },
+      "id": "ChartAreaInteractive",
+      "community": 7,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "properties": {
+        "file": "src/components/HelloWorld.vue",
+        "role": "demo",
+        "pattern": "starter_template",
+        "features": [
+          "counter_state",
+          "external_links",
+          "svg_icons"
+        ]
+      },
+      "id": "HelloWorld",
+      "community": 166,
+      "norm_label": ""
+    },
+    {
+      "type": "interface",
+      "properties": {
+        "defined_in": "NavSecondary.vue",
+        "fields": [
+          "title: string",
+          "url: string",
+          "icon?: Component"
+        ]
+      },
+      "id": "NavItem",
+      "community": 4,
+      "norm_label": ""
+    },
+    {
+      "type": "interface",
+      "properties": {
+        "defined_in": "NavUser.vue",
+        "fields": [
+          "name: string",
+          "email: string",
+          "avatar: string"
+        ]
+      },
+      "id": "User",
+      "community": 4,
+      "norm_label": ""
+    },
+    {
+      "type": "interface",
+      "properties": {
+        "defined_in": "NavDocuments.vue",
+        "fields": [
+          "name: string",
+          "url: string",
+          "icon?: Component"
+        ]
+      },
+      "id": "Document",
+      "community": 4,
+      "norm_label": ""
+    },
+    {
+      "type": "component_library",
+      "properties": {
+        "components": [
+          "SidebarGroup",
+          "SidebarGroupContent",
+          "SidebarMenu",
+          "SidebarMenuButton",
+          "SidebarMenuItem",
+          "SidebarMenuAction",
+          "SidebarGroupLabel",
+          "useSidebar"
+        ]
+      },
+      "id": "shadcn_sidebar",
+      "community": 4,
+      "norm_label": ""
+    },
+    {
+      "type": "component_library",
+      "properties": {
+        "components": [
+          "DropdownMenu",
+          "DropdownMenuContent",
+          "DropdownMenuItem",
+          "DropdownMenuSeparator",
+          "DropdownMenuTrigger",
+          "DropdownMenuGroup",
+          "DropdownMenuLabel"
+        ]
+      },
+      "id": "shadcn_dropdown",
+      "community": 4,
+      "norm_label": ""
+    },
+    {
+      "type": "component_library",
+      "properties": {
+        "components": [
+          "Card",
+          "CardHeader",
+          "CardTitle",
+          "CardDescription",
+          "CardContent"
+        ]
+      },
+      "id": "shadcn_card",
+      "community": 7,
+      "norm_label": ""
+    },
+    {
+      "type": "component_library",
+      "properties": {
+        "components": [
+          "ChartContainer",
+          "ChartCrosshair",
+          "ChartLegendContent",
+          "ChartTooltip",
+          "ChartTooltipContent",
+          "componentToString"
+        ],
+        "types": [
+          "ChartConfig"
+        ]
+      },
+      "id": "shadcn_chart",
+      "community": 7,
+      "norm_label": ""
+    },
+    {
+      "type": "icon_library",
+      "properties": {
+        "package": "@tabler/icons-vue",
+        "icons": [
+          "IconCreditCard",
+          "IconDotsVertical",
+          "IconLogout",
+          "IconNotification",
+          "IconUserCircle",
+          "IconDots",
+          "IconFolder",
+          "IconShare3",
+          "IconTrash"
+        ]
+      },
+      "id": "tabler_icons",
+      "community": 4,
+      "norm_label": ""
+    },
+    {
+      "type": "icon_library",
+      "properties": {
+        "package": "lucide-vue-next",
+        "icons": [
+          "TrendingUp",
+          "TrendingDown",
+          "Wallet"
+        ]
+      },
+      "id": "lucide_icons",
+      "community": 7,
+      "norm_label": ""
+    },
+    {
+      "type": "visualization_library",
+      "properties": {
+        "package": "@unovis/vue",
+        "components": [
+          "VisArea",
+          "VisAxis",
+          "VisLine",
+          "VisXYContainer"
+        ]
+      },
+      "id": "unovis",
+      "community": 7,
+      "norm_label": ""
+    },
+    {
+      "type": "state_management",
+      "properties": {
+        "store": "Pinia",
+        "location": "@/stores/app",
+        "state": [
+          "categories",
+          "budgets",
+          "totalIncome",
+          "totalExpense",
+          "netBalance"
+        ]
+      },
+      "id": "appStore",
+      "community": 7,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "labels": [
+        "Tabs",
+        "root-component",
+        "reka-ui"
+      ],
+      "attributes": {
+        "file": "src/components/ui/tabs/Tabs.vue",
+        "script_setup": true,
+        "lang": "ts",
+        "base_class": "TabsRoot",
+        "base_library": "reka-ui",
+        "default_classes": "flex flex-col gap-2",
+        "slot_props": true,
+        "data_slot": "tabs"
+      },
+      "id": "vue-component:Tabs",
+      "community": 5,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "labels": [
+        "TabsList",
+        "tab-navigation",
+        "reka-ui"
+      ],
+      "attributes": {
+        "file": "src/components/ui/tabs/TabsList.vue",
+        "script_setup": true,
+        "lang": "ts",
+        "base_class": "TabsList",
+        "base_library": "reka-ui",
+        "default_classes": "bg-muted text-muted-foreground inline-flex h-9 w-fit items-center justify-center rounded-lg p-[3px]",
+        "data_slot": "tabs-list"
+      },
+      "id": "vue-component:TabsList",
+      "community": 5,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "labels": [
+        "TabsTrigger",
+        "tab-button",
+        "reka-ui"
+      ],
+      "attributes": {
+        "file": "src/components/ui/tabs/TabsTrigger.vue",
+        "script_setup": true,
+        "lang": "ts",
+        "base_class": "TabsTrigger",
+        "base_library": "reka-ui",
+        "uses_forward_props": true,
+        "default_classes": "data-[state=active]:bg-background dark:data-[state=active]:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:outline-ring dark:data-[state=active]:border-input dark:data-[state=active]:bg-input/30 text-foreground dark:text-muted-foreground inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded-md border border-transparent px-2 py-1 text-sm font-medium whitespace-nowrap transition-[color,box-shadow] focus-visible:ring-[3px] focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-sm [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "data_slot": "tabs-trigger"
+      },
+      "id": "vue-component:TabsTrigger",
+      "community": 5,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "labels": [
+        "TabsContent",
+        "tab-panel",
+        "reka-ui"
+      ],
+      "attributes": {
+        "file": "src/components/ui/tabs/TabsContent.vue",
+        "script_setup": true,
+        "lang": "ts",
+        "base_class": "TabsContent",
+        "base_library": "reka-ui",
+        "default_classes": "flex-1 outline-none",
+        "data_slot": "tabs-content"
+      },
+      "id": "vue-component:TabsContent",
+      "community": 5,
+      "norm_label": ""
+    },
+    {
+      "type": "module",
+      "labels": [
+        "barrel-export",
+        "component-index"
+      ],
+      "attributes": {
+        "file": "src/components/ui/tabs/index.ts",
+        "exports": [
+          "Tabs",
+          "TabsContent",
+          "TabsList",
+          "TabsTrigger"
+        ]
+      },
+      "id": "export:tabs-index",
+      "community": 5,
+      "norm_label": ""
+    },
+    {
+      "type": "utility",
+      "labels": [
+        "className-utility"
+      ],
+      "attributes": {
+        "import_path": "@/lib/utils",
+        "used_by": [
+          "Tabs",
+          "TabsList",
+          "TabsTrigger",
+          "TabsContent"
+        ]
+      },
+      "id": "utility:cn",
+      "community": 5,
+      "norm_label": ""
+    },
+    {
+      "type": "utility",
+      "labels": [
+        "vue-use",
+        "props-manipulation"
+      ],
+      "attributes": {
+        "import_path": "@vueuse/core",
+        "used_by": [
+          "Tabs",
+          "TabsList",
+          "TabsTrigger",
+          "TabsContent"
+        ],
+        "purpose": "omit class prop from delegated props"
+      },
+      "id": "utility:reactiveOmit",
+      "community": 5,
+      "norm_label": ""
+    },
+    {
+      "type": "utility",
+      "labels": [
+        "reka-ui",
+        "props-forwarding"
+      ],
+      "attributes": {
+        "import_path": "reka-ui",
+        "used_by": [
+          "Tabs"
+        ],
+        "purpose": "forward props and emits to root component"
+      },
+      "id": "utility:useForwardPropsEmits",
+      "community": 5,
+      "norm_label": ""
+    },
+    {
+      "type": "utility",
+      "labels": [
+        "reka-ui",
+        "props-forwarding"
+      ],
+      "attributes": {
+        "import_path": "reka-ui",
+        "used_by": [
+          "TabsTrigger"
+        ],
+        "purpose": "forward props to trigger component"
+      },
+      "id": "utility:useForwardProps",
+      "community": 5,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "labels": [
+        "root",
+        "container",
+        "state-manager"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/Dialog.vue",
+        "library": "reka-ui",
+        "exports": "DialogRoot wrapper",
+        "pattern": "forwardPropsEmits"
+      },
+      "id": "dialog:DialogRoot",
+      "community": 1,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "labels": [
+        "trigger",
+        "activator"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/DialogTrigger.vue",
+        "library": "reka-ui",
+        "exports": "DialogTrigger wrapper",
+        "slots": [
+          "default"
+        ]
+      },
+      "id": "dialog:DialogTrigger",
+      "community": 1,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "labels": [
+        "content",
+        "modal",
+        "overlay"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/DialogContent.vue",
+        "features": [
+          "portal",
+          "overlay",
+          "close-button"
+        ],
+        "pattern": "reactiveOmit class forwarding",
+        "animations": [
+          "fade-in",
+          "zoom-in",
+          "fade-out",
+          "zoom-out"
+        ],
+        "positioning": "fixed center with translate"
+      },
+      "id": "dialog:DialogContent",
+      "community": 1,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "labels": [
+        "content",
+        "scrollable",
+        "overlay"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/DialogScrollContent.vue",
+        "features": [
+          "scrollable-overflow",
+          "portal",
+          "overlay"
+        ],
+        "difference_from_DialogContent": "overflow-y-auto on overlay"
+      },
+      "id": "dialog:DialogScrollContent",
+      "community": 1,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "labels": [
+        "header",
+        "layout"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/DialogHeader.vue",
+        "layout": "flex-col gap-2",
+        "responsive": "text-center sm:text-left"
+      },
+      "id": "dialog:DialogHeader",
+      "community": 1,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "labels": [
+        "footer",
+        "layout"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/DialogFooter.vue",
+        "layout": "flex-col-reverse sm:flex-row sm:justify-end",
+        "optional_feature": "showCloseButton with DialogClose"
+      },
+      "id": "dialog:DialogFooter",
+      "community": 1,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "labels": [
+        "title",
+        "typography"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/DialogTitle.vue",
+        "styling": "text-lg font-semibold leading-none",
+        "pattern": "reactiveOmit class forwarding"
+      },
+      "id": "dialog:DialogTitle",
+      "community": 1,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "labels": [
+        "description",
+        "typography"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/DialogDescription.vue",
+        "styling": "text-sm text-muted-foreground",
+        "pattern": "reactiveOmit class forwarding"
+      },
+      "id": "dialog:DialogDescription",
+      "community": 1,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "labels": [
+        "close",
+        "action"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/DialogClose.vue",
+        "exports": "DialogClose wrapper"
+      },
+      "id": "dialog:DialogClose",
+      "community": 1,
+      "norm_label": ""
+    },
+    {
+      "type": "component",
+      "labels": [
+        "overlay",
+        "backdrop"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/DialogOverlay.vue",
+        "styling": "fixed inset-0 bg-black/80",
+        "animations": [
+          "fade-in",
+          "fade-out"
+        ],
+        "pattern": "reactiveOmit class forwarding"
+      },
+      "id": "dialog:DialogOverlay",
+      "community": 1,
+      "norm_label": ""
+    },
+    {
+      "type": "module",
+      "labels": [
+        "barrel",
+        "index"
+      ],
+      "properties": {
+        "file": "src/components/ui/dialog/index.ts",
+        "exports": [
+          "Dialog",
+          "DialogClose",
+          "DialogContent",
+          "DialogDescription",
+          "DialogFooter",
+          "DialogHeader",
+          "DialogOverlay",
+          "DialogScrollContent",
+          "DialogTitle",
+          "DialogTrigger"
+        ],
+        "pattern": "centralized exports"
+      },
+      "id": "dialog:barrel_export",
+      "community": 1,
+      "norm_label": ""
+    },
+    {
+      "type": "pattern",
+      "labels": [
+        "composition",
+        "compound-component"
+      ],
+      "properties": {
+        "description": "Dialog system uses compound component pattern",
+        "root_component": "Dialog",
+        "leaf_components": [
+          "DialogTrigger",
+          "DialogContent",
+          "DialogHeader",
+          "DialogFooter",
+          "DialogTitle",
+          "DialogDescription"
+        ],
+        "data_slots": [
+          "data-slot=\"dialog\"",
+          "data-slot=\"dialog-trigger\"",
+          "data-slot=\"dialog-content\""
+        ]
+      },
+      "id": "dialog:composition_pattern",
+      "community": 1,
+      "norm_label": ""
+    },
+    {
+      "type": "dependency",
+      "labels": [
+        "utilities"
+      ],
+      "properties": {
+        "cn": "@/lib/utils className merger",
+        "reactiveOmit": "@vueuse/core for props filtering",
+        "useForwardPropsEmits": "reka-ui prop forwarding",
+        "useForwardProps": "reka-ui prop forwarding"
+      },
+      "id": "dialog:utility_dependencies",
+      "community": 1,
+      "norm_label": ""
+    },
+    {
+      "type": "mapping",
+      "labels": [
+        "library-mapping"
+      ],
+      "properties": {
+        "DialogRoot": "reka-ui DialogRoot",
+        "DialogTrigger": "reka-ui DialogTrigger",
+        "DialogContent": "reka-ui DialogContent",
+        "DialogPortal": "reka-ui DialogPortal",
+        "DialogClose": "reka-ui DialogClose",
+        "DialogTitle": "reka-ui DialogTitle",
+        "DialogDescription": "reka-ui DialogDescription",
+        "DialogOverlay": "reka-ui DialogOverlay"
+      },
+      "id": "dialog:reka_ui_mapping",
+      "community": 1,
+      "norm_label": ""
+    },
+    {
+      "type": "pattern",
+      "labels": [
+        "pattern",
+        "styling"
+      ],
+      "properties": {
+        "description": "Consistent class forwarding using reactiveOmit",
+        "components_using": [
+          "DialogContent",
+          "DialogScrollContent",
+          "DialogTitle",
+          "DialogDescription",
+          "DialogOverlay"
+        ],
+        "pattern": "reactiveOmit(props, 'class') then forward + cn()"
+      },
+      "id": "dialog:class_forwarding_pattern",
+      "community": 1,
+      "norm_label": ""
+    },
+    {
+      "type": "dependency",
+      "labels": [
+        "icons"
+      ],
+      "properties": {
+        "library": "lucide-vue-next",
+        "used_icons": [
+          "X for close button"
+        ],
+        "component_location": "DialogContent, DialogScrollContent"
+      },
+      "id": "dialog:icon_integration",
+      "community": 1,
+      "norm_label": ""
+    },
+    {
+      "type": "feature",
+      "labels": [
+        "a11y",
+        "accessibility"
+      ],
+      "properties": {
+        "screen_reader_support": "sr-only Close text",
+        "focus_management": "ring-offset-background focus:ring-ring",
+        "data_attributes": [
+          "data-state=open",
+          "data-state=closed"
+        ]
+      },
+      "id": "dialog:accessibility_features",
+      "community": 1,
+      "norm_label": ""
+    },
+    {
+      "type": "feature",
+      "labels": [
+        "animation",
+        "transitions"
+      ],
+      "properties": {
+        "framework": "data-state driven CSS animations",
+        "animations": {
+          "fade_in": "data-[state=open]:fade-in-0",
+          "fade_out": "data-[state=closed]:fade-out-0",
+          "zoom_in": "data-[state=open]:zoom-in-95",
+          "zoom_out": "data-[state=closed]:zoom-out-95"
+        },
+        "duration": "duration-200"
+      },
+      "id": "dialog:animation_system",
+      "community": 1,
+      "norm_label": ""
+    }
+  ],
+  "links": [
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_main_ts",
+      "target": "src_app_vue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_main_ts",
+      "target": "pinia",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/composables/useTheme.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_composables_usetheme_ts",
+      "target": "composables_usetheme_updateresolvedtheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/composables/useTheme.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "src_composables_usetheme_ts",
+      "target": "composables_usetheme_applytheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/composables/useTheme.ts",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "src_composables_usetheme_ts",
+      "target": "composables_usetheme_usetheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/composables/useTheme.ts",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "composables_usetheme_usetheme",
+      "target": "composables_usetheme_updateresolvedtheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/composables/useTheme.ts",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "composables_usetheme_usetheme",
+      "target": "composables_usetheme_applytheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/stores/app.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_stores_app_ts",
+      "target": "pinia",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SectionCards.vue",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "src_components_sectioncards_vue",
+      "target": "components_sectioncards_formatcurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/sidebar/SidebarProvider.vue",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "src_components_ui_sidebar_sidebarprovider_vue",
+      "target": "sidebar_sidebarprovider_setopenmobile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/sidebar/SidebarProvider.vue",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "src_components_ui_sidebar_sidebarprovider_vue",
+      "target": "sidebar_sidebarprovider_togglesidebar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/sidebar/SidebarProvider.vue",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "sidebar_sidebarprovider_togglesidebar",
+      "target": "sidebar_sidebarprovider_setopenmobile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/chart/utils.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_components_ui_chart_utils_ts",
+      "target": "chart_utils_serializekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/chart/utils.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "src_components_ui_chart_utils_ts",
+      "target": "chart_utils_componenttostring",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/table/utils.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_components_ui_table_utils_ts",
+      "target": "table_utils_valueupdater",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/utils.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_utils_ts",
+      "target": "lib_utils_cn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/router/index.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_router_index_ts",
+      "target": "vue-router",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "source_location": 11,
+      "source": "index_html_main_entry",
+      "target": "index_html_app_mount"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 3,
+      "source": "readme_expense_tracker",
+      "target": "readme_vue_framework"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 3,
+      "source": "readme_expense_tracker",
+      "target": "readme_typescript_language"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 3,
+      "source": "readme_expense_tracker",
+      "target": "readme_vite_build_tool"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 3,
+      "source": "readme_expense_tracker",
+      "target": "readme_tailwind_styling"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 3,
+      "source": "readme_expense_tracker",
+      "target": "readme_shadcn_components"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 21,
+      "source": "readme_expense_tracker",
+      "target": "readme_pinia_state"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 22,
+      "source": "readme_expense_tracker",
+      "target": "readme_vue_router"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 23,
+      "source": "readme_expense_tracker",
+      "target": "readme_axios_api"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 24,
+      "source": "readme_expense_tracker",
+      "target": "readme_lucide_icons"
+    },
+    {
+      "relation": "connects_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 116,
+      "source": "readme_expense_tracker",
+      "target": "readme_expense_api"
+    },
+    {
+      "relation": "configures",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 52,
+      "source": "readme_expense_tracker",
+      "target": "readme_vite_api_base_url"
+    },
+    {
+      "relation": "deploys_via",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 56,
+      "source": "readme_expense_tracker",
+      "target": "readme_dokploy_deployment"
+    },
+    {
+      "relation": "deploys_via",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 68,
+      "source": "readme_expense_tracker",
+      "target": "readme_docker_deployment"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 101,
+      "source": "readme_expense_tracker",
+      "target": "readme_project_structure"
+    },
+    {
+      "relation": "troubleshoots",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 158,
+      "source": "deployment_troubleshooting",
+      "target": "readme_expense_tracker"
+    },
+    {
+      "relation": "deploys",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 232,
+      "source": "deployment_netlify_config",
+      "target": "readme_expense_tracker"
+    },
+    {
+      "relation": "deploys",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 253,
+      "source": "deployment_vercel_config",
+      "target": "readme_expense_tracker"
+    },
+    {
+      "relation": "deploys",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 265,
+      "source": "deployment_aws_s3_config",
+      "target": "readme_expense_tracker"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 296,
+      "source": "deployment_security_considerations",
+      "target": "readme_expense_tracker"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": 5,
+      "source": "claude_project_overview",
+      "target": "readme_expense_tracker"
+    },
+    {
+      "relation": "visually_represents",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/assets/hero.png",
+      "source_location": null,
+      "source": "hero_png_ui_element",
+      "target": "readme_expense_tracker"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 14,
+      "source": "deployment_dokploy_guide",
+      "target": "readme_dokploy_deployment"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 78,
+      "source": "deployment_docker_guide",
+      "target": "readme_docker_deployment"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DEPLOYMENT.md",
+      "source_location": 279,
+      "source": "deployment_health_check",
+      "target": "docker_compose_healthcheck"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docker-compose.yml",
+      "source_location": 2,
+      "source": "docker_compose_service",
+      "target": "docker_compose_build_config"
+    },
+    {
+      "relation": "configures",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docker-compose.yml",
+      "source_location": 7,
+      "source": "docker_compose_service",
+      "target": "docker_compose_port_mapping"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docker-compose.yml",
+      "source_location": 11,
+      "source": "docker_compose_service",
+      "target": "docker_compose_healthcheck"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": 24,
+      "source": "claude_project_overview",
+      "target": "claude_composition_api"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": 32,
+      "source": "claude_project_overview",
+      "target": "claude_path_aliases"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": 39,
+      "source": "claude_project_overview",
+      "target": "claude_shadcn_config"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": 50,
+      "source": "claude_project_overview",
+      "target": "claude_build_process"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": 58,
+      "source": "claude_project_overview",
+      "target": "claude_openapi_spec"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": 35,
+      "source": "claude_project_overview",
+      "target": "claude_cn_utility"
+    },
+    {
+      "from": "svg-icons-sprite",
+      "to": "svg-favicon",
+      "label": "contains_vue_branding",
+      "description": "The favicon.vue.svg is the Vue.js brand logo, while icons.svg contains Vue.js as one of the framework branding elements",
+      "source": "svg-icons-sprite",
+      "target": "svg-favicon",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "svg-vue-logo",
+      "to": "svg-favicon",
+      "label": "duplicate_brand_asset",
+      "description": "Both files contain the Vue.js logo - one as favicon, one as UI asset",
+      "source": "svg-vue-logo",
+      "target": "svg-favicon",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "svg-vite-logo",
+      "to": "svg-vue-logo",
+      "label": "build_tool_branding",
+      "description": "Vite and Vue.js logos represent the build tool/framework pairing used in this project",
+      "source": "svg-vite-logo",
+      "target": "svg-vue-logo",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "vite.config.ts",
+      "to": "vite-plugin-vue",
+      "relation": "configures",
+      "attributes": {
+        "phase": "build"
+      },
+      "source": "vite.config.ts",
+      "target": "vite-plugin-vue",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "vite.config.ts",
+      "to": "vite-plugin-tailwindcss",
+      "relation": "configures",
+      "attributes": {
+        "phase": "build"
+      },
+      "source": "vite.config.ts",
+      "target": "vite-plugin-tailwindcss",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "src/main.ts",
+      "to": "src/App.vue",
+      "relation": "mounts",
+      "attributes": {
+        "selector": "#app"
+      },
+      "source": "src/main.ts",
+      "target": "src/App.vue",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "src/main.ts",
+      "to": "vue-router",
+      "relation": "registers",
+      "attributes": {
+        "method": "app.use"
+      },
+      "source": "src/main.ts",
+      "target": "vue-router",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "src/main.ts",
+      "to": "pinia",
+      "relation": "registers",
+      "attributes": {
+        "method": "app.use"
+      },
+      "source": "src/main.ts",
+      "target": "pinia",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "src/App.vue",
+      "to": "app-store",
+      "relation": "uses",
+      "attributes": {
+        "purpose": "app initialization"
+      },
+      "source": "src/App.vue",
+      "target": "app-store",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "src/App.vue",
+      "to": "sidebar-layout",
+      "relation": "implements",
+      "attributes": {},
+      "source": "src/App.vue",
+      "target": "sidebar-layout",
+      "confidence_score": 1.0
+    },
+    {
+      "type": "contains",
+      "label": "category endpoints",
+      "confidence_score": 1.0,
+      "source": "api_apiClient",
+      "target": "api_categories"
+    },
+    {
+      "type": "contains",
+      "label": "transaction endpoints",
+      "confidence_score": 1.0,
+      "source": "api_apiClient",
+      "target": "api_transactions"
+    },
+    {
+      "type": "contains",
+      "label": "budget endpoints",
+      "confidence_score": 1.0,
+      "source": "api_apiClient",
+      "target": "api_budgets"
+    },
+    {
+      "type": "contains",
+      "label": "analytics endpoints",
+      "confidence_score": 1.0,
+      "source": "api_apiClient",
+      "target": "api_analytics"
+    },
+    {
+      "from": "component:AppSidebar.vue",
+      "to": "store:useAppStore",
+      "type": "USES",
+      "metadata": {
+        "purpose": "data_binding",
+        "properties": [
+          "transactions",
+          "summary",
+          "netBalance",
+          "totalIncome",
+          "totalExpense"
+        ]
+      },
+      "source": "component:AppSidebar.vue",
+      "target": "store:useAppStore",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:AppSidebar.vue",
+      "to": "pattern:shadcn-sidebar",
+      "type": "IMPLEMENTS",
+      "metadata": {
+        "collapsible": "icon"
+      },
+      "source": "component:AppSidebar.vue",
+      "target": "pattern:shadcn-sidebar",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:AppSidebar.vue",
+      "to": "navigation:structure",
+      "type": "IMPLEMENTS",
+      "metadata": {
+        "active_state": "route.path comparison"
+      },
+      "source": "component:AppSidebar.vue",
+      "target": "navigation:structure",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:AppSidebar.vue",
+      "to": "pattern:currency-formatting",
+      "type": "USES",
+      "metadata": {
+        "function": "formatCurrency"
+      },
+      "source": "component:AppSidebar.vue",
+      "target": "pattern:currency-formatting",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:AppSidebar.vue",
+      "to": "styling:css-variables",
+      "type": "USES",
+      "metadata": {
+        "purpose": "theme_aware_styling",
+        "variables": [
+          "--primary",
+          "--destructive"
+        ]
+      },
+      "source": "component:AppSidebar.vue",
+      "target": "styling:css-variables",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:AppSidebar.vue",
+      "to": "integration:lucide-vue-next",
+      "type": "USES",
+      "metadata": {
+        "icons": [
+          "LayoutDashboard",
+          "ListPlus",
+          "Tag",
+          "Wallet",
+          "Loader2"
+        ]
+      },
+      "source": "component:AppSidebar.vue",
+      "target": "integration:lucide-vue-next",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:SiteHeader.vue",
+      "to": "component:ThemeToggle.vue",
+      "type": "COMPOSES",
+      "metadata": {
+        "placement": "header_right"
+      },
+      "source": "component:SiteHeader.vue",
+      "target": "component:ThemeToggle.vue",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:SiteHeader.vue",
+      "to": "component:AddTransactionDialog.vue",
+      "type": "COMPOSES_CONDITIONAL",
+      "metadata": {
+        "condition": "route.path === '/' || route.path === '/transactions'",
+        "size": "sm"
+      },
+      "source": "component:SiteHeader.vue",
+      "target": "component:AddTransactionDialog.vue",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:SiteHeader.vue",
+      "to": "pattern:shadcn-sidebar",
+      "type": "INTEGRATES",
+      "metadata": {
+        "component": "SidebarTrigger"
+      },
+      "source": "component:SiteHeader.vue",
+      "target": "pattern:shadcn-sidebar",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:SiteHeader.vue",
+      "to": "navigation:structure",
+      "type": "USES",
+      "metadata": {
+        "purpose": "dynamic_title_generation"
+      },
+      "source": "component:SiteHeader.vue",
+      "target": "navigation:structure",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:SiteHeader.vue",
+      "to": "integration:lucide-vue-next",
+      "type": "USES",
+      "metadata": {
+        "indirect": true,
+        "through": [
+          "ThemeToggle",
+          "AddTransactionDialog"
+        ]
+      },
+      "source": "component:SiteHeader.vue",
+      "target": "integration:lucide-vue-next",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:SiteHeader.vue",
+      "to": "pattern:conditional-rendering",
+      "type": "USES",
+      "metadata": {
+        "computed_property": "showAddButton"
+      },
+      "source": "component:SiteHeader.vue",
+      "target": "pattern:conditional-rendering",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:ThemeToggle.vue",
+      "to": "composable:useTheme",
+      "type": "USES",
+      "metadata": {
+        "methods": [
+          "setTheme",
+          "resolvedTheme"
+        ]
+      },
+      "source": "component:ThemeToggle.vue",
+      "target": "composable:useTheme",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:ThemeToggle.vue",
+      "to": "integration:lucide-vue-next",
+      "type": "USES",
+      "metadata": {
+        "icons": [
+          "Sun",
+          "Moon"
+        ]
+      },
+      "source": "component:ThemeToggle.vue",
+      "target": "integration:lucide-vue-next",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:NavMain.vue",
+      "to": "integration:tabler-icons-vue",
+      "type": "USES",
+      "metadata": {
+        "icons": [
+          "IconCirclePlusFilled",
+          "IconMail"
+        ]
+      },
+      "source": "component:NavMain.vue",
+      "target": "integration:tabler-icons-vue",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:DataTable.vue",
+      "to": "store:useAppStore",
+      "type": "USES",
+      "metadata": {
+        "purpose": "data_fetching",
+        "actions": [
+          "deleteTransaction"
+        ]
+      },
+      "source": "component:DataTable.vue",
+      "target": "store:useAppStore",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:DataTable.vue",
+      "to": "pattern:currency-formatting",
+      "type": "USES",
+      "metadata": {
+        "function": "formatCurrency"
+      },
+      "source": "component:DataTable.vue",
+      "target": "pattern:currency-formatting",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:DataTable.vue",
+      "to": "styling:css-variables",
+      "type": "USES",
+      "metadata": {
+        "purpose": "conditional_coloring",
+        "variables": [
+          "--chart-1",
+          "--chart-3",
+          "--border"
+        ]
+      },
+      "source": "component:DataTable.vue",
+      "target": "styling:css-variables",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:DataTable.vue",
+      "to": "integration:lucide-vue-next",
+      "type": "USES",
+      "metadata": {
+        "icons": [
+          "Trash2",
+          "Eye"
+        ]
+      },
+      "source": "component:DataTable.vue",
+      "target": "integration:lucide-vue-next",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:DataTable.vue",
+      "to": "pattern:conditional-rendering",
+      "type": "USES",
+      "metadata": {
+        "states": [
+          "loading",
+          "empty",
+          "data"
+        ]
+      },
+      "source": "component:DataTable.vue",
+      "target": "pattern:conditional-rendering",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:AddTransactionDialog.vue",
+      "to": "store:useAppStore",
+      "type": "USES",
+      "metadata": {
+        "purpose": "crud_operations",
+        "actions": [
+          "createTransaction",
+          "updateTransaction"
+        ]
+      },
+      "source": "component:AddTransactionDialog.vue",
+      "target": "store:useAppStore",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:AddTransactionDialog.vue",
+      "to": "form:transaction-schema",
+      "type": "IMPLEMENTS",
+      "metadata": {
+        "validation": "required_fields",
+        "modes": [
+          "create",
+          "edit"
+        ]
+      },
+      "source": "component:AddTransactionDialog.vue",
+      "target": "form:transaction-schema",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "component:AddTransactionDialog.vue",
+      "to": "integration:lucide-vue-next",
+      "type": "USES",
+      "metadata": {
+        "icons": [
+          "Plus"
+        ]
+      },
+      "source": "component:AddTransactionDialog.vue",
+      "target": "integration:lucide-vue-next",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "NavSecondary",
+      "to": "shadcn_sidebar",
+      "type": "uses",
+      "properties": {
+        "components": [
+          "SidebarGroup",
+          "SidebarGroupContent",
+          "SidebarMenu",
+          "SidebarMenuButton",
+          "SidebarMenuItem"
+        ]
+      },
+      "source": "NavSecondary",
+      "target": "shadcn_sidebar",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "NavSecondary",
+      "to": "NavItem",
+      "type": "defines",
+      "source": "NavSecondary",
+      "target": "NavItem",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "NavUser",
+      "to": "shadcn_sidebar",
+      "type": "uses",
+      "properties": {
+        "components": [
+          "SidebarMenu",
+          "SidebarMenuButton",
+          "SidebarMenuItem",
+          "useSidebar"
+        ]
+      },
+      "source": "NavUser",
+      "target": "shadcn_sidebar",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "NavUser",
+      "to": "shadcn_dropdown",
+      "type": "uses",
+      "properties": {
+        "components": [
+          "DropdownMenu",
+          "DropdownMenuContent",
+          "DropdownMenuGroup",
+          "DropdownMenuItem",
+          "DropdownMenuLabel",
+          "DropdownMenuSeparator",
+          "DropdownMenuTrigger"
+        ]
+      },
+      "source": "NavUser",
+      "target": "shadcn_dropdown",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "NavUser",
+      "to": "tabler_icons",
+      "type": "uses",
+      "properties": {
+        "icons": [
+          "IconCreditCard",
+          "IconDotsVertical",
+          "IconLogout",
+          "IconNotification",
+          "IconUserCircle"
+        ]
+      },
+      "source": "NavUser",
+      "target": "tabler_icons",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "NavUser",
+      "to": "User",
+      "type": "defines",
+      "source": "NavUser",
+      "target": "User",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "NavDocuments",
+      "to": "shadcn_sidebar",
+      "type": "uses",
+      "properties": {
+        "components": [
+          "SidebarGroup",
+          "SidebarGroupLabel",
+          "SidebarMenu",
+          "SidebarMenuAction",
+          "SidebarMenuButton",
+          "SidebarMenuItem",
+          "useSidebar"
+        ]
+      },
+      "source": "NavDocuments",
+      "target": "shadcn_sidebar",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "NavDocuments",
+      "to": "shadcn_dropdown",
+      "type": "uses",
+      "properties": {
+        "components": [
+          "DropdownMenu",
+          "DropdownMenuContent",
+          "DropdownMenuItem",
+          "DropdownMenuSeparator",
+          "DropdownMenuTrigger"
+        ]
+      },
+      "source": "NavDocuments",
+      "target": "shadcn_dropdown",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "NavDocuments",
+      "to": "tabler_icons",
+      "type": "uses",
+      "properties": {
+        "icons": [
+          "IconDots",
+          "IconFolder",
+          "IconShare3",
+          "IconTrash"
+        ]
+      },
+      "source": "NavDocuments",
+      "target": "tabler_icons",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "NavDocuments",
+      "to": "Document",
+      "type": "defines",
+      "source": "NavDocuments",
+      "target": "Document",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "SectionCards",
+      "to": "shadcn_card",
+      "type": "uses",
+      "properties": {
+        "components": [
+          "Card",
+          "CardHeader",
+          "CardTitle",
+          "CardDescription"
+        ]
+      },
+      "source": "SectionCards",
+      "target": "shadcn_card",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "SectionCards",
+      "to": "appStore",
+      "type": "consumes",
+      "properties": {
+        "computed_values": [
+          "totalIncome",
+          "totalExpense",
+          "netBalance",
+          "categories",
+          "budgets"
+        ]
+      },
+      "source": "SectionCards",
+      "target": "appStore",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "SectionCards",
+      "to": "lucide_icons",
+      "type": "uses",
+      "properties": {
+        "icons": [
+          "TrendingUp",
+          "TrendingDown",
+          "Wallet"
+        ]
+      },
+      "source": "SectionCards",
+      "target": "lucide_icons",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "ChartAreaInteractive",
+      "to": "shadcn_card",
+      "type": "uses",
+      "properties": {
+        "components": [
+          "Card",
+          "CardHeader",
+          "CardContent",
+          "CardTitle",
+          "CardDescription"
+        ]
+      },
+      "source": "ChartAreaInteractive",
+      "target": "shadcn_card",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "ChartAreaInteractive",
+      "to": "shadcn_chart",
+      "type": "uses",
+      "properties": {
+        "components": [
+          "ChartContainer",
+          "ChartCrosshair",
+          "ChartLegendContent",
+          "ChartTooltip",
+          "ChartTooltipContent",
+          "componentToString"
+        ]
+      },
+      "source": "ChartAreaInteractive",
+      "target": "shadcn_chart",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "ChartAreaInteractive",
+      "to": "unovis",
+      "type": "uses",
+      "properties": {
+        "components": [
+          "VisArea",
+          "VisAxis",
+          "VisLine",
+          "VisXYContainer"
+        ]
+      },
+      "source": "ChartAreaInteractive",
+      "target": "unovis",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "vue-component:Tabs",
+      "to": "vue-component:TabsList",
+      "type": "composition",
+      "labels": [
+        "parent-child",
+        "slot-content"
+      ],
+      "source": "vue-component:Tabs",
+      "target": "vue-component:TabsList",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "vue-component:Tabs",
+      "to": "vue-component:TabsContent",
+      "type": "composition",
+      "labels": [
+        "parent-child",
+        "slot-content"
+      ],
+      "source": "vue-component:Tabs",
+      "target": "vue-component:TabsContent",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "vue-component:Tabs",
+      "to": "utility:useForwardPropsEmits",
+      "type": "uses",
+      "source": "vue-component:Tabs",
+      "target": "utility:useForwardPropsEmits",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "vue-component:Tabs",
+      "to": "utility:reactiveOmit",
+      "type": "uses",
+      "source": "vue-component:Tabs",
+      "target": "utility:reactiveOmit",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "vue-component:Tabs",
+      "to": "utility:cn",
+      "type": "uses",
+      "source": "vue-component:Tabs",
+      "target": "utility:cn",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "export:tabs-index",
+      "to": "vue-component:Tabs",
+      "type": "exports",
+      "source": "export:tabs-index",
+      "target": "vue-component:Tabs",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "vue-component:TabsList",
+      "to": "vue-component:TabsTrigger",
+      "type": "composition",
+      "labels": [
+        "parent-child",
+        "slot-content"
+      ],
+      "source": "vue-component:TabsList",
+      "target": "vue-component:TabsTrigger",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "vue-component:TabsList",
+      "to": "utility:reactiveOmit",
+      "type": "uses",
+      "source": "vue-component:TabsList",
+      "target": "utility:reactiveOmit",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "vue-component:TabsList",
+      "to": "utility:cn",
+      "type": "uses",
+      "source": "vue-component:TabsList",
+      "target": "utility:cn",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "export:tabs-index",
+      "to": "vue-component:TabsList",
+      "type": "exports",
+      "source": "export:tabs-index",
+      "target": "vue-component:TabsList",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "vue-component:TabsTrigger",
+      "to": "utility:useForwardProps",
+      "type": "uses",
+      "source": "vue-component:TabsTrigger",
+      "target": "utility:useForwardProps",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "vue-component:TabsTrigger",
+      "to": "utility:reactiveOmit",
+      "type": "uses",
+      "source": "vue-component:TabsTrigger",
+      "target": "utility:reactiveOmit",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "vue-component:TabsTrigger",
+      "to": "utility:cn",
+      "type": "uses",
+      "source": "vue-component:TabsTrigger",
+      "target": "utility:cn",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "export:tabs-index",
+      "to": "vue-component:TabsTrigger",
+      "type": "exports",
+      "source": "export:tabs-index",
+      "target": "vue-component:TabsTrigger",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "vue-component:TabsContent",
+      "to": "utility:reactiveOmit",
+      "type": "uses",
+      "source": "vue-component:TabsContent",
+      "target": "utility:reactiveOmit",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "vue-component:TabsContent",
+      "to": "utility:cn",
+      "type": "uses",
+      "source": "vue-component:TabsContent",
+      "target": "utility:cn",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "export:tabs-index",
+      "to": "vue-component:TabsContent",
+      "type": "exports",
+      "source": "export:tabs-index",
+      "target": "vue-component:TabsContent",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogRoot",
+      "to": "dialog:composition_pattern",
+      "label": "implements",
+      "properties": {
+        "role": "root component"
+      },
+      "source": "dialog:DialogRoot",
+      "target": "dialog:composition_pattern",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogRoot",
+      "to": "dialog:reka_ui_mapping",
+      "label": "wraps",
+      "properties": {
+        "library_component": "DialogRoot"
+      },
+      "source": "dialog:DialogRoot",
+      "target": "dialog:reka_ui_mapping",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:barrel_export",
+      "to": "dialog:DialogRoot",
+      "label": "exports",
+      "properties": {
+        "as": "Dialog"
+      },
+      "source": "dialog:barrel_export",
+      "target": "dialog:DialogRoot",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogTrigger",
+      "to": "dialog:composition_pattern",
+      "label": "part-of",
+      "properties": {
+        "role": "activator component"
+      },
+      "source": "dialog:DialogTrigger",
+      "target": "dialog:composition_pattern",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogTrigger",
+      "to": "dialog:reka_ui_mapping",
+      "label": "wraps",
+      "properties": {
+        "library_component": "DialogTrigger"
+      },
+      "source": "dialog:DialogTrigger",
+      "target": "dialog:reka_ui_mapping",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:barrel_export",
+      "to": "dialog:DialogTrigger",
+      "label": "exports",
+      "source": "dialog:barrel_export",
+      "target": "dialog:DialogTrigger",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogContent",
+      "to": "dialog:composition_pattern",
+      "label": "part-of",
+      "properties": {
+        "role": "main content wrapper"
+      },
+      "source": "dialog:DialogContent",
+      "target": "dialog:composition_pattern",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogScrollContent",
+      "to": "dialog:DialogContent",
+      "label": "imports",
+      "properties": {
+        "usage": "content inside overlay"
+      },
+      "source": "dialog:DialogScrollContent",
+      "target": "dialog:DialogContent",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogClose",
+      "to": "dialog:DialogContent",
+      "label": "used-by",
+      "properties": {
+        "placement": "absolute top-4 right-4"
+      },
+      "source": "dialog:DialogClose",
+      "target": "dialog:DialogContent",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogContent",
+      "to": "dialog:DialogOverlay",
+      "label": "imports",
+      "properties": {
+        "usage": "overlay as separate component"
+      },
+      "source": "dialog:DialogContent",
+      "target": "dialog:DialogOverlay",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogContent",
+      "to": "dialog:reka_ui_mapping",
+      "label": "uses",
+      "properties": {
+        "library_components": [
+          "DialogPortal",
+          "DialogContent",
+          "DialogClose"
+        ]
+      },
+      "source": "dialog:DialogContent",
+      "target": "dialog:reka_ui_mapping",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:barrel_export",
+      "to": "dialog:DialogContent",
+      "label": "exports",
+      "source": "dialog:barrel_export",
+      "target": "dialog:DialogContent",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogContent",
+      "to": "dialog:class_forwarding_pattern",
+      "label": "implements",
+      "source": "dialog:DialogContent",
+      "target": "dialog:class_forwarding_pattern",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogContent",
+      "to": "dialog:utility_dependencies",
+      "label": "uses",
+      "properties": {
+        "utilities": [
+          "cn",
+          "reactiveOmit",
+          "useForwardPropsEmits"
+        ]
+      },
+      "source": "dialog:DialogContent",
+      "target": "dialog:utility_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogContent",
+      "to": "dialog:icon_integration",
+      "label": "uses",
+      "properties": {
+        "icon": "X from lucide-vue-next"
+      },
+      "source": "dialog:DialogContent",
+      "target": "dialog:icon_integration",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogContent",
+      "to": "dialog:animation_system",
+      "label": "uses",
+      "properties": {
+        "animations": [
+          "fade-in-0",
+          "fade-out-0",
+          "zoom-in-95",
+          "zoom-out-95"
+        ]
+      },
+      "source": "dialog:DialogContent",
+      "target": "dialog:animation_system",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogScrollContent",
+      "to": "dialog:DialogOverlay",
+      "label": "composes-with",
+      "properties": {
+        "relationship": "overlay contains scrollable content"
+      },
+      "source": "dialog:DialogScrollContent",
+      "target": "dialog:DialogOverlay",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:barrel_export",
+      "to": "dialog:DialogScrollContent",
+      "label": "exports",
+      "source": "dialog:barrel_export",
+      "target": "dialog:DialogScrollContent",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogScrollContent",
+      "to": "dialog:class_forwarding_pattern",
+      "label": "implements",
+      "source": "dialog:DialogScrollContent",
+      "target": "dialog:class_forwarding_pattern",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogScrollContent",
+      "to": "dialog:utility_dependencies",
+      "label": "uses",
+      "properties": {
+        "utilities": [
+          "cn",
+          "reactiveOmit",
+          "useForwardPropsEmits"
+        ]
+      },
+      "source": "dialog:DialogScrollContent",
+      "target": "dialog:utility_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogScrollContent",
+      "to": "dialog:icon_integration",
+      "label": "uses",
+      "properties": {
+        "icon": "X from lucide-vue-next"
+      },
+      "source": "dialog:DialogScrollContent",
+      "target": "dialog:icon_integration",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogScrollContent",
+      "to": "dialog:animation_system",
+      "label": "uses",
+      "properties": {
+        "animations": [
+          "fade-in",
+          "fade-out"
+        ]
+      },
+      "source": "dialog:DialogScrollContent",
+      "target": "dialog:animation_system",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogHeader",
+      "to": "dialog:composition_pattern",
+      "label": "part-of",
+      "properties": {
+        "role": "header layout container"
+      },
+      "source": "dialog:DialogHeader",
+      "target": "dialog:composition_pattern",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogTitle",
+      "to": "dialog:DialogHeader",
+      "label": "typically-contained-in",
+      "properties": {
+        "relationship": "semantic grouping"
+      },
+      "source": "dialog:DialogTitle",
+      "target": "dialog:DialogHeader",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogDescription",
+      "to": "dialog:DialogHeader",
+      "label": "typically-contained-in",
+      "properties": {
+        "relationship": "semantic grouping"
+      },
+      "source": "dialog:DialogDescription",
+      "target": "dialog:DialogHeader",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:barrel_export",
+      "to": "dialog:DialogHeader",
+      "label": "exports",
+      "source": "dialog:barrel_export",
+      "target": "dialog:DialogHeader",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogHeader",
+      "to": "dialog:utility_dependencies",
+      "label": "uses",
+      "properties": {
+        "utilities": [
+          "cn"
+        ]
+      },
+      "source": "dialog:DialogHeader",
+      "target": "dialog:utility_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogFooter",
+      "to": "dialog:composition_pattern",
+      "label": "part-of",
+      "properties": {
+        "role": "footer layout container"
+      },
+      "source": "dialog:DialogFooter",
+      "target": "dialog:composition_pattern",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogClose",
+      "to": "dialog:DialogFooter",
+      "label": "optionally-used-by",
+      "properties": {
+        "condition": "showCloseButton prop"
+      },
+      "source": "dialog:DialogClose",
+      "target": "dialog:DialogFooter",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:barrel_export",
+      "to": "dialog:DialogFooter",
+      "label": "exports",
+      "source": "dialog:barrel_export",
+      "target": "dialog:DialogFooter",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogFooter",
+      "to": "dialog:utility_dependencies",
+      "label": "uses",
+      "properties": {
+        "utilities": [
+          "cn"
+        ]
+      },
+      "source": "dialog:DialogFooter",
+      "target": "dialog:utility_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogTitle",
+      "to": "dialog:reka_ui_mapping",
+      "label": "wraps",
+      "properties": {
+        "library_component": "DialogTitle"
+      },
+      "source": "dialog:DialogTitle",
+      "target": "dialog:reka_ui_mapping",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:barrel_export",
+      "to": "dialog:DialogTitle",
+      "label": "exports",
+      "source": "dialog:barrel_export",
+      "target": "dialog:DialogTitle",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogTitle",
+      "to": "dialog:class_forwarding_pattern",
+      "label": "implements",
+      "source": "dialog:DialogTitle",
+      "target": "dialog:class_forwarding_pattern",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogTitle",
+      "to": "dialog:utility_dependencies",
+      "label": "uses",
+      "properties": {
+        "utilities": [
+          "cn",
+          "reactiveOmit",
+          "useForwardProps"
+        ]
+      },
+      "source": "dialog:DialogTitle",
+      "target": "dialog:utility_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogDescription",
+      "to": "dialog:reka_ui_mapping",
+      "label": "wraps",
+      "properties": {
+        "library_component": "DialogDescription"
+      },
+      "source": "dialog:DialogDescription",
+      "target": "dialog:reka_ui_mapping",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:barrel_export",
+      "to": "dialog:DialogDescription",
+      "label": "exports",
+      "source": "dialog:barrel_export",
+      "target": "dialog:DialogDescription",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogDescription",
+      "to": "dialog:class_forwarding_pattern",
+      "label": "implements",
+      "source": "dialog:DialogDescription",
+      "target": "dialog:class_forwarding_pattern",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogDescription",
+      "to": "dialog:utility_dependencies",
+      "label": "uses",
+      "properties": {
+        "utilities": [
+          "cn",
+          "reactiveOmit",
+          "useForwardProps"
+        ]
+      },
+      "source": "dialog:DialogDescription",
+      "target": "dialog:utility_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogClose",
+      "to": "dialog:reka_ui_mapping",
+      "label": "wraps",
+      "properties": {
+        "library_component": "DialogClose"
+      },
+      "source": "dialog:DialogClose",
+      "target": "dialog:reka_ui_mapping",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:barrel_export",
+      "to": "dialog:DialogClose",
+      "label": "exports",
+      "source": "dialog:barrel_export",
+      "target": "dialog:DialogClose",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogClose",
+      "to": "dialog:accessibility_features",
+      "label": "implements",
+      "properties": {
+        "features": [
+          "sr-only text",
+          "focus management"
+        ]
+      },
+      "source": "dialog:DialogClose",
+      "target": "dialog:accessibility_features",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogOverlay",
+      "to": "dialog:reka_ui_mapping",
+      "label": "wraps",
+      "properties": {
+        "library_component": "DialogOverlay"
+      },
+      "source": "dialog:DialogOverlay",
+      "target": "dialog:reka_ui_mapping",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:barrel_export",
+      "to": "dialog:DialogOverlay",
+      "label": "exports",
+      "source": "dialog:barrel_export",
+      "target": "dialog:DialogOverlay",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogOverlay",
+      "to": "dialog:class_forwarding_pattern",
+      "label": "implements",
+      "source": "dialog:DialogOverlay",
+      "target": "dialog:class_forwarding_pattern",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogOverlay",
+      "to": "dialog:utility_dependencies",
+      "label": "uses",
+      "properties": {
+        "utilities": [
+          "cn",
+          "reactiveOmit"
+        ]
+      },
+      "source": "dialog:DialogOverlay",
+      "target": "dialog:utility_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "from": "dialog:DialogOverlay",
+      "to": "dialog:animation_system",
+      "label": "uses",
+      "properties": {
+        "animations": [
+          "fade-in-0",
+          "fade-out-0"
+        ]
+      },
+      "source": "dialog:DialogOverlay",
+      "target": "dialog:animation_system",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "tech_stack_dependencies",
+      "label": "Vue 3 Expense Tracker Tech Stack",
+      "nodes": [
+        "readme_vue_framework",
+        "readme_typescript_language",
+        "readme_vite_build_tool",
+        "readme_tailwind_styling",
+        "readme_shadcn_components",
+        "readme_pinia_state",
+        "readme_vue_router",
+        "readme_axios_api",
+        "readme_lucide_icons"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md"
+    },
+    {
+      "id": "deployment_methods",
+      "label": "Deployment Methods",
+      "nodes": [
+        "readme_dokploy_deployment",
+        "readme_docker_deployment",
+        "deployment_netlify_config",
+        "deployment_vercel_config",
+        "deployment_aws_s3_config"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DEPLOYMENT.md"
+    },
+    {
+      "id": "architecture_configuration",
+      "label": "Application Architecture Configuration",
+      "nodes": [
+        "claude_composition_api",
+        "claude_path_aliases",
+        "claude_shadcn_config",
+        "claude_build_process",
+        "claude_cn_utility"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md"
+    },
+    {
+      "id": "framework-branding",
+      "members": [
+        "svg-vue-logo",
+        "svg-vite-logo",
+        "svg-favicon"
+      ],
+      "label": "Vue.js + Vite Framework Branding",
+      "description": "Collection of official logos representing the Vue.js 3 + Vite technology stack used in this project"
+    },
+    {
+      "id": "social-media-icons",
+      "members": [
+        "svg-icons-sprite"
+      ],
+      "label": "Social Platform Icons",
+      "description": "Reusable SVG sprite for social media integration (Bluesky, Discord, GitHub, X/Twitter)"
+    },
+    {
+      "id": "app-initialization-flow",
+      "type": "flow",
+      "members": [
+        "src/main.ts",
+        "pinia",
+        "vue-router",
+        "src/App.vue"
+      ],
+      "attributes": {
+        "description": "Vue app initialization sequence with Pinia and Router"
+      }
+    },
+    {
+      "id": "build-configuration",
+      "type": "configuration-group",
+      "members": [
+        "vite.config.ts",
+        "vite-plugin-vue",
+        "vite-plugin-tailwindcss"
+      ],
+      "attributes": {
+        "description": "Vite build configuration with Vue and Tailwind plugins"
+      }
+    },
+    {
+      "id": "api-proxy-setup",
+      "type": "configuration-group",
+      "members": [
+        "vite.config.ts"
+      ],
+      "attributes": {
+        "proxy_target": "https://expense-api.ratama.space",
+        "proxy_path": "/api",
+        "description": "Development API proxy configuration"
+      }
+    },
+    {
+      "id": "api_rest_pattern",
+      "type": "pattern",
+      "members": [
+        "api_categories",
+        "api_transactions",
+        "api_budgets"
+      ],
+      "label": "standard CRUD operations (list, get, create, update, delete)",
+      "confidence_score": 1.0
+    },
+    {
+      "id": "api_error_handling",
+      "type": "pattern",
+      "members": [
+        "api_index",
+        "ApiError"
+      ],
+      "label": "response interceptor attaches ApiError to rejection",
+      "confidence_score": 1.0
+    },
+    {
+      "id": "crud_views_pattern",
+      "members": [
+        "transactionsview",
+        "budgetsview",
+        "categoriesview"
+      ],
+      "type": "DESIGN_PATTERN",
+      "attributes": {
+        "pattern": "CRUD_VIEW_WITH_INLINE_EDITING",
+        "description": "All three views implement similar CRUD patterns with inline editing, modal creation, and delete confirmation"
+      },
+      "confidence_score": 0.9
+    },
+    {
+      "id": "store_centric_data_flow",
+      "members": [
+        "dashboardview",
+        "transactionsview",
+        "budgetsview",
+        "categoriesview"
+      ],
+      "type": "ARCHITECTURAL_PATTERN",
+      "attributes": {
+        "pattern": "STORE_CENTRIC_DATA_FLOW",
+        "description": "All views use useAppStore for data fetching and mutations"
+      },
+      "confidence_score": 1.0
+    },
+    {
+      "id": "loading_state_pattern",
+      "members": [
+        "transactionsview",
+        "budgetsview",
+        "categoriesview"
+      ],
+      "type": "UI_PATTERN",
+      "attributes": {
+        "pattern": "LOADING_STATE_HANDLING",
+        "description": "All views check appStore.loading and show Loader2 spinner"
+      },
+      "confidence_score": 0.95
+    },
+    {
+      "id": "currency_formatting_reuse",
+      "members": [
+        "transactionsview",
+        "budgetsview"
+      ],
+      "type": "CODE_DUPLICATION",
+      "attributes": {
+        "pattern": "DUPLICATE_CURRENCY_FORMATTING",
+        "description": "Both views implement identical formatCurrency function with IDR locale"
+      },
+      "confidence_score": 1.0
+    },
+    {
+      "id": "modal_dialog_pattern",
+      "members": [
+        "transactionsview",
+        "budgetsview",
+        "categoriesview"
+      ],
+      "type": "UI_PATTERN",
+      "attributes": {
+        "pattern": "MODAL_DIALOG_FOR_CREATE",
+        "description": "All views use Dialog component for create operations"
+      },
+      "confidence_score": 0.95
+    },
+    {
+      "id": "category_budget_relationship",
+      "members": [
+        "transactionsview",
+        "budgetsview",
+        "categoriesview"
+      ],
+      "type": "DATA_DEPENDENCY",
+      "attributes": {
+        "relationship": "CATEGORY_CENTRIC_DOMAIN",
+        "description": "Transactions and budgets both depend on categories; budgets view filters out categories that already have budgets"
+      },
+      "confidence_score": 0.95
+    },
+    {
+      "id": "layout:app-shell",
+      "type": "layout_composition",
+      "members": [
+        "component:AppSidebar.vue",
+        "component:SiteHeader.vue"
+      ],
+      "metadata": {
+        "pattern": "sidebar_layout",
+        "responsive": true,
+        "collapsible": true
+      }
+    },
+    {
+      "id": "theme:implementation",
+      "type": "theme_integration",
+      "members": [
+        "component:ThemeToggle.vue",
+        "composable:useTheme",
+        "styling:css-variables"
+      ],
+      "metadata": {
+        "modes": [
+          "light",
+          "dark",
+          "system"
+        ],
+        "approach": "class_based",
+        "css_class": ".dark"
+      }
+    },
+    {
+      "id": "state:app-store-consumers",
+      "type": "state_management",
+      "members": [
+        "component:AppSidebar.vue",
+        "component:DataTable.vue",
+        "component:AddTransactionDialog.vue"
+      ],
+      "metadata": {
+        "store": "useAppStore",
+        "pattern": "pinia_store",
+        "data_flow": "unidirectional"
+      }
+    },
+    {
+      "id": "navigation:routing-integration",
+      "type": "routing",
+      "members": [
+        "component:AppSidebar.vue",
+        "component:SiteHeader.vue",
+        "navigation:structure"
+      ],
+      "metadata": {
+        "library": "vue-router",
+        "features": [
+          "active_state",
+          "route_based_rendering"
+        ]
+      }
+    },
+    {
+      "id": "ui:shadcn-components",
+      "type": "ui_library",
+      "members": [
+        "component:ThemeToggle.vue",
+        "component:NavMain.vue",
+        "component:AddTransactionDialog.vue",
+        "component:DataTable.vue"
+      ],
+      "metadata": {
+        "library": "shadcn-vue",
+        "style_variant": "new-york",
+        "components_used": [
+          "Button",
+          "Dialog",
+          "DropdownMenu",
+          "Table",
+          "Select",
+          "Input",
+          "Sidebar"
+        ]
+      }
+    },
+    {
+      "id": "form:transaction-workflow",
+      "type": "user_workflow",
+      "members": [
+        "component:AddTransactionDialog.vue",
+        "component:DataTable.vue",
+        "form:transaction-schema"
+      ],
+      "metadata": {
+        "flow": "create_edit_view_delete",
+        "components": [
+          "Dialog",
+          "Table",
+          "Actions"
+        ]
+      }
+    },
+    {
+      "id": "navigation_components",
+      "type": "component_group",
+      "members": [
+        "NavSecondary",
+        "NavUser",
+        "NavDocuments"
+      ],
+      "properties": {
+        "shared_pattern": "sidebar_navigation",
+        "common_features": [
+          "responsive_design",
+          "dropdown_menus",
+          "icon_support"
+        ],
+        "sidebar_integration": true
+      }
+    },
+    {
+      "id": "data_visualization_components",
+      "type": "component_group",
+      "members": [
+        "SectionCards",
+        "ChartAreaInteractive"
+      ],
+      "properties": {
+        "shared_pattern": "dashboard_widgets",
+        "common_features": [
+          "computed_data",
+          "shadcn_card_wrapper",
+          "responsive_layout"
+        ],
+        "data_display": true
+      }
+    },
+    {
+      "id": "shadcn_ui_integration",
+      "type": "design_system",
+      "members": [
+        "shadcn_sidebar",
+        "shadcn_dropdown",
+        "shadcn_card",
+        "shadcn_chart",
+        "shadcn_avatar",
+        "shadcn_select"
+      ],
+      "properties": {
+        "library": "shadcn-vue",
+        "styling": "CSS_variables",
+        "theming": "light_dark_mode"
+      }
+    },
+    {
+      "id": "icon_system",
+      "type": "design_pattern",
+      "members": [
+        "tabler_icons",
+        "lucide_icons"
+      ],
+      "properties": {
+        "pattern": "icon_component_usage",
+        "implementation": "Vue_components"
+      }
+    },
+    {
+      "id": "pattern:tabs-composition",
+      "type": "component-pattern",
+      "nodes": [
+        "vue-component:Tabs",
+        "vue-component:TabsList",
+        "vue-component:TabsTrigger",
+        "vue-component:TabsContent"
+      ],
+      "attributes": {
+        "pattern": "reka-ui-tabs-wrapper",
+        "description": "Composite tabs component wrapping reka-ui primitives",
+        "composition": "Tabs contains TabsList and TabsContent; TabsList contains TabsTrigger"
+      }
+    },
+    {
+      "id": "pattern:props-delegation",
+      "type": "pattern",
+      "nodes": [
+        "vue-component:Tabs",
+        "vue-component:TabsList",
+        "vue-component:TabsTrigger",
+        "vue-component:TabsContent",
+        "utility:reactiveOmit"
+      ],
+      "attributes": {
+        "pattern": "class-prop-delegation",
+        "description": "All tab components use reactiveOmit to exclude class prop, then bind delegated props to base component"
+      }
+    },
+    {
+      "id": "pattern:styling-architecture",
+      "type": "pattern",
+      "nodes": [
+        "vue-component:Tabs",
+        "vue-component:TabsList",
+        "vue-component:TabsTrigger",
+        "vue-component:TabsContent",
+        "utility:cn"
+      ],
+      "attributes": {
+        "pattern": "cn-utility-merging",
+        "description": "All components use cn() utility to merge default classes with custom class prop"
+      }
+    },
+    {
+      "id": "dialog:full_dialog_composition",
+      "type": "composition",
+      "nodes": [
+        "dialog:DialogRoot",
+        "dialog:DialogTrigger",
+        "dialog:DialogContent",
+        "dialog:DialogHeader",
+        "dialog:DialogTitle",
+        "dialog:DialogDescription",
+        "dialog:DialogFooter",
+        "dialog:DialogClose"
+      ],
+      "properties": {
+        "pattern": "compound component",
+        "description": "Complete dialog composition hierarchy"
+      }
+    },
+    {
+      "id": "dialog:styling_pattern_consistency",
+      "type": "pattern",
+      "nodes": [
+        "dialog:DialogContent",
+        "dialog:DialogScrollContent",
+        "dialog:DialogTitle",
+        "dialog:DialogDescription",
+        "dialog:DialogOverlay"
+      ],
+      "properties": {
+        "pattern": "reactiveOmit + cn class forwarding",
+        "purpose": "consistent styling override pattern"
+      }
+    },
+    {
+      "id": "dialog:portal_pattern",
+      "type": "pattern",
+      "nodes": [
+        "dialog:DialogContent",
+        "dialog:DialogScrollContent",
+        "dialog:DialogOverlay"
+      ],
+      "properties": {
+        "pattern": "DialogPortal wrapping",
+        "purpose": "render outside DOM hierarchy"
+      }
+    },
+    {
+      "id": "dialog:data_slot_attributes",
+      "type": "metadata",
+      "nodes": [
+        "dialog:DialogRoot",
+        "dialog:DialogTrigger",
+        "dialog:DialogContent",
+        "dialog:DialogHeader",
+        "dialog:DialogFooter",
+        "dialog:DialogTitle",
+        "dialog:DialogDescription",
+        "dialog:DialogClose",
+        "dialog:DialogOverlay"
+      ],
+      "properties": {
+        "pattern": "data-slot attributes for component identification",
+        "purpose": "testing and styling hooks"
+      }
+    },
+    {
+      "id": "dialog:reka_ui_abstraction",
+      "type": "abstraction",
+      "nodes": [
+        "dialog:DialogRoot",
+        "dialog:DialogTrigger",
+        "dialog:DialogContent",
+        "dialog:DialogTitle",
+        "dialog:DialogDescription",
+        "dialog:DialogClose",
+        "dialog:DialogOverlay"
+      ],
+      "properties": {
+        "layer": "wrapper around reka-ui primitives",
+        "value_add": "styling, data-slots, icon integration"
+      }
+    }
+  ],
+  "built_at_commit": "b0c0eeb6ee2d8f63d5f8411b4552119b64882c03"
+}
